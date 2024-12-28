@@ -1,0 +1,249 @@
+---
+title: "Functions"
+---
+
+1. [Builder](/create/builder-add-ons)
+
+Functions let you build powerful backend logic by turning your words into code. They handle powerful operations while keeping your UI clean and focused.
+
+### Why Use Functions
+
+Functions offer several key benefits:
+
+* **Turn words into logic** - Describe what you want in plain language and Create generates the code
+
+* **Separate UI from Logic** - Keep pages focused on presentation while Functions handle powerful operations
+
+* **Test in Isolation** - Debug and perfect logic independently from your UI
+
+* **Reuseable** - Use Functions across pages and components once they're working
+
+* **External APIs** - Functions can connect securely to thousands of APIs using [Secrets](https://github.com/Create-Inc/docs/blob/main/builder-add-ons/broken-reference/README.md)
+
+* **Composeable** - Build powerful features by combining Functions with [Integrations](/create/builder-add-ons/integrations), [Databases](/create/builder-add-ons/databases-beta), and other Functions
+
+For example, imagine building an app that analyzes documents with AI:
+
+Without Functions, you would need to handle everything in one place:
+
+* Upload interface for PDFs
+
+* Code to display the document
+
+* AI analysis of images
+
+* AI text summarization
+
+* Error messages
+
+* Loading screens
+
+With Functions, you can split this into simpler parts:
+
+Page:
+
+* A clean upload interface
+
+* Document display
+
+* A button that calls your analysis Function
+
+Function:
+
+* AI image analysis
+
+* AI text summarization
+
+* Error handling
+
+This separation makes your app easier to build, test, and maintain.
+
+### Creating Functions
+
+Create Functions in several ways:
+
+* **Logo Menu** > New Function
+
+* Press `option-F` (or `alt-F` on Windows)
+
+* Type `/` in chat > Create Function
+
+Describe what you want the Function to do:
+
+* What inputs it needs
+
+* What logic it should perform
+
+* What outputs it should return
+
+Create generates:
+
+* A flow diagram showing the Function's logic
+
+* The underlying serverless code (viewable in the "Code" tab)
+
+* Input/output interfaces
+
+### Making Functions that Work
+
+When building Functions:
+
+* For external APIs, find their documentation first. You can paste API endpoint URLs directly into the Function chat - Create will analyze the screenshot and write the code.
+
+* If you get test errors, paste the error message back into your Function definition. Create often knows how to fix the specific issue.
+
+### Using Integrations, Databases, and Other Functions
+
+Make your Functions more powerful by combining them with:
+
+* [Integrations](/create/builder-add-ons/integrations) - Add AI capabilities and other features
+
+* [Databases](/create/builder-add-ons/databases-beta) - Store and retrieve data
+
+* Other Functions - Chain multiple Functions together
+
+To use these in your Function:
+
+1. Type `/` or open the Add-ons menu
+
+2. Select the Integration, Database, or Function
+
+3. Describe how you want to use it
+
+For example, you could build a Function that:
+
+* Uses ChatGPT to analyze text
+
+* Stores results in a database
+
+* Calls another Function to notify users
+
+Create handles connecting everything together based on your description. If you need specific behavior, add more details to your prompt about how you want the pieces to interact.
+
+### Testing Functions
+
+Every Function has a full test runner available in the 3-dot menu > Run Test tab. Use it to:
+
+* **Sample Inputs** - Enter test data as Form or JSON
+
+* **Run Tests** - Execute the Function with your inputs
+
+* **View Results** - See outputs or error messages
+
+* **Debug** - Use error descriptions to fix issues. You can often just paste the error description into your prompt to fix it.
+
+Functions have a 5-minute timeout. Chain Functions together for longer operations.
+
+### Using Functions
+
+Add Functions to pages, components, or other Functions:
+
+* Type `/` in chat
+
+* Select your Function
+
+* Describe how you want to use it
+
+Create handles:
+
+* Connecting inputs/outputs
+
+* Error states
+
+* Loading indicators
+
+* UI integration
+
+### Updating Functions
+
+After changing a Function:
+
+1. Find where you integrated it
+
+2. Click "Update" next to the integration
+
+3. Create will refresh with latest changes
+
+Changes to Functions don't automatically update everywhere they're used. This prevents unwanted changes from breaking your app.
+
+### External APIs and Secrets
+
+Functions can connect to any external API. To use an API:
+
+1. Store authentication details (API keys, tokens) as [Secrets](/create/builder-add-ons/functions#secrets)
+
+2. Tell Create which API to use - it will handle the integration
+
+3. Test carefully since calls hit live APIs
+
+Popular APIs and where to find credentials:
+
+* **Stripe**: [How to get your API Key](https://docs.stripe.com/keys)
+
+* **GitHub**: [How to get your Personal Access Token](https://github.com/settings/tokens)
+
+* **Exa**: [How to get your API Key](https://docs.exa.ai/reference/getting-started)
+
+* **Twilio**: [How to get your API Key](https://www.twilio.com/docs/iam/api-keys)
+
+* **Sendgrid**: [How to get your API Key](https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys)
+
+* **MailGun**: [How to get your API Key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials)
+
+* **HubSpot**: [How to get your API key](https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key)
+
+Here is an in-depth YouTube video tutorial on how to connect to an external API, using the [Exa AI Search API](https://exa.ai/):
+
+You can also use Zapier, Make, and other platforms that connect to APIs by using their "webhook" triggers. Here's a YouTube video with the steps:
+
+<Frame caption="Function -> Zapier" />
+
+### Secrets
+
+Secrets securely store sensitive data like API keys and passwords. They're available to all Functions in your project.
+
+To add a Secret:
+
+1. Open the "Secrets" panel in any Function
+
+2. Click "+ Add a new secret"
+
+3. Name it clearly (e.g. "Stripe API Key")
+
+4. Enter the secret value
+
+![](https://docs.create.xyz/~gitbook/image?url=https%3A%2F%2Fgithub.com%2FCreate-Inc%2Fdocs%2Fblob%2Fmain%2F.gitbook%2Fassets%2FScreenshot%25202024-05-23%2520at%25203.17.24%2520PM.png\&width=768\&dpr=4\&quality=100\&sign=d1ef5369\&sv=2)
+
+Create automatically uses well-named secrets when generating Function code. For example, if you have a "Stripe API Key" secret and mention Stripe in your prompt, Create will use that key securely.
+
+When using popular APIs like Stripe or Twilio, Create will often ask for specific secret names in chat (e.g. "Stripe Secret Key"). Use these as hints for what credentials you need.
+
+Supported secret types:
+
+* API Keys
+
+* Access Tokens
+
+* Basic Auth Credentials
+
+* Bearer Tokens
+
+Note: OAuth tokens aren't supported since they require refresh flows.
+
+### Publishing
+
+When ready to launch:
+
+1. Click **Publish** in top right
+
+2. Choose Functions to publish
+
+3. Set routes if needed (all Function routes start with /api)
+
+4. Enable/disable as needed
+
+Published Functions are locked versions your published app uses. Continue development without breaking live features.
+
+Need help? [Join our Discord](https://www.create.xyz/discord) and post in #help-me-build
+
+[PreviousStyle Guides](/create/builder-add-ons/style-guides)[NextDatabases (beta)](/create/builder-add-ons/databases-beta)

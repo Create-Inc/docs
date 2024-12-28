@@ -1,0 +1,135 @@
+---
+title: "Custom Domains"
+---
+
+1. [Publish & Share](/create/publish-and-share)
+
+Add your own domain to any Create site app
+
+<Frame caption="Custom domain configuration in the Publish modal">
+  <img src="https://docs.create.xyz/~gitbook/image?url=https%3A%2F%2Fgithub.com%2FCreate-Inc%2Fdocs%2Fblob%2Fmain%2F.gitbook%2Fassets%2Fcustom-domain-modal.png&width=768&dpr=4&quality=100&sign=83253c22&sv=2" />
+</Frame>
+
+### What is a custom domain?
+
+A custom domain lets you use your own web address (like `yourapp.com`) instead of the default `created.app` address. You'll need to:
+
+* Own a domain (purchase one from providers like GoDaddy if you don't have one)
+
+* Have a Create Pro subscription ([upgrade here](https://create.xyz/pricing))
+
+* Have an app ready to publish
+
+**Important timing notes:**
+
+* DNS changes can take up to 48 hours to take effect
+
+* During this time, your domain might not work or might show old content
+
+* If it's been 48 hours since you'd added records and published your domain, reach out for support
+
+### How it works
+
+When someone visits your domain:
+
+1. Your domain provider checks its DNS records
+
+2. The records point visitors to Create's servers
+
+3. Create routes visitors to your published app
+
+DNS records are like an address book for the internet. They tell browsers where to find your app when someone types in your domain name.
+
+### Setting up your domain
+
+1. [Publish](/create/publish-and-share/publish) your Create app
+
+2. Select "Publish to a custom domain" in the Publish modal
+
+3. Add these DNS records at your domain provider:
+
+```
+Type: A
+Name: @
+Value: 76.76.21.21
+```
+
+```
+Type: CNAME
+Name: www
+Value: cname.vercel-dns.com
+```
+
+**Using a subdomain?** For addresses like `app.your-domain.com`, just add one record:
+
+```
+Type: A
+Name: subdomain-name (e.g., "app")
+Value: 76.76.21.21
+```
+
+### Provider-specific setup
+
+<AccordionGroup>
+  <Accordion title="AWS Route 53">
+    *Follow the instructions below for AWS Route 53*
+
+    **Step 1:** Create a new record
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252FwS1LfV8PAZYYcdy0VPSx%252Fcreate_record.jpeg)
+
+    **Step 2:** Select `A` for the record type and set `76.76.21.21` for the value.
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252Fg3TVDjU2OdFaAeGoQnM5%252Fapex.png)
+
+    **Step 3:** Create another new record like in Step 1
+
+    **Step 4:** Select `CNAME` for the record type, set [`cname.vercel-dns.com`](http://cname.vercel-dns.com/) for the value, and set `www` for the subdomain.
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252FtHza7kV8rMXjfE7JvUJs%252Fwww.png)
+
+    In the end, you should have two additional records like here:
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252F4gzyd4aFkKohKxq0D6Bg%252Fend.png)
+
+    **CAUTION:** There should be ONLY ONE `A` record. If there is already one, please remove the old one.
+
+    **Important:** You may not be able to see your live domain for up to 48 hours, as it takes time for the records to update and become active.
+  </Accordion>
+
+  <Accordion title="GoDaddy">
+    *Follow the instructions below for GoDaddy*
+
+    **Step 1:** Navigate to the Domains sections
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252Fnc54YXMsoq7NMyqvsWw7%252Fwhere.png)
+
+    **Step 2:** Press `Add new record`
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252FNxjFdHAGwulmMzpObhsy%252Fadd_record.png)
+
+    **Step 3:** Add these two records like in the picture:
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252FWLtOK0UXGZE10d2U24Fw%252Fadd_records.png)
+
+    In the end, you should have two new records. It should look like this:
+
+    ![](/images/create/publish-and-share/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhtL7VuGp0gBcXZ6RdKx1%252Fuploads%252FXQWj4uc149fcuSfTsl5G%252Fend%2520%281%29.png)
+
+    **Important:** You may not be able to see your live domain for up to 48 hours, as it takes time for the records to update and become active.
+  </Accordion>
+</AccordionGroup>
+
+### Removing a custom domain
+
+1. Open the Publish modal
+
+2. Click "Remove domain" next to your custom domain
+
+3. Remove the DNS records from your domain provider
+
+### Need help?
+
+Email customers\@create.xyz for support with domain setup.
+
+[PreviousCreate Community](/create/publish-and-share/create-community)[NextAnimations](/create/quick-tips/animations)

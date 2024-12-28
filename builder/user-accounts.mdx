@@ -1,0 +1,213 @@
+---
+title: "User Accounts"
+---
+
+1. [Builder](/create/builder-add-ons)
+
+Let users sign up and sign in to your app
+
+User Accounts add authentication and user management to your app. They handle sign-up, sign-in, and user data storage automatically.
+
+### Why Use User Accounts
+
+User Accounts offer several benefits:
+
+* **Private pages** - Require sign-in to view certain [Pages](/create/builder-add-ons/pages)
+
+* **Protected actions** - Gate [Functions](/create/builder-add-ons/functions) behind authentication
+
+* **Personalization** - Store and show user-specific content in [Databases](/create/builder-add-ons/databases-beta)
+
+* **Grow your users** - Let people sign up and join your community
+
+### Getting Started
+
+Enable User Accounts in two steps:
+
+1. **Enable for Project**:
+
+   * Open Create logo menu
+
+   * Choose "Enable User Accounts"
+
+   * Signup, Signin, Logout pages and a Users database gets created automatically
+
+2. **Protect Content**:
+
+   * Open page/function settings (3-dot menu > Settings > "Require sign in to view")
+
+   * Enable "Require sign in to view"
+
+   * Publish to apply changes
+
+### How Authentication Works
+
+When you enable User Accounts, Create adds:
+
+* **Authentication Pages**:
+
+  * `/account/signin` - Sign in page
+
+  * `/account/signup` - Sign up page
+
+  * `/account/logout` - Logout page
+
+  * Link to these pages directly for custom flows
+
+* **Users Database**:
+
+  * Stores user accounts automatically
+
+  * Built-in fields: email, password (hashed)
+
+  * Add custom fields as needed using [Databases](/create/builder-add-ons/databases-beta)
+
+* **Access Control**:
+
+  * Protected pages redirect to sign in
+
+  * After auth, users return to original page
+
+  * Functions can check user status
+
+  * Link between pages normally - auth handles protection
+
+Create handles auth redirects automatically. Link pages as you normally would - the auth system manages access control.
+
+### How It Works Under The Hood
+
+Create uses JWT (JSON Web Token) authentication to manage user sessions:
+
+* When users sign up or sign in, Create stores a secure cookie in their browser
+
+* This cookie keeps users logged in as they browse your app
+
+* When users visit a protected page or use a protected function, Create checks this cookie
+
+* If no valid cookie exists, Create redirects them to the sign-in page
+
+* To let users log out, add a link to `/account/logout` in your app's signed-in experience
+
+* When users visit the logout page, Create removes the cookie and ends their session
+
+### Real World Example
+
+Let's say you have an AI app with:
+
+* Landing page (at `/`)
+
+* AI homework creator (at `/app`)
+
+To add user accounts:
+
+1. Enable User Accounts for the project
+
+2. Go to `/app` page > 3-dot menu > Settings > "Require account to view"
+
+3. Publish changes
+
+4. Now:
+
+   * `/` remains public
+
+   * `/app` redirects to sign-in
+
+   * After sign-in, users access `/app`
+
+   * Add personalization: "When user is logged in, show their profile in top right and store their AI generations in GenerationsDB with their user ID"
+
+### Using User Data
+
+Access user information in two ways:
+
+1. **Direct References**:
+
+   * Use "signed in user" in prompts
+
+   * Example: "Show current user's email in header"
+
+   * Create handles the code automatically
+
+2. **Database Queries**:
+
+   * Query Users [database](/create/builder-add-ons/databases-beta) like any other database
+
+   * Join with other databases using user ID
+
+   * Store user-specific data in related tables
+
+### Roles and Permissions
+
+Add custom roles to control access:
+
+1. **Add Role Field**:
+
+   * Update Users database schema
+
+   * Add "role" or similar field
+
+   * Set values like "admin", "member"
+
+2. **Check Roles**:
+
+   * Reference roles in prompts
+
+   * Example: "If signed in user is admin, show settings"
+
+   * Create handles the logic
+
+### Testing
+
+Verify your User Accounts setup:
+
+1. Enable auth on a test page
+
+2. Publish changes
+
+3. Open an incognito window
+
+4. Verify redirect to sign-in
+
+5. Create test account
+
+6. Confirm access after auth
+
+### Troubleshooting
+
+If authentication isn't working:
+
+* Verify User Accounts is enabled for project
+
+* Check page/function auth settings
+
+* Review Users database contents
+
+* Test with a fresh account
+
+* Join our Discord for help
+
+### FAQs
+
+#### Q: Can I customize the sign-in page?
+
+Not yet, but it's on our roadmap.
+
+#### Q: Can I add social login (Google, Facebook)?
+
+Coming soon.
+
+#### Q: Can I add fields beyond email?
+
+Yes! Update the Users database or create related databases to store additional user information.
+
+### See Also
+
+* [Databases](/create/builder-add-ons/databases-beta) - Store user data and content
+
+* [Functions](/create/builder-add-ons/functions) - Add custom authentication logic that looks at the UserDB to do different actions
+
+* [Pages](/create/builder-add-ons/pages) - Create protected routes
+
+* [Publishing](/create/publish-and-share/publish) - Deploy your authenticated app
+
+[PreviousDatabases (beta)](/create/builder-add-ons/databases-beta)[NextUploads](/create/builder-add-ons/uploads)

@@ -1,0 +1,119 @@
+---
+title: "Uploads"
+---
+
+1. [Builder](/create/builder-add-ons)
+
+Let users upload files to your app (images, PDFs, documents, audio, videos, etc.)
+
+Uploads let users add files to your app - like images, PDFs, documents, audio, and videos. Build galleries, AI tools that process text or documents, or just let users set profile pictures.
+
+### Why Use Uploads
+
+Uploads enable several capabilities:
+
+* **File sharing** - Let users upload and share files
+
+* **Galleries** - Build collections of images or videos
+
+* **Documents** - Handle PDFs and other documents
+
+* **User specific content** - Allow profile pictures and submissions with [User Accounts](/create/builder-add-ons/user-accounts)
+
+### Adding Uploads
+
+Add uploads to any [Page](/create/builder-add-ons/pages), [Component](/create/builder-add-ons/components), or [Function](/create/builder-add-ons/functions) by prompting Create to handle uploads:
+
+1. **Describe the upload flow**:
+
+   * UI elements (buttons, drag areas)
+
+   * Success/error states
+
+   * What happens after upload
+
+2. **Choose upload method**:
+
+   * File selector
+
+   * Drag and drop
+
+   * URL input
+
+   * Copy/paste
+
+3. **Handle the file**:
+
+   * Store URL in database
+
+   * Display preview
+
+   * Process content
+
+Example prompts:
+
+* "Add an image upload button to the form that shows a preview after its uploaded"
+
+* "Let users drag PDFs to upload and store in /\[Database]"
+
+* "Create a profile picture uploader with cropping. Store the URLs in /\[UsersDB]"
+
+Create will write the code to support uploads based on your prompt. We recommend specificity in how you want to support uploads. Some common details to include:
+
+1. UI around uploads
+
+2. How the app should handle different states (uploads, error, success, etc.)
+
+3. How the app should use the upload
+
+Create automatically:
+
+* Stores files securely
+
+* Returns permanent URLs for the file stored on Create's cloud
+
+* Handles file serving when you use the URL
+
+To save uploads:
+
+* Store URLs in [Databases](/create/builder-add-ons/databases-beta)
+
+* Reference URLs in your app
+
+* Query stored URLs later from the database
+
+Always store upload URLs in a database if you need to access files later. Without storage, URLs exist but are hard to find.
+
+Create offers several integrations to help process uploaded files:
+
+* [File Conversion](/create/builder-add-ons/integrations#file-conversion) - Convert between file formats like PDF, images, and more
+
+* [GPT-4 Vision](/create/builder-add-ons/integrations#gpt-4-vision) - Analyze uploaded images
+
+* [Document Scanner](/create/builder-add-ons/integrations#document-scanner) - Extract text from scanned documents
+
+* [Audio Transcription](/create/builder-add-ons/integrations#audio-transcription) - Convert audio files to text
+
+### Technical Details
+
+**Supported Upload Methods**:
+
+* File upload
+
+* URL import
+
+* Base64 data
+
+* Array buffers
+
+**Considerations**:
+
+* 10MB max file size
+
+* Common web formats supported
+
+* Files stored in Create's cloud
+
+Add file size validation to prevent errors from large uploads. Just prompt Create to show an error if your users upload a larger file size.
+
+[PreviousUser Accounts](/create/builder-add-ons/user-accounts)[NextPublish](/create/publish-and-share/publish)
