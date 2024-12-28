@@ -79,8 +79,15 @@
       "group": "Account",
       "pages": [
         "account/your-profile",
-        "account/subscription",
+        "account/subscriptions",
         "account/credits"
+      ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "support/help",
+        "support/ambassadors"
       ]
     }
   ],
