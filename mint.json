@@ -33,11 +33,15 @@
     "name": "Create",
     "url": "https://create.xyz"
   },
+  "topAnchor": {
+    "name": "Guides",
+    "icon": "book-open-cover"
+  },
   "anchors": [
     {
-      "name": "Docs",
-      "icon": "book-open-cover",
-      "url": "https://docs.create.xyz"
+      "name": "Product updates",
+      "icon": "x-twitter",
+      "url": "https://x.com/create_xyz"
     },
     {
       "name": "Community",
