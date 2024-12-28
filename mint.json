@@ -64,7 +64,7 @@
         "builder/components",
         "builder/style-guides",
         "builder/functions",
-        "builder/databases-beta",
+        "builder/databases",
         "builder/user-accounts",
         "builder/uploads"
       ]
