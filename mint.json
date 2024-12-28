@@ -99,5 +99,8 @@
     "x": "https://x.com/create_xyz",
     "github": "https://github.com/Create-Inc",
     "linkedin": "https://www.linkedin.com/company/createxyz"
+  }, 
+  "metadata": {
+    "og:image": "/images/og.png"
   }
 }
