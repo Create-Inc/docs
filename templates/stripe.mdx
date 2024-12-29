@@ -1,0 +1,136 @@
+---
+title: "Add Stripe to your Create template"
+description: "Set up your Stripe account to start charging for subscriptions in your app."
+---
+
+<Note>
+  Before you begin, you'll need a [Stripe account](https://stripe.com/). Watch this [setup guide](https://www.youtube.com/watch?v=-g3nUV_y648) to help you get started.
+</Note>
+
+## Setup Overview
+
+<CardGroup cols={2}>
+  <Card title="Configure Stripe" icon="gear">
+    Set up your products and pricing in Stripe's dashboard
+  </Card>
+  <Card title="Connect to Create" icon="plug">
+    Add your Stripe keys and webhook configuration to your app
+  </Card>
+</CardGroup>
+
+## Activate Test Mode
+
+<Steps>
+  <Step title="Open Stripe Dashboard">
+    Visit [https://dashboard.stripe.com](https://dashboard.stripe.com)
+  </Step>
+  <Step title="Enable Test Mode">
+    <img src="/images/stripe/stripe-activate-test-mode.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+## Create a Product
+
+<Steps>
+  <Step title="Open Product Catalog">
+    <img src="/images/stripe/stripe-open-product-catalog.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Create Product">
+    <img src="/images/stripe/stripe-create-new-product.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Configure Pricing">
+    Set up recurring pricing for your product
+    <img src="/images/stripe/stripe-set-recurring-pricing.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Set Price">
+    <img src="/images/stripe/stripe-select-price.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Get Price ID">
+    Copy the price ID - you'll need this for Create
+    <img src="/images/stripe/stripe-copy-price-id.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Add to Create">
+    Set the price ID in your Create configuration
+    <img src="/images/stripe/stripe-set-price-id-create.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+## Configure Webhooks
+
+<Steps>
+  <Step title="Find Webhooks">
+    Search for `webhook` in the Stripe dashboard
+    <img src="/images/stripe/stripe-find-webhook-menu.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Create Endpoint">
+    <img src="/images/stripe/stripe-create-webhook.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Set Endpoint URL">
+    <Info>Use the format: `your-app.created.app/api/stripe-webhook`</Info>
+    <img src="/images/stripe/stripe-set-webhook-url.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Get Project ID">
+    <img src="/images/stripe/stripe-get-project-id.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Configure Events">
+    <img src="/images/stripe/stripe-webhook-events-menu.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Select Events">
+    Subscribe to these events:
+    - `customer.subscription.created`
+    - `customer.subscription.updated`
+    
+    <img src="/images/stripe/stripe-select-subscription-events.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Verify Configuration">
+    Your webhook configuration should look like this:
+    <img src="/images/stripe/stripe-webhook-final-form.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Get Webhook Secret">
+    <img src="/images/stripe/stripe-reveal-webhook-secret.png" style={{ borderRadius: '0.5rem' }} />
+    <img src="/images/stripe/stripe-copy-webhook-secret.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Configure Create">
+    Add the webhook secret to your Create configuration
+    <img src="/images/stripe/stripe-set-webhook-secret-create.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+## Add API Keys
+
+<Steps>
+  <Step title="Locate API Keys">
+    <img src="/images/stripe/stripe-find-api-keys.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Get Secret Key">
+    <img src="/images/stripe/stripe-reveal-api-key.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Copy Key">
+    <Warning>Never share or commit your secret key</Warning>
+    <img src="/images/stripe/stripe-copy-api-key.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  
+  <Step title="Add to Create">
+    Set your secret key in Create's configuration
+    <img src="/images/stripe/stripe-set-api-key-create.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+<Note>
+  After completing setup, test your integration using Stripe's test mode before going live.
+</Note>

@@ -146,6 +146,10 @@
       "destination": "/support/ambassadors"
     },
     {
+      "source": "/create/add-stripe-to-your-create-template",
+      "destination": "/templates/stripe"
+    },
+    {
       "source": "/create/builder-add-ons/:slug*",
       "destination": "/builder/:slug*"
     },
