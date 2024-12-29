@@ -97,7 +97,61 @@
     "github": "https://github.com/Create-Inc",
     "linkedin": "https://www.linkedin.com/company/createxyz"
   },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
+  },
   "metadata": {
     "og:image": "/images/og.png"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/create",
+      "destination": "/welcome"
+    },
+    {
+      "source": "/create/getting-started/builder-basics",
+      "destination": "/essentials"
+    },
+    {
+      "source": "/create/getting-started/faq",
+      "destination": "/faq"
+    },
+    {
+      "source": "/create/getting-started/guide-to-prompting",
+      "destination": "/prompting"
+    },
+    {
+      "source": "/create/builder-add-ons/databases-beta",
+      "destination": "/builder/databases"
+    },
+    {
+      "source": "/create/publish-and-share/invite-your-team",
+      "destination": "/publish-and-share/teams"
+    },
+    {
+      "source": "/create/publish-and-share/embed-an-iframe",
+      "destination": "/publish-and-share/embed"
+    },
+    {
+      "source": "/create/publish-and-share/create-community",
+      "destination": "/publish-and-share/community"
+    },
+    {
+      "source": "/create/account/manage-subscription",
+      "destination": "/account/subscriptions"
+    },
+    {
+      "source": "/create/support/ambassador-program",
+      "destination": "/support/ambassadors"
+    },
+    {
+      "source": "/create/builder-add-ons/:slug*",
+      "destination": "/builder/:slug*"
+    },
+    {
+      "source": "/create/:slug*",
+      "destination": "/:slug*"
+    }
+  ]
 }
