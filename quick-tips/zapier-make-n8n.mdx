@@ -1,0 +1,119 @@
+---
+title: "Zapier, Make, n8n, etc."
+description: "Learn how to integrate Create with Zapier, Make.com, n8n, and other automation platforms"
+---
+
+<Note>
+  This guide focuses on Zapier integration, but the same principles apply to other automation tools like Make.com and n8n, or any platform that accepts webhooks.
+</Note>
+
+## Overview
+
+Create can connect to any workflow automation tool that supports webhooks. This guide will show you how to set up a webhook integration wit h Zapier, allowing you to:
+- Send data from Create to other apps
+- Trigger automated workflows
+- Connect with 5,000+ apps in the Zapier ecosystem
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/BJvJHMUXSSM"
+  title="Connect Create to Zapier Tutorial"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+## Step-by-Step Integration
+
+### Create a Zapier Webhook
+
+<Steps>
+  <Step title="Create a New Zap">
+    Go to [Zapier](https://zapier.com/) and click "Create Zap"
+  </Step>
+  <Step title="Select Webhook Trigger">
+    Choose "Webhooks by Zapier" as your trigger app
+    Select "Catch Raw Hook" as the trigger event
+  </Step>
+  <Step title="Copy Webhook URL">
+    Zapier will generate a unique webhook URL - copy this for the next step
+  </Step>
+</Steps>
+
+### Make a Function in Create
+
+<Steps>
+  <Step title="Create a New Function">
+    In your Create project, go to the Functions tab and click "New Function"
+  </Step>
+  <Step title="Prompt">
+    Say you want to send data to Zapier. Create will recognize it and ask you for the webhook URL.
+  </Step>
+  <Step title="Add Webhook URL">
+    Add a new secret called `ZAPIER_WEBHOOK_URL` and paste your Zapier webhook URL
+  </Step>
+  <Step title="Write Your Prompt">
+    Write a prompt that specifies:
+    - What data to collect from the user
+    - When to trigger the webhook
+    - What data to send to Zapier
+    
+    Example prompt:
+    ```
+    Take in name, email, generate message body with /ChatGPT, and then send this data to Zapier using the webhook URL stored in ZAPIER_WEBHOOK_URL
+    ```
+  </Step>
+  <Step title="Test the Connection">
+    Click "Generate" in Create and test your function
+    Check Zapier to confirm the test data was received
+  </Step>
+</Steps>
+
+### Extend in Zapier
+
+<Steps>
+  <Step title="Add Zapier Actions">
+    Add subsequent steps in your Zap to:
+    - Send emails
+    - Update spreadsheets
+    - Create CRM records
+    - And more
+  </Step>
+  <Step title="Turn On Your Zap">
+    Once testing is successful, turn on your Zap
+  </Step>
+</Steps>
+
+### Use your Function in Create
+
+You can now use your function in Create. For example, you can use it in a page, or another function. Just press / to reference it and Create will hook it up. 
+
+You now have an app that can trigger its own workflows in Zapier with custom information. You can use that inforamtion in downstream automations.  
+
+<Tip>
+  For security, always use environment variables or secrets to store webhook URLs, never hardcode them in your functions.
+</Tip>
+
+## Data Format
+
+When sending data to Zapier, Create will automatically format it as JSON. Example payload:
+
+```json 
+{
+"name": "John Doe",
+"email": "john@example.com",
+"timestamp": "2024-03-21T10:30:00Z"
+}
+```
+
+## Additional Resources
+
+<CardGroup>
+  <Card title="Functions" icon="book" href="https://docs.create.xyz/create/builder-add-ons/functions#external-apis">
+    Learn more about Functions
+  </Card>
+  <Card title="Video Tutorial" icon="video" href="https://www.youtube.com/embed/BJvJHMUXSSM">
+    Watch a step-by-step video guide
+  </Card>
+</CardGroup>

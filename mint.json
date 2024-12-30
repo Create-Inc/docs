@@ -80,6 +80,15 @@
       ]
     },
     {
+      "group": "Quick Tips",
+      "pages": [
+        "quick-tips/animations",
+        "quick-tips/format-markdown",
+        "quick-tips/external-apis",
+        "quick-tips/zapier-make-n8n"
+      ]
+    },
+    {
       "group": "Account",
       "pages": [
         "account/your-profile",
@@ -152,6 +161,14 @@
     {
       "source": "/create/setting-up-replicate",
       "destination": "/templates/replicate"
+    },
+    {
+      "source": "/create/quick-tips/connect-to-automation-tools",
+      "destination": "/quick-tips/zapier-make-n8n"
+    },
+    {
+      "source": "/create/quick-tips/connect-to-external-apis",
+      "destination": "/quick-tips/external-apis"
     },
     {
       "source": "/create/builder-add-ons/:slug*",

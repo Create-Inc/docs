@@ -1,65 +1,71 @@
 ---
-title: "Embed an iframe"
+title: 'Embed an iframe'
+description: 'Add your Create app to any website using iframes'
 ---
-
-1. [Publish & Share](/create/publish-and-share)
-
-Add your Create app to any website using iframes
 
 An iframe lets you display your Create app inside other websites - like embedding a YouTube video. This means users can interact with your app without leaving the host website.
 
-### Getting the embed code
+## Getting the embed code
 
 Get your app's embed code in two steps:
 
 1. Open your project and click the **Share** button
-
 2. Select **Embed Project** and copy the iframe HTML code
 
-![](/images/create/publish-and-share/~gitbook/image)
+<img src="/images/embed/embed.gif" alt="Share button location" />
 
-### Adding to WordPress
+## Adding to WordPress
 
 Here's how to add your app to a WordPress.org site:
 
-#### 1. Click "Share" then "Embed Project" inside your Create project
+<Steps>
+  <Step title="Access embed code">
+    Click "Share" then "Embed Project" inside your Create project
+    
+    <img src="/images/embed/embed-code.gif" alt="Selecting embed option" />
+  </Step>
 
-![](/images/create/publish-and-share/~gitbook/image)
+  <Step title="Copy iframe code">
+    <img src="/images/embed/copy-embed.gif" alt="Copying iframe embed code" />
+  </Step>
 
-#### 2. Copy the iframe HTML code
+  <Step title="Add HTML block">
+    Inside your WordPress site, add an HTML block
+    
+    <img src="/images/embed/add-block.gif" alt="Adding HTML block in WordPress" />
+  </Step>
 
-![](/images/create/publish-and-share/~gitbook/image)
+  <Step title="Paste iframe code">
+    <img src="/images/embed/paste-iframe.gif" alt="Pasting iframe code" />
+  </Step>
 
-#### 3. Inside your WordPress site, add an HTML block
+  <Step title="Adjust dimensions">
+    Modify the height and width as needed
+    
+    <img src="/images/embed/adjust-size.gif" alt="Adjusting iframe dimensions" />
+  </Step>
+</Steps>
 
-![](/images/create/publish-and-share/~gitbook/image)
-
-#### 4. Paste in the iframe HTML code
-
-![](/images/create/publish-and-share/~gitbook/image)
-
-#### 5. Adjust the height and width, if needed
-
-![](/images/create/publish-and-share/~gitbook/image)
-
-### Customizing the embed
+## Customizing the embed
 
 You can modify how your app appears:
 
-* Change `width` and `height` in the iframe code
+- Change `width` and `height` in the iframe code
+- Set a custom `title` for accessibility 
+- Add CSS classes for styling
 
-* Set a custom `title` for accessibility
+### Example Code
 
-* Add CSS classes for styling
-
-**Try it yourself!**
-
-Here's a sample embed code to test:
-
+```html
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.create.xyz/app/e19f4e2a-9063-4180-ba9f-7c7028ccd2a3" 
+  title="My Site">
+</iframe>
 ```
-<iframe width="560" height="315" src="<https://www.create.xyz/app/e19f4e2a-9063-4180-ba9f-7c7028ccd2a3>" title="My Site"></iframe>
-```
 
-*Note: if you are working with a* [*wordpress.com*](http://wordpress.com/) *site, you may need to use a* [*plugin*](https://wordpress.com/plugins/iframe) *to get the iframe to display.*
+<Note>
+  If you are working with a wordpress.com site, you may need to use a [plugin](https://wordpress.com/plugins/iframe) to get the iframe to display.
+</Note>
 
-[PreviousInvite your team](/create/publish-and-share/invite-your-team)[NextCreate Community](/create/publish-and-share/create-community)

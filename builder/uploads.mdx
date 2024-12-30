@@ -5,6 +5,15 @@ description: "Let users upload files to your app (images, PDFs, documents, audio
 
 Uploads let users add files to your app - like images, PDFs, documents, audio, and videos. Build galleries, AI tools that process text or documents, or just let users set profile pictures.
 
+<iframe 
+  src="https://twitframe.com/show?url=https://twitter.com/create_xyz/status/1865149581593579572" 
+  width="550" 
+  height="450" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+
+
 ### Why Use Uploads
 
 Uploads enable several capabilities:
@@ -79,8 +88,11 @@ To save uploads:
 
 * Query stored URLs later from the database
 
+<Tip>
 Always store upload URLs in a database if you need to access files later. Without storage, URLs exist but are hard to find.
+</Tip>
 
+<Info>
 Create offers several integrations to help process uploaded files:
 
 * [File Conversion](/create/builder-add-ons/integrations#file-conversion) - Convert between file formats like PDF, images, and more
@@ -90,6 +102,7 @@ Create offers several integrations to help process uploaded files:
 * [Document Scanner](/create/builder-add-ons/integrations#document-scanner) - Extract text from scanned documents
 
 * [Audio Transcription](/create/builder-add-ons/integrations#audio-transcription) - Convert audio files to text
+</Info>
 
 ### Technical Details
 
@@ -111,5 +124,7 @@ Create offers several integrations to help process uploaded files:
 
 * Files stored in Create's cloud
 
+<Info>
 Add file size validation to prevent errors from large uploads. Just prompt Create to show an error if your users upload a larger file size.
+</Info>
 

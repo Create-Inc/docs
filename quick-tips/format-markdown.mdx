@@ -1,15 +1,58 @@
 ---
 title: "Format markdown"
+description: "Learn how to display AI-generated content beautifully using Create's Markdown Renderer"
 ---
 
-1. [QUICK TIPS](/create/quick-tips)
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/2nmTB-Kqm6w"
+  title="Markdown Renderer Tutorial"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 
-When you use AI integrations in Create, like ChatGPT or Claude, the AI models will often output text with [Markdown](https://en.wikipedia.org/wiki/Markdown) formatting. Markdown is an easy-to-read, lightweight markup language that is much simpler than HTML. It indicates which parts of text are headings, have bold or italic style, are bulleted lists, etc.
+## Overview
 
-In Create, you can use our built-in Markdown Renderer to easily display correctly formatted output from AI models. All you have to do is type `/` and select `Markdown Renderer` from the list of integrations and Create will automatically update your project code.
+When using AI integrations like ChatGPT or Claude in Create, the output often includes [Markdown](https://en.wikipedia.org/wiki/Markdown) formatting. Our built-in Markdown Renderer helps you display this content beautifully with minimal effort. Markdown is a lightweight markup language that's much simpler than HTML, making it perfect for indicating headers, lists, bold text, and more.
 
-![](/images/create/quick-tips/~gitbook/image)
+<img src="/images/tips/markdownrenderer.png" />
 
-Here's a YouTube video tutorial as well explaining step-by-step how to use the Markdown Renderer integration:
+## How to Use
 
-[PreviousConnect to external APIs](/create/quick-tips/connect-to-external-apis)[NextYour profile](/create/account/your-profile)
+<Steps>
+  <Step title="Generate Markdown Content">
+    Use any AI integration (like ChatGPT or Claude) and specifically ask it to format its response using markdown. For example:
+    ```
+    Write a blog post about AI and format it using markdown with headers, lists, and emphasis
+    ```
+  </Step>
+
+  <Step title="Add the Markdown Renderer">
+    Type `/` and select `Markdown Renderer`. Tell Create to use it to display your AI-generated content. For example:
+    ```
+    Display the AI's response using the Markdown Renderer
+    ```
+  </Step>
+</Steps>
+
+## Supported Formatting
+
+The Markdown Renderer supports:
+
+* **Headers** (# H1, ## H2, etc.)
+* *Italic* and **bold** text
+* Bulleted and numbered lists
+* [Links](https://create.xyz)
+* Code blocks with syntax highlighting
+* Tables
+* And more!
+
+<Note>
+The Markdown Renderer converts markdown syntax into HTML elements. This means you can style these elements using CSS to customize how your AI-generated content looks. Just tell Create how you want to style specific elements like headers, paragraphs, or lists.
+</Note>
+
+<Tip>
+You can combine the Markdown Renderer with any AI integration to create beautifully formatted content, documentation, or blog posts.
+</Tip>
