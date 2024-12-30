@@ -23,6 +23,9 @@
       "family": "Inter"
     }
   },
+  "modeToggle": {
+    "default": "light"
+  },
   "topbarLinks": [
     {
       "name": "Updates",
