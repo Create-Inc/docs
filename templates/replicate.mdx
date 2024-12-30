@@ -1,0 +1,98 @@
+---
+title: "🖼️ Setting up Replicate"
+description: "Easily set up your Replicate account to start generating images in your app."
+---
+
+<Note>
+  Before you begin, you will need an account on [Github](https://github.com/). You can make one here: [https://github.com/signup](https://github.com/signup)
+</Note>
+
+## Setup Overview
+
+<CardGroup cols={2}>
+  <Card title="Create Account" icon="user">
+    Sign up and configure your Replicate account
+  </Card>
+  <Card title="Configure Billing" icon="credit-card">
+    Set up billing to access Replicate's API
+  </Card>
+  <Card title="Get API Token" icon="key">
+    Generate and save your API token
+  </Card>
+  <Card title="Connect to Create" icon="plug">
+    Add your Replicate token to Create
+  </Card>
+</CardGroup>
+
+## Account Setup
+
+<Steps>
+  <Step title="Visit Replicate">
+    Go to [replicate.com](https://replicate.com/) and click "Get started"
+    <img src="/images/replicate/replicate-get-started.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Sign in with GitHub">
+    Click "Sign in with Github" to continue
+    <img src="/images/replicate/replicate-github-signin.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Authorize Access">
+    Allow Replicate to access your GitHub account
+    <img src="/images/replicate/replicate-authorize.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+## Configure Billing
+
+<Steps>
+  <Step title="Open Account Settings">
+    Navigate to "Account settings" in the menu
+    <img src="/images/replicate/replicate-account-settings.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Access Billing">
+    Click on the "Billing" section
+    <img src="/images/replicate/replicate-billing-menu.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Set Up Payment">
+    Click "Set up billing" to continue
+    <img src="/images/replicate/replicate-setup-billing.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Add Payment Method">
+    Enter your payment information and click "Save card"
+    <img src="/images/replicate/replicate-save-card.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+## Generate API Token
+
+<Steps>
+  <Step title="Access API Tokens">
+    Navigate to "API tokens" in the settings menu
+    <img src="/images/replicate/replicate-api-tokens.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Create New Token">
+    Create a new API token for your Create project
+    <img src="/images/replicate/replicate-create-token.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Copy Token">
+    <Warning>
+      Make sure to copy your token now - you won't be able to see it again!
+    </Warning>
+    <img src="/images/replicate/replicate-copy-token.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+
+  <Step title="Add to Create">
+    Enter and save your API token in Create
+    <img src="/images/replicate/replicate-save-token.png" style={{ borderRadius: '0.5rem' }} />
+  </Step>
+</Steps>
+
+<Note>
+  Remember to keep your API token secure and never share it publicly. If you need to generate a new token, you can revoke the old one from the Replicate dashboard.
+</Note>

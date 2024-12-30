@@ -150,6 +150,10 @@
       "destination": "/templates/stripe"
     },
     {
+      "source": "/create/setting-up-replicate",
+      "destination": "/templates/replicate"
+    },
+    {
       "source": "/create/builder-add-ons/:slug*",
       "destination": "/builder/:slug*"
     },
