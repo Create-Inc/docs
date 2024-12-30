@@ -21,21 +21,84 @@ Add integrations by:
 
 You can add integrations to your [Pages](/builder/pages), [Components](/builder/components), or [Functions](/builder/functions). When you add an integration, you'll see a special chip in your chat. Create adds the integration code to your page/component/function.
 
+<Tip>
+You need to include the integration in your prompt. You'll know it's referenced correctly if you see a chip in your chat.
+</Tip>
+
 <Info>
 Some integrations use credits to run. Learn more about [Credits](/account/credits).
 </Info>
 
 ## AI & LLMs
 
-Build AI apps with our AI integrations. All offer:
+Build powerful AI apps with our integrated models. Each integration comes with support out of box for:
 
-* Streaming responses by default - text appears word by word. You can also tell Create not to stream when you use the integration.
+* **Streaming** - AI-generated text appears word by word, real time. You can tell Create not to stream when you use the integration if you'd rather have it load. 
+* **Flexible Prompting** - Let Create guess the best prompt or specify the exact prompt
+* **Structured Outputs** - Get JSON responses to build dynamic UIs and drive application logic
 
-* Flexible prompting - let Create suggest prompts or specify your own
+Adding AI is simple - just use a slash command, describe how you want to use the AI, and Create handles hooking it up to your app. 
 
-* Structured outputs - get JSON responses to build UIs and logic (see [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs))
+#### Streaming Responses
+By default, responses appear word-by-word as they're generated, creating an engaging real-time experience. This works great for chatbots and interactive experiences.
 
-It just takes a slash command, and Create adds the AI api to your app.
+If you prefer to show a loading spinner and display the complete response at once, simply tell Create "don't stream the response" in your prompt. This is useful for:
+- Applications that process the full response
+- UIs that need to wait for complete data
+- Situations where immediate partial results aren't helpful
+
+#### Prompting
+Create offers multiple ways to handle AI prompts:
+
+1. **Basic Integration**
+   - Just include the AI integration (e.g. `/[ChatGPT]`) in your message
+   - Create will guess an optimal prompt based on your app's context
+   
+2. **Custom Prompts**
+   - Specify exactly what you want: "Use /[ChatGPT] with prompt: 'Analyze this text for tone'"
+   - Control the exact behavior of the AI
+
+3. **Dynamic Variables**
+   - Use `[brackets]` for dynamic values
+   - Example: "Take in a subject line from the user. Then use /[ChatGPT] with prompt: 'Generate a concise email for [subject line]'"
+   - Create handles all the code to pass variables to your prompts. You can chain multiple variables
+
+4. **Prompt Optimization**
+   - Let Create help: "Optimize the prompt for /[ChatGPT]. I want to [your goals]"
+   - Create will craft an effective prompt for your AI integration
+
+#### Structured Outputs
+While AI typically returns raw text, you can request JSON responses for more structured data handling.
+
+**Common Use Cases:**
+1. **Building UIs**   
+
+```javascript
+   // Example: "Generate a recipe as JSON and show UI for each step"
+   {
+     "title": "Chocolate Cake",
+     "steps": [
+       {"step": 1, "instruction": "Preheat oven..."},
+       {"step": 2, "instruction": "Mix ingredients..."}
+     ]
+   }   
+```
+
+2. **Driving Logic**   
+```javascript
+   // Example: "Analyze text sentiment as JSON"
+   {
+     "sentiment": "positive",
+     "score": 0.8,
+     "key_phrases": ["excellent service", "highly recommend"]
+   }   ```
+```
+
+**Important Notes:**
+- JSON responses automatically disable streaming
+- Remember to handle loading states
+- Great for when you need to process or display data programmatically
+- See [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) for more examples
 
 ### ChatGPT
 
