@@ -118,10 +118,6 @@
   },
   "redirects": [
     {
-      "source": "/create",
-      "destination": "/welcome"
-    },
-    {
       "source": "/create/getting-started/builder-basics",
       "destination": "/essentials"
     },
@@ -180,6 +176,10 @@
     {
       "source": "/create/:slug*",
       "destination": "/:slug*"
+    },
+    {
+      "source": "/create",
+      "destination": "/welcome"
     }
   ]
 }
