@@ -47,6 +47,48 @@ You can change what level of detail you want to work on:
 
 * When you select the **canvas**, messages can modify multiple elements at once
 
+## Generations 
+
+When you send a message, Create uses your message, message history, and the app's code history to generate the code for a new version.
+
+When generating, you'll see the **code stream** or a **building icon**. When it's done, you can play with the app in **Demo mode**.
+
+<Tip>
+[Pro members](https://create.xyz/pricing) get better generations - Create uses more history and context to make smarter changes.
+</Tip>
+
+<Tip>
+Read our [guide to prompting](/prompting) to learn how to write clear messages that get the results you want.
+</Tip>
+
+### Project-wide vs Single Element
+
+You can generate changes at two levels:
+
+**Project-wide generation**
+* Tap the **project name** in project selector or tap on **canvas**
+* Messages apply to entire project
+* Create can edit across multiple elements
+* Create can add new [**Pages**](/builder/pages), [**Components**](/builder/components), [**Functions**](/builder/functions)
+* Good for:
+  * Building many elements quickly
+  * Maintaining consistent styles
+  * Features that span elements (**navigation**, [**databases**](/builder/databases))
+
+**Single element generation**
+* Tap **element name** in project selector or **select element** on canvas
+* Messages only update that specific element
+* Changes confined to selected [**Page**](/builder/pages), [**Component**](/builder/components), or [**Function**](/builder/functions)
+* Good for:
+  * Making targeted changes with more control
+  * Refining specific features
+  * Debugging
+
+<Tip>
+Switch between **project** and **element** level as needed. Start broad with project-wide changes, then drill down to specific elements for fine-tuning.
+</Tip>
+
+
 ## Version history
 
 As you chat with Create, it saves your version history automatically.
@@ -87,7 +129,7 @@ You can quickly switch between different modes to work on your app. Learn more a
 
 Add new elements to your project through:
 
-* Tapping the **top left Logo menu**
+* Tapping the **top left Logo menu**. From here make new [Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions).
 
 * `/` **commands** in the chat. See our guide on [integrations](/builder/integrations)
 
