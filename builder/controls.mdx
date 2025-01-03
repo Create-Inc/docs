@@ -7,7 +7,7 @@ description: "How to use the Create builder"
   <img src="/images/builder.png" />
 </Frame>
 
-### Chat
+## Chat
 
 You chat with Create to build your app. Tell it what to build using text or images:
 
@@ -21,13 +21,13 @@ You chat with Create to build your app. Tell it what to build using text or imag
 
 * When you select a **specific element**, messages update only that element
 
-* When you select the *project name** in the **element selector** or the **canvas**, messages can modify multiple elements at once
+* When you select the **project name** in the [**Project Selector**](/builder/controls#project-selector) or the **canvas**, messages can modify multiple elements at once
 
 <Info>
 Learn how to write effective prompts in our [Guide to Prompting](/prompting).
 </Info>
 
-### `/` Commands
+## Commands
 
 * Type `/` in the chat to open the add-ons menu
 
@@ -37,39 +37,77 @@ Learn how to write effective prompts in our [Guide to Prompting](/prompting).
 
 * Send your message to apply the command
 
-### Top Navigation
+## Controls
 
-Key controls from left to right:
+Key controls in the top navigation from left to right:
 
 * **Logo Menu**: Create new elements ([Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions), etc.)
-
-* **Element Selector**: Rename the project/element, jump between different elements in your project, change the generation level
-
-* **3 Dot Menu**: Access element settings
-
-* **Mode Switcher**: Toggle between Demo, Select, and Code modes
-
-* **View Switcher**: Choose between Canvas and Focused views
-
-* **Responsive Preview**: Test responsive design (Desktop/Mobile)
-
+* **Project Selector**: Rename the project/element, jump between different elements in your project, change the [generation level](#project-wide-vs-single-element-generation)
+* **Modes**: Toggle between [Demo](#demo-mode), [Select](#select-mode), and [Code](#code-mode) modes
+* **Views**: Switch between [Canvas and Focused views](#canvas-vs-focused-views)
+* **Responsive**: Test responsive design (Desktop/Mobile)
 * **Privacy**: Control access and team settings
+* **Invite**: Add collaborators to your project
+* **Publish**: Launch your app live
 
-* [**Invite**](/publish-and-share/teams): Add collaborators to your project
+### Logo Menu
+Create new elements ([Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions), etc.)
 
-* [**Publish**](/publish-and-share/publish): Launch your app live
+<Frame caption="Logo Menu - Create new elements like Pages, Components, and Functions">
+  <img src="https://ucarecdn.com/e5bb6e1c-ae74-4162-8177-743f25b6cf0e/" />
+</Frame>
 
-### Project-wide vs Single Element Generation
+### Project Selector
+Rename the project/element, jump between different elements in your project, change the [generation level](#project-wide-vs-single-element-generation)
+
+<Frame caption="Switch between elements. Change the generation level for project-wide or single element updates">
+  <img src="https://ucarecdn.com/31edd5db-c58a-493b-b497-22bec7c732ea/" />
+</Frame>
+
+<Frame caption="Rename the project or elements">
+  <img src="https://ucarecdn.com/a15745a2-08e0-4f33-abeb-718e5184eecd/" />
+</Frame>
+
+### 3 Dot Menu
+Access element specific settings
+
+<Frame caption="Access element specific settings">
+  <img src="https://ucarecdn.com/362b8822-8897-497f-abb9-f5920ba8d913/  " />
+</Frame>
+
+### Mode Switcher
+Toggle between [Demo](#demo-mode), [Select](#select-mode), and [Code](#code-mode) modes
+
+### View Switcher
+Choose between [Canvas and Focused views](#views)
+
+<Frame caption="Switch between Canvas and Focused. Tap on canvas for project-wide generation">
+  <img src="https://ucarecdn.com/97152048-ddac-4cbf-8f7e-7be09667f262/" />
+</Frame>
+
+### Responsive Preview
+Test responsive design (Desktop/Mobile)
+
+### Privacy Settings
+Control access and team settings
+
+### Invite
+Add collaborators to your project
+
+### Publish
+Launch your app live. Learn more about [Publishing](/publish-and-share/publish).
+
+## Generations
 
 Control the scope of Create's changes by selecting different elements:
 
-* **Project-wide generation**:
-  * Select the **project name** in element selector or tap the **canvas**
+* **Project**:
+  * Select the **project name** in [**Project Selector**](/builder/controls#project-selector) or tap the **canvas**
   * Create can modify multiple elements at once
   * Can add new [Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions) as needed
   * Best for building features that span elements
 
-* **Single element generation**:
+* **Element**:
   * Select a specific **element name** or tap it on the **canvas**
   * Changes confined to just that [Page](/builder/pages), [Component](/builder/components), or [Function](/builder/functions)
   * Best for focused updates and refinements to each element
@@ -78,63 +116,49 @@ Control the scope of Create's changes by selecting different elements:
 See our [Guide to Prompting](/prompting#project-wide-vs-single-element) for level-specific prompting tips.
 </Tip>
 
-### Demo, Select, and Code
+## Modes
 
 Switch between three modes as you build:
 
-* **Demo mode**:
+* **Demo**: Test your app
+* **Select**: Select elements for specific updates
+* **Code**: View and edit code
 
-  * Test your app as users will experience it
+### Demo
+Test your app as users will experience it:
+* Fill forms and trigger interactions
+* See real-time integration updates
+* Perfect for testing flows and debugging
 
-  * Fill forms and trigger interactions
+### Select
+Make updates to specific elements:
+* Tap elements to make updates
+* Create reusable [components](/builder/components)
+* Add links between [pages](/builder/pages)
+* Modify properties and styling with direct commands
 
-  * See real-time integration updates
+### Code
+View and edit code directly:
+* Make precise adjustments
+* Add custom logic
+* Export the code as a React/Next.js project
 
-  * Perfect for testing flows and debugging
-
-* **Select mode**:
-
-  * Tap elements to make updates
-
-  * Create reusable [components](/builder/components)
-
-  * Add links between [pages](/builder/pages)
-
-  * Modify properties and styling with direct commands
-
-* **Code mode**:
-
-  * View and edit code directly
-
-  * Make precise adjustments
-
-  * Add custom logic
-
-  * Export the code as a React/Next.js project
-
-### Canvas vs. Focused views
+## Views
 
 Toggle between two views using the collapse icon:
 
-* **Canvas view**:
+### Canvas
+See multiple elements on an infinite canvas:
+* Get a bird's eye view of your project
+* Drag and arrange elements freely
+* Generate across the project
 
-  * See multiple elements on an infinite canvas
+### Focused
+Work one element at a time:
+* Fix the element's position, which helps you test scroll
+* Switch elements using [**Project Selector**](/builder/controls#project-selector)
 
-  * Get a bird's eye view of your project
-
-  * Drag and arrange elements freely
-
-  * Generate across the project
-
-* **Focused view**:
-
-  * Work one element at a time
-
-  * Fix the element's position, which helps you test scroll
-
-  * Switch elements using project selector
-
-### Version History
+## Version History
 
 Keep track of changes and revert to previous versions:
 
@@ -155,8 +179,7 @@ Keep track of changes and revert to previous versions:
   * Published versions are labeled
   * Restore any version 
 
-
-### Elements
+## Elements
 
 When you select an element in Select mode:
 
@@ -168,7 +191,7 @@ When you select an element in Select mode:
 
 <img src="/images/page-menu.png" />
 
-### Projects
+## Projects
 
 **Rename, Duplicate or Delete** projects from the dashboard (create.xyz/dashboard)
 
