@@ -102,6 +102,10 @@
     {
       "group": "Support",
       "pages": ["support/help", "support/ambassadors"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["guides/pilot-training-portal"]
     }
   ],
   "footerSocials": {
