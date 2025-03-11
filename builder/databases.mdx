@@ -380,6 +380,27 @@ If data isn't saving when you use your app, there are 3 common failure points to
   For any errors you encounter, you can paste them directly into Create's chat. It often recognizes specific error patterns and knows how to fix them.
 </Tip>
 
+## Database Management Tools
+
+### Database Resets
+
+You can reset your development (builder) database schema to match the state of your published database. This is helpful if you've made changes to your database in the builder that can't be safely applied to your published database.
+
+<Frame caption="The database reset button is located in the top right corner of the database viewer in demo mode">
+  <img src="/images/databases/dbreset.png" />
+</Frame>
+
+**When to use database resets:**
+* When you've made schema changes that conflict with your published database
+* When you want to start fresh with your development database
+* When you're stuck with migration conflicts during publishing
+
+**How to reset your database:**
+1. Go to the database viewer in demo mode
+2. Click the reset button in the top right corner
+
+**Important:** This will delete ALL data in your builder database. Your published database will remain untouched.
+
 ## FAQ
 
 <AccordionGroup>
@@ -405,6 +426,14 @@ If data isn't saving when you use your app, there are 3 common failure points to
 
   <Accordion title="Can I write custom queries?">
     Create handles making queries to your database automatically. For custom queries, create a [Function](/builder/functions) and describe what you need. You can then use your Function.  Or use the built in SQL editor in the database viewer.
+  </Accordion>
+
+  <Accordion title="How do I reset my development database?">
+    You can reset your development (builder) database schema to match the state of your published database. This is helpful if you've made changes to your database in the builder that can't be safely applied to your published database. To reset your database, go to the database viewer in demo mode and click the reset button in the top right corner. **Note:** This will delete ALL data in your builder database. Your published database will remain untouched.
+  </Accordion>
+
+  <Accordion title="How do I convert a V1 database to V2?">
+    We now support converting legacy V1 databases to the new V2 format. When you convert: 1) A new V2 database is created for you, 2) Your data is migrated from V1 to V2, 3) A function is created in your project to access the data, 4) Your apps will automatically start using the new data store. To convert your database, go to your V1 database at www.create.xyz/database/[DATABASE_ID] and click the conversion option in the top right dropdown menu. After conversion, you can use the new database like any other V2 database in your project.
   </Accordion>
 
   <Accordion title="I have a legacy database from an app built prior to February 2025" defaultOpen={false}>
