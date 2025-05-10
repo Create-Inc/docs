@@ -1,0 +1,210 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Create",
+  "colors": {
+    "primary": "#7C89FF",
+    "light": "#6171FF",
+    "dark": "#4C5BD2"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "anchors": [
+      {
+        "anchor": "Guides",
+        "icon": "book-open-cover",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "welcome",
+              "essentials",
+              "prompting",
+              "faq"
+            ]
+          },
+          {
+            "group": "Builder",
+            "pages": [
+              "builder/overview",
+              "builder/controls",
+              "builder/pages",
+              "builder/integrations",
+              "builder/components",
+              "builder/style-guides",
+              "builder/functions",
+              "builder/databases",
+              "builder/user-accounts",
+              "builder/uploads",
+              "stripe",
+              "builder/mobile"
+            ]
+          },
+          {
+            "group": "Publish & Share",
+            "pages": [
+              "publish-and-share/publish",
+              "publish-and-share/custom-domains",
+              "publish-and-share/embed",
+              "publish-and-share/teams",
+              "publish-and-share/community"
+            ]
+          },
+          {
+            "group": "Quick Tips",
+            "pages": [
+              "quick-tips/animations",
+              "quick-tips/format-markdown",
+              "quick-tips/external-apis",
+              "quick-tips/zapier-make-n8n"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/your-profile",
+              "account/subscriptions",
+              "account/credits"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "support/help",
+              "support/ambassadors"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/pilot-training-portal"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Product updates",
+          "href": "https://x.com/create_xyz",
+          "icon": "x-twitter"
+        },
+        {
+          "anchor": "Community",
+          "href": "https://create.xyz/discord",
+          "icon": "discord"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Updates",
+        "href": "https://x.com/create_xyz"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Create",
+      "href": "https://create.xyz"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/create_xyz",
+      "github": "https://github.com/Create-Inc",
+      "linkedin": "https://www.linkedin.com/company/createxyz"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Instrument Sans"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/create/getting-started/builder-basics",
+      "destination": "/essentials"
+    },
+    {
+      "source": "/create/getting-started/faq",
+      "destination": "/faq"
+    },
+    {
+      "source": "/create/getting-started/guide-to-prompting",
+      "destination": "/prompting"
+    },
+    {
+      "source": "/create/builder-add-ons/databases-beta",
+      "destination": "/builder/databases"
+    },
+    {
+      "source": "/create/publish-and-share/invite-your-team",
+      "destination": "/publish-and-share/teams"
+    },
+    {
+      "source": "/create/publish-and-share/embed-an-iframe",
+      "destination": "/publish-and-share/embed"
+    },
+    {
+      "source": "/create/publish-and-share/create-community",
+      "destination": "/publish-and-share/community"
+    },
+    {
+      "source": "/create/account/manage-subscription",
+      "destination": "/account/subscriptions"
+    },
+    {
+      "source": "/create/support/ambassador-program",
+      "destination": "/support/ambassadors"
+    },
+    {
+      "source": "/create/add-stripe-to-your-create-template",
+      "destination": "/templates/stripe"
+    },
+    {
+      "source": "/create/setting-up-replicate",
+      "destination": "/templates/replicate"
+    },
+    {
+      "source": "/create/quick-tips/connect-to-automation-tools",
+      "destination": "/quick-tips/zapier-make-n8n"
+    },
+    {
+      "source": "/create/quick-tips/connect-to-external-apis",
+      "destination": "/quick-tips/external-apis"
+    },
+    {
+      "source": "/builder/databases-v2",
+      "destination": "/builder/databases"
+    },
+    {
+      "source": "/builder/user-accounts-v2",
+      "destination": "/builder/user-accounts"
+    },
+    {
+      "source": "/create/builder-add-ons/:slug*",
+      "destination": "/builder/:slug*"
+    },
+    {
+      "source": "/create/:slug*",
+      "destination": "/:slug*"
+    },
+    {
+      "source": "/create",
+      "destination": "/welcome"
+    }
+  ]
+}
