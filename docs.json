@@ -137,6 +137,17 @@
     "options": ["copy", "view", "chatgpt", "claude"]
   },
   "redirects": [
+    { "source": "/controls", "destination": "/builder/controls" },
+    { "source": "/pages", "destination": "/builder/pages" },
+    { "source": "/integrations", "destination": "/builder/integrations" },
+    { "source": "/components", "destination": "/builder/components" },
+    { "source": "/functions", "destination": "/builder/functions" },
+    { "source": "/databases", "destination": "/builder/databases" },
+    { "source": "/auth", "destination": "/builder/user-accounts" },
+    { "source": "/mobile", "destination": "/builder/mobile" },
+    { "source": "/credits", "destination": "/account/credits" },
+    { "source": "/publish", "destination": "/publish-and-share/publish" },
+    { "source": "/custom-domains", "destination": "/publish-and-share/custom-domains" },
     {
       "source": "/create/getting-started/builder-basics",
       "destination": "/essentials"
