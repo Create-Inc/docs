@@ -133,6 +133,9 @@
       "family": "Inter"
     }
   },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
+  },
   "redirects": [
     {
       "source": "/create/getting-started/builder-basics",
