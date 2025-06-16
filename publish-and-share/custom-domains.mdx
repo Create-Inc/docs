@@ -2,30 +2,27 @@
 title: "Custom Domains"
 ---
 
+
 Add your own domain to any Create site app
 
 <Frame caption="Custom domain configuration in the Publish modal">
-  <img src="/images/domains/modal.png" />
+  ![](/images/domains/modal.png)
 </Frame>
 
 ## What is a custom domain?
 
 A custom domain lets you use your own web address (like `yourapp.com`) instead of the default `created.app` address. You'll need to:
 
-* Own a domain (purchase one from providers like GoDaddy if you don't have one)
-
-* Have a Create Pro subscription ([upgrade here](https://create.xyz/pricing))
-
-* Have an app ready to publish
+- Own a domain (purchase one from providers like GoDaddy if you don't have one)
+- Have a Create Pro subscription ([upgrade here](https://create.xyz/pricing))
+- Have an app ready to publish
 
 <Note>
   **Important timing notes:**
 
-  * DNS changes can take up to 48 hours to take effect
-
-  * During this time, your domain might not work or might show old content
-
-  * If it's been 48 hours since you'd added records and published your domain, reach out for support
+  - DNS changes can take up to 48 hours to take effect
+  - During this time, your domain might not work or might show old content
+  - If it's been 48 hours since you'd added records and published your domain, reach out for support
 </Note>
 
 ## How it works
@@ -36,11 +33,9 @@ When someone visits your domain:
   <Step title="DNS Lookup">
     Your domain provider checks its DNS records
   </Step>
-
   <Step title="Routing">
     The records point visitors to Create's servers
   </Step>
-
   <Step title="Delivery">
     Create routes visitors to your published app
   </Step>
@@ -54,13 +49,11 @@ DNS records are like an address book for the internet. They tell browsers where 
   <Step title="Publish your app">
     [Publish](/publish-and-share/publish) your Create app
   </Step>
-
   <Step title="Configure domain">
-    &#x20;Select "Publish to a custom domain" in the Publish modal
+     Select "Publish to a custom domain" in the Publish modal
   </Step>
-
   <Step title="Add DNS records within your hosting control panel from your provider">
-    Add these DNS records ***at your domain provide***&#x72;:&#x20;
+    Add these DNS records **_at your domain provide_**r: 
 
     ```
     Type: A
@@ -95,75 +88,63 @@ DNS records are like an address book for the internet. They tell browsers where 
     <Steps>
       <Step title="Create a new record">
         <Frame>
-          <img src="/images/domains/aws-create.png" />
+          ![](/images/domains/aws-create.png)
         </Frame>
       </Step>
-
       <Step title="Configure A record">
         Select `A` for the record type and set `76.76.21.21` for the value.
 
         <Frame>
-          <img src="/images/domains/aws-apex.png" />
+          ![](/images/domains/aws-apex.png)
         </Frame>
       </Step>
-
-      <Step>Create another record like in Step 1</Step>
-
       <Step title="Add CNAME record">
         Create another record with:
 
-        * Type: `CNAME`
-
-        * Value: `cname.vercel-dns.com`
-
-        * Subdomain: `www`
+        - Type: `CNAME`
+        - Value: `cname.vercel-dns.com`
+        - Subdomain: `www`
 
         <Frame>
-          <img src="/images/domains/aws-www.png" />
+          ![](/images/domains/aws-www.png)
         </Frame>
       </Step>
     </Steps>
-
     Your final configuration should look like this:
 
     <Frame>
-      <img src="/images/domains/aws-final.png" />
+      ![](/images/domains/aws-final.png)
     </Frame>
-
     <Warning>
       There should be ONLY ONE `A` record. If there is already one, please remove the old one.
     </Warning>
   </Accordion>
-
   <Accordion title="GoDaddy">
     Follow these steps to configure your domain in GoDaddy:
 
     <Steps>
       <Step title="Navigate to Domains">
         <Frame>
-          <img src="/images/domains/godaddy-domains.png" />
+          ![](/images/domains/godaddy-domains.png)
         </Frame>
       </Step>
-
       <Step title="Add new record">
         <Frame>
-          <img src="/images/domains/godaddy-add.png" />
+          ![](/images/domains/godaddy-add.png)
         </Frame>
       </Step>
-
       <Step title="Configure records">
         Add both the A and CNAME records as shown:
 
         <Frame>
-          <img src="/images/domains/godaddy-records.png" />
+          ![](/images/domains/godaddy-records.png)
         </Frame>
       </Step>
     </Steps>
-
     Your final configuration should look like this:
 
     <Frame>
-      <img src="/images/domains/godaddy-final.png" />
+      ![](/images/domains/godaddy-final.png)
     </Frame>
   </Accordion>
 </AccordionGroup>
@@ -174,11 +155,9 @@ DNS records are like an address book for the internet. They tell browsers where 
   <Step title="Open Publish modal">
     Access the Publish settings for your app
   </Step>
-
   <Step title="Remove domain">
     Click "Remove domain" next to your custom domain
   </Step>
-
   <Step title="Clean up DNS">
     Remove the DNS records from your domain provider
   </Step>
