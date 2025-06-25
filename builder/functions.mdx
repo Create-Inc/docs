@@ -8,51 +8,37 @@ Functions let you build powerful backend logic by turning your words into code. 
 
 Functions offer several key benefits:
 
-* **Turn words into logic** - Describe what you want in plain language and Create generates the code
-
-* **Separate UI from Logic** - Keep pages focused on presentation while Functions handle powerful operations
-
-* **Test in Isolation** - Debug and perfect logic independently from your UI
-
-* **Reuseable** - Use Functions across pages and components once they're working
-
-* **External APIs** - Functions can connect securely to thousands of APIs using [Secrets](#secrets)
-
-* **Composeable** - Build powerful features by combining Functions with [Integrations](/builder/integrations), [Databases](/builder/databases), and other Functions
+- **Turn words into logic** - Describe what you want in plain language and Create generates the code
+- **Separate UI from Logic** - Keep pages focused on presentation while Functions handle powerful operations
+- **Test in Isolation** - Debug and perfect logic independently from your UI
+- **Reuseable** - Use Functions across pages and components once they're working
+- **External APIs** - Functions can connect securely to thousands of APIs using [Secrets](#secrets)
+- **Composeable** - Build powerful features by combining Functions with [Integrations](/builder/integrations), [Databases](/builder/databases), and other Functions
 
 For example, imagine building an app that analyzes documents with AI:
 
 Without Functions, you would need to handle everything in one place:
 
-* Upload interface for PDFs
-
-* Code to display the document
-
-* AI analysis of images
-
-* AI text summarization
-
-* Error messages
-
-* Loading screens
+- Upload interface for PDFs
+- Code to display the document
+- AI analysis of images
+- AI text summarization
+- Error messages
+- Loading screens
 
 With Functions, you can split this into simpler parts:
 
 Page:
 
-* A clean upload interface
-
-* Document display
-
-* A button that calls your analysis Function
+- A clean upload interface
+- Document display
+- A button that calls your analysis Function
 
 Function:
 
-* AI image analysis
-
-* AI text summarization
-
-* Error handling
+- AI image analysis
+- AI text summarization
+- Error handling
 
 This separation makes your app easier to build, test, and maintain.
 
@@ -60,89 +46,71 @@ This separation makes your app easier to build, test, and maintain.
 
 Create Functions in several ways:
 
-* **Logo Menu** > New Function
-
-* Press `option-F` (or `alt-F` on Windows)
-
-* Type `/` in chat > Create Function
+- **Logo Menu** \> New Function
+- Press `option-F` (or `alt-F` on Windows)
+- Type `/` in chat \> Create Function
 
 <Frame caption="Creating a new Function">
-  <img src="/images/functions/new.gif" />
+  ![](/images/functions/new.gif)
 </Frame>
 
 Describe what you want the Function to do:
 
-* What inputs it needs
-
-* What logic it should perform
-
-* What outputs it should return
+- What inputs it needs
+- What logic it should perform
+- What outputs it should return
 
 Create generates:
 
-* A flow diagram showing the Function's logic
-
-* The underlying serverless code (viewable in the "Code" tab)
-
-* Input/output interfaces
+- A flow diagram showing the Function's logic
+- The underlying serverless code (viewable in the "Code" tab)
+- Input/output interfaces
 
 ## Making Functions that Work
 
 When building Functions:
 
-* For external APIs, find their documentation first. You can paste API endpoint URLs directly into the Function chat - Create will analyze the screenshot and write the code.
-
-* If you get test errors, paste the error message back into your Function definition. Create often knows how to fix the specific issue.
+- For external APIs, find their documentation first. You can paste API endpoint URLs directly into the Function chat - Create will analyze the screenshot and write the code.
+- If you get test errors, paste the error message back into your Function definition. Create often knows how to fix the specific issue.
 
 ## Using Integrations, Databases, and Other Functions
 
 Make your Functions more powerful by combining them with:
 
-* [Integrations](/builder/integrations) - Add AI capabilities and other features
-
-* [Databases](/builder/databases) - Store and retrieve data
-
-* Other Functions - Chain multiple Functions together
+- [Integrations](/builder/integrations) - Add AI capabilities and other features
+- [Databases](/builder/databases) - Store and retrieve data
+- Other Functions - Chain multiple Functions together
 
 To use these in your Function:
 
 1. Type `/` or open the Add-ons menu
-
 2. Select the Integration, Database, or Function
-
 3. Describe how you want to use it
 
 <Frame caption="Using an integration in a Function">
-  <img src="/images/functions/use-integration.gif" />
+  ![](/images/functions/use-integration.gif)
 </Frame>
 
 For example, you could build a Function that:
 
-* Uses ChatGPT to analyze text
-
-* Stores results in a database
-
-* Calls another Function to notify users
+- Uses ChatGPT to analyze text
+- Stores results in a database
+- Calls another Function to notify users
 
 Create handles connecting everything together based on your description. If you need specific behavior, add more details to your prompt about how you want the pieces to interact.
 
 ## Testing Functions
 
-Every Function has a full test runner available in the 3-dot menu > Run Test tab.
+Every Function has a full test runner available by clicking on the three dot menu to the far right of the function page itself
 
-<Frame caption="Accessing the test runner">
-  <img src="/images/functions/test-runner.gif" />
-</Frame>
+![image.png](/images/image.png)
 
 Use it to:
 
-* **Sample Inputs** - Enter test data as Form or JSON
-
-* **Run Tests** - Execute the Function with your inputs
-
-* **View Results** - See outputs or error messages
-
-* **Debug** - Use error descriptions to fix issues. You can often just paste the error description into your prompt to fix it.
+- **Sample Inputs** - Enter test data as Form or JSON
+- **Run Tests** - Execute the Function with your inputs
+- **View Results** - See outputs or error messages
+- **Debug** - Use error descriptions to fix issues. You can often just paste the error description into your prompt to fix it.
 
 ![](/images/functions/testing.gif)
 
@@ -154,34 +122,27 @@ Use it to:
 
 Add Functions to pages, components, or other Functions:
 
-* Type `/` in chat
-
-* Select your Function
-
-* Describe how you want to use it
+- Type `/` in chat
+- Select your Function
+- Describe how you want to use it
 
 <Frame caption="Using a Function">
-  <img src="/images/functions/use-in-page.gif" />
+  ![](/images/functions/use-in-page.gif)
 </Frame>
 
 Create handles:
 
-* Connecting inputs/outputs
-
-* Error states
-
-* Loading indicators
-
-* UI integration
+- Connecting inputs/outputs
+- Error states
+- Loading indicators
+- UI integration
 
 ## Updating Functions
 
 After changing a Function:
 
 1. Find where you integrated it
-
 2. Click "Update" next to the integration
-
 3. Create will refresh with latest changes
 
 <Info>
@@ -193,37 +154,31 @@ After changing a Function:
 Functions can connect to any external API. To use an API:
 
 1. Store authentication details (API keys, tokens) as [Secrets](#secrets)
-
 2. Tell Create which API to use - it will handle the integration
-
 3. Test carefully since calls hit live APIs
 
 Popular APIs and where to find credentials:
 
-* **Stripe**: [How to get your API Key](https://docs.stripe.com/keys)
-
-* **GitHub**: [How to get your Personal Access Token](https://github.com/settings/tokens)
-
-* **Exa**: [How to get your API Key](https://docs.exa.ai/reference/getting-started)
-
-* **Twilio**: [How to get your API Key](https://www.twilio.com/docs/iam/api-keys)
-
-* **Sendgrid**: [How to get your API Key](https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys)
-
-* **MailGun**: [How to get your API Key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials)
-
-* **HubSpot**: [How to get your API key](https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key)
+- **Stripe**: [How to get your API Key](https://docs.stripe.com/keys)
+- **GitHub**: [How to get your Personal Access Token](https://github.com/settings/tokens)
+- **Exa**: [How to get your API Key](https://docs.exa.ai/reference/getting-started)
+- **Twilio**: [How to get your API Key](https://www.twilio.com/docs/iam/api-keys)
+- **Sendgrid**: [How to get your API Key](https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys)
+- **MailGun**: [How to get your API Key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials)
+- **HubSpot**: [How to get your API key](https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key)
 
 Here is an in-depth YouTube video tutorial on how to connect to an external API, using the [Exa AI Search API](https://exa.ai/):
 
 <div className="relative aspect-video">
-  <iframe src="https://www.youtube.com/embed/Le_b7AORg-A" title="Create Tutorial: Connecting to External APIs" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+<iframe src="https://www.youtube.com/embed/Le_b7AORg-A" title="Create Tutorial: Connecting to External APIs" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+
 </div>
 
 You can also use Zapier, Make, and other platforms that connect to APIs by using their "webhook" triggers. Here's a YouTube video with the steps:
 
 <div className="relative aspect-video">
-  <iframe src="https://www.youtube.com/embed/BJvJHMUXSSM" title="How to make a tool that uses Zapier in Create" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+<iframe src="https://www.youtube.com/embed/BJvJHMUXSSM" title="How to make a tool that uses Zapier in Create" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+
 </div>
 
 ## Secrets
@@ -233,11 +188,8 @@ Secrets securely store sensitive data like API keys and passwords. They're avail
 To add a Secret:
 
 1. Open the "Secrets" panel from the 3-dot menu at the top of chat in any Function
-
-2. Click "+ Add a new secret"
-
+2. Click "\+ Add a new secret"
 3. Name it clearly (e.g. "Stripe API Key")
-
 4. Enter the secret value
 
 Create automatically uses well-named secrets when generating Function code. For example, if you have a "Stripe API Key" secret and mention Stripe in your prompt, Create will use that key securely.
@@ -248,13 +200,10 @@ Create automatically uses well-named secrets when generating Function code. For 
 
 Supported secret types:
 
-* API Keys
-
-* Access Tokens
-
-* Basic Auth Credentials
-
-* Bearer Tokens
+- API Keys
+- Access Tokens
+- Basic Auth Credentials
+- Bearer Tokens
 
 <Info>
   OAuth tokens aren't supported since they require refresh flows.
@@ -265,11 +214,8 @@ Supported secret types:
 When ready to launch:
 
 1. Click **Publish** in top right
-
 2. Choose Functions to publish
-
 3. Set routes if needed (all Function routes start with /api)
-
 4. Enable/disable as needed
 
 Published Functions are locked versions your published app uses. Continue development without breaking live features.
