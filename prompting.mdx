@@ -6,7 +6,7 @@ description: "Our top tips from the team and community on how to chat with Creat
 Create understands both **text** and **images** to build your app. You'll get better results if you're clear. Soon, you'll notice it's way faster than coding.
 
 <Info>
-**Prompting** is a fancy word for "writing instructions to an AI". AI models can make mistakes, so there are better and worse ways to write the same instructions to get what you want.
+  **Prompting** is a fancy word for "writing instructions to an AI". AI models can make mistakes, so there are better and worse ways to write the same instructions to get what you want.
 </Info>
 
 ## Tips
@@ -18,6 +18,7 @@ Many of these tips work in combo :)
 ❌ **Don't:** be vague - `landing page`
 
 ✅ **Do:** set a clear context and goals:
+
 ```
 Landing page for B2B SaaS product selling an AI app builder. Show a header, pricing options for free, pro, and enterprise, testimonials section, footer
 ```
@@ -27,6 +28,7 @@ Landing page for B2B SaaS product selling an AI app builder. Show a header, pric
 ❌ **Don't:** try to do many things all at once - `Make a social media site that lets users logs in, saves their posts, shows them in a feed, lets you like each card in the feed, and lets send invites to new friends`
 
 ✅ **Do:** break down complex tasks into smaller steps:
+
 ```
 Update the cards to be 12px apart in the feed 
 ```
@@ -40,37 +42,43 @@ Add a way to store posts
 You can paste images into the chat. You'll get best results if you add more context with a description of what about the image you want.
 
 <Info>
-On a Mac, try Control + Command + Shift + 4 to easily save a screenshot to your clipboard- ready to paste with Command + V!
+  On a Mac, try Control \+ Command \+ Shift \+ 4 to easily save a screenshot to your clipboard- ready to paste with Command \+ V\!
 </Info>
 
 Examples:
 
 ✅ **Do:** replicate exactly (might require multiple passes / images):
+
 ```
 Replicate this exactly: <page-image>. Details: [...more details on things you want it to copy]
 ```
 
 ✅ **Do:** make something similar:
+
 ```
 Make something with similar features to this: <page-image>. Details: [...more on specific things you want it to copy]
 ```
 
 ✅ **Do:** style specific elements:
+
 ```
 Make the card look like this: <card-image>. Details: [...more details you want it to copy]
 ```
 
 ✅ **Do:** extract text content:
+
 ```
 Fill the pricing options with all the text from this image: <image of pricing options>
 ```
 
 ✅ **Do:** use for inspiration:
+
 ```
 Start with something that looks like this: <competitor image>. Now add: [more details]
 ```
 
 ✅ **Do:** apply styles:
+
 ```
 Style it like this: <image of styles>.
 ```
@@ -81,13 +89,13 @@ To make something exact, you can even specify details like hex codes, fonts, or 
 
 Example:
 
-✅ **Do:** get close in English if you don't know: 
+✅ **Do:** get close in English if you don't know:
 
 ```
 light gray subtitles that have some space between them and the title
 ```
 
-✅ **Do:** get specific on values  
+✅ **Do:** get specific on values
 
 ```
 #d3d3d3 subtitles
@@ -102,6 +110,10 @@ Use Inter for the titles and subtitles
 ```
 
 ### Be specific on errors
+
+<Tip>
+  The AI builder will attempt to help you recover from errors by providing specific information to feed back into the chat automatically. You can also check error logs directly in your dashboard via the bottom right corner
+</Tip>
 
 ❌ **Don't:** vague- `It's still not working. Ugh`
 
@@ -137,11 +149,11 @@ When I hit the 'manage teachers' button [screenshot] it should take me back to [
 
 If you see a error message, you can often just paste it back into the chat to give Create more context.
 
-### Using previous versions 
+### Using previous versions
 
-When you generate something new, Create has knowledge of your previous versions. 
+When you generate something new, Create has knowledge of your previous versions.
 
-You can sometimes be specific on what you liked about previous versions to bring that functionality back. 
+You can sometimes be specific on what you liked about previous versions to bring that functionality back.
 
 ```
 In a previous version, the paste image when the page was selected worked. It's now not working. 
@@ -149,98 +161,88 @@ In a previous version, the paste image when the page was selected worked. It's n
 Figure out how to bring that back. 
 ```
 
-### Avoid "too long" → break into components
-
-As your project grows long, Create can sometimes have a harder time making changes. You can combat this by breaking your project into more elements ([components](/builder/components), [functions](/builder/functions), etc).
-
-## Project-wide vs Single Element
-
-You can prompt Create at two different levels:
-
-- **Project-wide**: Select the project name in [**Project Selector**](/builder/controls#project-selector) or tap on the canvas itself
-- **Single element**: Select a specific element in the [**Project Selector**](/builder/controls#project-selector) or tap it on the canvas
-
-Many of the tips above work at either level, but there are some things you can do specifically at each level.
-
-<Tip>
-Learn more about the different elements you can use in Create in the [Builder Overview](/builder/overview).
-
-Larger projects often have multiple [Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions), and a [Database](/builder/databases) or [User Accounts](/builder/user-accounts).
-</Tip>
-
-
-### Project-wide prompts
+### Global prompting
 
 Create can make changes across the entire project in parallel and/or create new elements if they don't exist.
 
-When you have the project selected, you can make prompts that:
-
 ✅ **Add new elements across your app:**
+
 ```
 Make a dashboard with table, nav, and search. Also have an about page in the nav
 ```
+
 This will update existing elements in parallel and/or create new elements if they don't exist:
+
 - Dashboard (page)
-- Table (component) 
+- Table (component)
 - Nav (component)
 - Search (component)
 - About (page)
 
 ✅ **Handle interactions between elements:**
+
 ```
 On the about page the back button should go to the home page
 ```
+
 This will:
+
 - Update the linking on the back button in the about page
 - Get the route from the home page
 
 ✅ **Break down complex pages:**
+
 ```
 Turn this dashboard page into separate components
 ```
+
 This will:
+
 - Break down the page into separate components
-- Make new components as needed 
+- Make new components as needed
 - Update the page to use the new components
 
 ✅ **Connect data across pages:**
+
 ```
 Store data in /database when the user enters the form on the dashboard page. When you tap an element in the table, show that info in the details page
 ```
+
 This handles:
+
 - Database queries on multiple pages
 - Routing between pages
 - Passing data via query params
 
 ✅ **Style across pages and components**
+
 ```
 Make everything look more like this for style: <screenshot>
 ```
+
 This will:
+
 - Update the dashboard page to match the screenshot
 - Update all components that are used on the dashboard page to match the new style
 
 ### Single Element prompts
 
-Create only makes changes to the specific element you've selected ([Page](/builder/pages), [Component](/builder/components), [Function](/builder/functions), etc).
-
-With a specific element selected, you can make more targeted changes:
+Target individual pages or elements by name
 
 ✅ **Style specific elements:**
+
 ```
-Make this page look like this: <screenshot>
+Make the user account page look like this: <screenshot>
 ```
 
 ✅ **Debug specific functionality:**
+
 ```
 This function isn't returning the right data. I expect it to take in Y and return Z
 ```
 
 ✅ **Add focused features:**
+
 ```
 Add a date picker to this form that only allows dates in the next 30 days
 ```
-
-<Info>
-Switch between levels as needed - start with project-wide prompts for overall structure, then drill down to single elements for fine-tuning. Or start from a single element for simplicity, and then go back to project-wide level as you add more elements. 
-</Info>
