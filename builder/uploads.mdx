@@ -5,126 +5,85 @@ description: "Let users upload files to your app (images, PDFs, documents, audio
 
 Uploads let users add files to your app - like images, PDFs, documents, audio, and videos. Build galleries, AI tools that process text or documents, or just let users set profile pictures.
 
-<iframe 
-  src="https://twitframe.com/show?url=https://twitter.com/create_xyz/status/1865149581593579572" 
-  width="550" 
-  height="450" 
-  frameborder="0" 
-  allowfullscreen>
-</iframe>
-
-
-### Why Use Uploads
+## Why Use Uploads
 
 Uploads enable several capabilities:
 
-* **File sharing** - Let users upload and share files
-
-* **Galleries** - Build collections of images or videos
-
-* **Documents** - Handle PDFs and other documents
-
-* **User specific content** - Allow profile pictures and submissions with [User Accounts](/builder/user-accounts)
+- **File sharing** - Let users upload and share files
+- **Galleries** - Build collections of images or videos
+- **Documents** - Handle PDFs and other documents
+- **User specific content** - Allow profile pictures and submissions with [User Accounts](/builder/user-accounts)
 
 ### Adding Uploads
 
 Add uploads to any [Page](/builder/pages), [Component](/builder/components), or [Function](/builder/functions) by prompting Create to handle uploads:
 
 1. **Describe the upload flow**:
-
-   * UI elements (buttons, drag areas)
-
-   * Success/error states
-
-   * What happens after upload
-
+   - UI elements (buttons, drag areas)
+   - Success/error states
+   - What happens after upload
 2. **Choose upload method**:
-
-   * File selector
-
-   * Drag and drop
-
-   * URL input
-
-   * Copy/paste
-
+   - File selector
+   - Drag and drop
+   - URL input
+   - Copy/paste
 3. **Handle the file**:
-
-   * Store URL in database
-
-   * Display preview
-
-   * Process content
+   - Store URL in database
+   - Display preview
+   - Process content
 
 Example prompts:
 
-* "Add an image upload button to the form that shows a preview after its uploaded"
-
-* "Let users drag PDFs to upload and store in /\[Database]"
-
-* "Create a profile picture uploader with cropping. Store the URLs in /\[UsersDB]"
+- "Add an image upload button to the form that shows a preview after its uploaded"
+- "Let users drag PDFs to upload and store in /[Database]"
+- "Create a profile picture uploader with cropping. Store the URLs in /[UsersDB]"
 
 Create will write the code to support uploads based on your prompt. We recommend specificity in how you want to support uploads. Some common details to include:
 
 1. UI around uploads
-
 2. How the app should handle different states (uploads, error, success, etc.)
-
 3. How the app should use the upload
 
 Create automatically:
 
-* Stores files securely
-
-* Returns permanent URLs for the file stored on Create's cloud
-
-* Handles file serving when you use the URL
+- Stores files securely
+- Returns permanent URLs for the file stored on Create's cloud
+- Handles file serving when you use the URL
 
 To save uploads:
 
-* Store URLs in [Databases](/builder/databases)
-
-* Reference URLs in your app
-
-* Query stored URLs later from the database
+- Store URLs in [Databases](/builder/databases)
+- Reference URLs in your app
+- Query stored URLs later from the database
 
 <Tip>
-Always store upload URLs in a database if you need to access files later. Without storage, URLs exist but are hard to find.
+  Always store upload URLs in a database if you need to access files later. Without storage, URLs exist but are hard to find.
 </Tip>
 
 <Info>
-Create offers several integrations to help process uploaded files:
+  Create offers several integrations to help process uploaded files:
 
-* [File Conversion](/builder/integrations#file-conversion) - Convert between file formats like PDF, images, and more
-
-* [GPT-4 Vision](/builder/integrations#gpt-4-vision) - Analyze uploaded images
-
-* [Document Scanner](/builder/integrations#document-scanner) - Extract text from scanned documents
-
-* [Audio Transcription](/builder/integrations#audio-transcription) - Convert audio files to text
+  - [File Conversion](/builder/integrations#file-conversion) - Convert between file formats like PDF, images, and more
+  - [GPT-4 Vision](/builder/integrations#gpt-4-vision) - Analyze uploaded images
+  - [Document Scanner](/builder/integrations#document-scanner) - Extract text from scanned documents
+  - [Audio Transcription](/builder/integrations#audio-transcription) - Convert audio files to text
 </Info>
 
 ### Technical Details
 
 **Supported Upload Methods**:
 
-* File upload
-
-* URL import
-
-* Base64 data
-
-* Array buffers
+- File upload
+- URL import
+- Base64 data
+- Array buffers
 
 **Considerations**:
 
-* 10MB max file size
-
-* Common web formats supported
-
-* Files stored in Create's cloud
+- 10MB max file size
+- Common web formats supported
+- Files stored in Create's cloud
 
 <Info>
-Add file size validation to prevent errors from large uploads. Just prompt Create to show an error if your users upload a larger file size.
+  Add file size validation to prevent errors from large uploads. Just prompt Create to show an error if your users upload a larger file size.
 </Info>
-
