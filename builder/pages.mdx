@@ -1,5 +1,6 @@
 ---
 title: "Pages"
+description: "The create builder will automatically generate pages for you as you instruct it. "
 ---
 
 Pages are the screens of your site or app. You start with a blank page when you open a new project.
@@ -10,43 +11,39 @@ You can build powerful apps using a single page. As your project grows, you may 
 
 You start with a blank page. To create a new one:
 
-* [**Logo Menu**](/builder/controls#logo-menu)
+- [**Logo Menu**](/builder/controls#logo-menu)
 
-   in the top left corner > New Page OR press 
+  in the top left corner \> New Page OR press
 
   `option-N`
 
-   (or 
+  (or
 
   `alt-N`
 
-   on Windows)
+  on Windows)
 
 Pages auto-name based on their content. Rename by:
 
-* Tapping the 
+- Tapping the
 
   [**Project Selector**](/builder/controls#project-selector)
 
-   dropdown
-
-* Using the 
+  dropdown
+- Using the
 
   [**3 Dot Menu**](/builder/controls#3-dot-menu)
 
-   next to the page name
+  next to the page name
 
 ## Using Multiple Pages
 
 Consider splitting your app into multiple pages when:
 
-* Different sections serve distinct purposes (e.g. home, about, contact)
-
-* Your page code gets long (>1500 lines) - shorter pages help Create generate more accurate code
-
-* You want separate views for different user types (e.g. customer-facing vs admin pages)
-
-* You need to 
+- Different sections serve distinct purposes (e.g. home, about, contact)
+- Your page code gets long (\>1500 lines) - shorter pages help Create generate more accurate code
+- You want separate views for different user types (e.g. customer-facing vs admin pages)
+- You need to
 
   [restrict access to certain users](/builder/user-accounts)
 
@@ -58,47 +55,40 @@ Consider splitting your app into multiple pages when:
 
 Make pages look good using:
 
-* **Screenshots**
+- **Screenshots**
 
-   pasted in chat - see our 
+  pasted in chat - see our
 
   [prompting guide](/prompting)
+- **URLs**
 
-* **URLs**
+  in chat - Create screenshots any URL and adds it to context
+- [**Integrations**](/builder/integrations)
 
-   in chat - Create screenshots any URL and adds it to context
+  for component packs like shadcn/ui
+- [**Style Guides**](/builder/style-guides)
 
-* [**Integrations**](/builder/integrations)
+  for consistency
+- [**Components**](/builder/components)
 
-   for component packs like shadcn/ui
-
-* [**Style Guides**](/builder/style-guides)
-
-   for consistency
-
-* [**Components**](/builder/components)
-
-   for reusable elements
+  for reusable elements
 
 ## Add Elements
 
 Use `/` command menu to add:
 
-* [**Components**](/builder/components)
+- [**Components**](/builder/components)
 
-   for UI elements
+  for UI elements
+- [**Integrations**](/builder/integrations)
 
-* [**Integrations**](/builder/integrations)
+  for AI services
+- [**Databases**](/builder/databases)
 
-   for AI services
+  for data storage
+- [**Functions**](/builder/functions)
 
-* [**Databases**](/builder/databases)
-
-   for data storage
-
-* [**Functions**](/builder/functions)
-
-   for backend logic
+  for backend logic
 
 Learn more about all available elements in our [overview](/builder/overview).
 
@@ -110,21 +100,18 @@ Learn more about all available elements in our [overview](/builder/overview).
 
 To publish:
 
-* Tap 
+- Tap
 
   **Publish**
 
-   in top right
-
-* Choose pages to make live
-
-* Set routes (e.g. 
+  in top right
+- Choose pages to make live
+- Set routes (e.g.
 
   `/about`
 
   )
-
-* Only published pages are accessible
+- Only published pages are accessible
 
 <Info>
   Routes are URL paths to your pages (e.g. yourdomain.com/about). Keep pages private by not publishing them.
@@ -134,74 +121,36 @@ Read more about publishing in our [publishing guide](/publish-and-share/publish)
 
 ## Adding Links
 
-1. By hand:
+Instruct the builder on where to link and it will do the rest:
 
-   * Make sure you're in 
+- "Link the bio page to the biography link at the homepage"
+- Change links at anytime with new instructions
 
-     [Select Mode](/builder/controls#select-mode)
-
-   * Tap the element you want to be a link (e.g. a button or card)
-
-   * You'll see a blue outline on the element you've selected
-
-   * Scroll to the bottom of the chat window
-
-   * Choose "Link" in chat
-
-   * Pick a target page/URL
-
-   * Save your changes
-
-2. By prompt:
-
-   * [Publish](/publish-and-share/publish)
-
-      your app and 
-
-     [choose routes](/publish-and-share/publish#routes)
-
-      for each page (e.g. 
-
-     `/about`
-
-     )
-
-   * Tell Create what element should lead to the route (e.g. "When clicking the About button, go to the /about page")
-
-   * Create will update the code
-
-   * Publish your app to try it out live
-
-<iframe src="https://twitframe.com/show?url=https://twitter.com/create_xyz/status/1864105603750306055" width="550" height="450" frameborder="0" allowfullscreen />
+![Linking Pn](/images/linking.png)
 
 ## Requiring Authentication
 
 You can restrict page access to signed-in users:
 
-1. Enable 
+1. Enable
 
    [User Accounts](/builder/user-accounts)
-
-2. Page > 3-dot menu > Settings > "Require account to view"
-
+2. Page \> 3-dot menu \> Settings \> "Require account to view"
 3. Publish changes
 
 Users will:
 
-* See content when signed in
-
-* Get redirected to login when not
+- See content when signed in
+- Get redirected to login when not
 
 Learn more about [User Accounts](/builder/user-accounts).
 
 ## Deleting a Page
 
-This is not a recoverable action, proceed with caution&#x20;
+This is not a recoverable action, proceed with caution 
 
 ![](/Screenshot2025-02-11at1.14.17PM.png)
 
-* Select desired page from top level navigation
-
-* Use three dot menu to reveal deletion action
-
-* Click Delete Page
+- Select desired page from top level navigation
+- Use three dot menu to reveal deletion action
+- Click Delete Page
