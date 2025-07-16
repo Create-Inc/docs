@@ -6,8 +6,9 @@ description: "Add email sending capabilities to your application"
 Resend provides reliable email delivery and tracking for your application's email needs.
 
 <Warning>
-    To send emails from a registered domain, you must verify your domain in Resend.<br></br>
-    Please follow the official Resend guide [here](https://resend.com/docs/dashboard/domains/introduction).
+  To send emails from a registered domain, you must verify your domain in Resend.\
+  
+  Please follow the official Resend guide [here](https://resend.com/docs/dashboard/domains/introduction).
 </Warning>
 
 ## Overview
@@ -29,14 +30,24 @@ Resend provides reliable email delivery and tracking for your application's emai
 <Steps>
   <Step title="Visit Resend Website">
     Go to [resend.com](https://resend.com/) and click "Get Started"
-    
-    <img src="/images/resend/resend-signup.png" style={{ borderRadius: '0.5rem' }} />
-  </Step>
 
+    <img
+      src="/visit-resend-website.png"
+      style={{ borderRadius:"0.5rem" }}
+      alt=""
+      title=""
+    />
+  </Step>
   <Step title="Complete Registration">
-    * Sign up with email/password
-    * Verify your email address
-    <img src="/images/resend/resend-auth.png" style={{ borderRadius: '0.5rem' }} />
+    - Sign up with email/password
+    - Verify your email address
+
+    <img
+      src="/complete-registration.png"
+      style={{ borderRadius:"0.5rem" }}
+      alt=""
+      title=""
+    />
   </Step>
 </Steps>
 
@@ -44,19 +55,31 @@ Resend provides reliable email delivery and tracking for your application's emai
 
 <Steps>
   <Step title="Create New Key">
-    If this is your first time generating an API key, this Get Started page will show.<br></br>
-    Otherwise, navigate to the API Keys page.<br></br>
-    1. Click "Add an API Key"
+    If this is your first time generating an API key, this Get Started page will show.\
     
-    <img src="/images/resend/resend-apigen.png" style={{ borderRadius: '0.5rem' }} />
-  </Step>
+    Otherwise, navigate to the API Keys page.
 
+    1. Click "Add an API Key"
+
+    <img
+      src="/generate-new-key.png"
+      style={{ borderRadius:"0.5rem" }}
+      alt=""
+      title=""
+    />
+  </Step>
   <Step title="Secure Your Key">
     1. Copy the API key
     2. Store it securely
     3. Test the key by sending a test email
-    <img src="/images/resend/resend-verify.png" style={{ borderRadius: '0.5rem' }} />
-    
+
+    <img
+      src="/secure-your-key.png"
+      style={{ borderRadius:"0.5rem" }}
+      alt=""
+      title=""
+    />
+
     <Warning>
       This key will only be shown once - save it immediately
     </Warning>
@@ -70,28 +93,26 @@ Resend provides reliable email delivery and tracking for your application's emai
     1. In your Create project, type `/` in chat
     2. Select "Resend" from the menu
   </Step>
-
   <Step title="Add Your API Key">
     1. Paste your Resend API key into "RESEND_API_KEY" secret
-    
+
     <Tip>
       Need a new key? Regenerate in Resend dashboard.
     </Tip>
   </Step>
-
   <Step title="Start Sending">
     Use prompts to implement email features:
-    
-    * `Send welcome email to new users with /Resend`
-    * `Build a password reset flow using /Resend`
-    * `Create a newsletter system with /Resend`
-    
+
+    - `Send welcome email to new users with /Resend`
+    - `Build a password reset flow using /Resend`
+    - `Create a newsletter system with /Resend`
+
     <Warning>
       Resend has daily sending limits - monitor usage in their dashboard
     </Warning>
   </Step>
 </Steps>
 
-<Note type="success">
-  Resend integration complete! Use `/Resend` in chat to access email capabilities.
-</Note>
+<success>
+  Resend integration complete\! Use `/Resend` in chat to access email capabilities.
+</success>
