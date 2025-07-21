@@ -1,11 +1,9 @@
 ---
 title: "Controls"
-description: "How to use the Create builder"
+description: "How to use the Create builder "
 ---
 
-<Frame caption="Create builder interface showing the main canvas, chat, and key controls">
-  ![](/images/builder.png)
-</Frame>
+![Controls Pn](/images/controls.png)
 
 ## Chat
 
@@ -15,8 +13,6 @@ You chat with Create to build your app. Tell it what to build using text or imag
 - Press `cmd-enter` (or `ctrl-enter` on Windows) to send messages
 - Create uses your app's code and chat history to generate updates
   - Paid plans get enhanced AI generations with more context
-- When you select a **specific element**, messages update only that element
-- When you select the **project name** in the [**Project Selector**](/builder/controls#project-selector) or the **canvas**, messages can modify multiple elements at once
 - **Discussion Mode** - chat without making edits by clicking on the speech bubble icon labeled _Discuss_. It can be important at times to prevent edits to your work and be able to ask questions of the builder about status, approach or specific features without allowing it to alter your current design.
 
 <Info>
@@ -36,32 +32,20 @@ Key controls in the top navigation from left to right:
 
 - **Logo Menu**: Create new elements ([Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions), etc.)
 - **Project Selector**: Rename the project/element, jump between different elements in your project, change the [generation level](#generations)
-- **Modes**: Toggle between [Demo](#demo-mode), [Select](#select-mode), and [Code](#code-mode) modes
-- **Views**: Switch between [Canvas and Focused views](#canvas-vs-focused-views)
-- **Responsive**: Test responsive design (Desktop/Mobile)
-- **Privacy**: Control access and team settings
-- **Invite**: Add collaborators to your project
-- **Publish**: Launch your app live
+- **Modes**: Toggle between [Demo, Code and Preview](/essentials)
+- **Responsive**: Test responsive design (Desktop/Mobile
+- **Publish**: [Launch your website or app](/publish-and-share/publish)
 
 ### Logo Menu
 
-Create new elements ([Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions), etc.)
+![Logomenucontrols Pn](/images/logomenucontrols.png)
 
-<Frame caption="Logo Menu - Create new elements like Pages, Components, and Functions">
-  ![](https://ucarecdn.com/e5bb6e1c-ae74-4162-8177-743f25b6cf0e/)
-</Frame>
-
-### Project Selector
-
-Rename the project/element, jump between different elements in your project, change the [generation level](#project-wide-vs-single-element-generation)
-
-<Frame caption="Switch between elements. Change the generation level for project-wide or single element updates">
-  ![](https://ucarecdn.com/31edd5db-c58a-493b-b497-22bec7c732ea/)
-</Frame>
-
-<Frame caption="Rename the project or elements">
-  ![](https://ucarecdn.com/a15745a2-08e0-4f33-abeb-718e5184eecd/)
-</Frame>
+- Return to Dashboard - head back to your main account page in Create
+- New Project - start a new project
+- Version History - [restore from a prior version](https://www.create.xyz/docs/essentials#version-history)
+- Enable User Accounts - turn on [user login](/builder/user-accounts) features
+- [Project Settings](https://www.create.xyz/docs/essentials#project-settings) - project metadata, generation settings, social previews and more
+- Docs - head here to our documentation and knowledge base
 
 ### Project Settings
 
@@ -69,120 +53,25 @@ Control important project specific settings including assets, secret keys, custo
 
 ![Ezgif 6c735490bbae99 Gi](/images/ezgif-6c735490bbae99.gif)
 
-### 3 Dot Menu
+### Mode Switcher: **Demo, Code, and Preview**
 
-Access element specific settings
+By default we will always show you the build in demo mode. You can quickly switch between different modes to work on your app. Learn more about [**controls**](https://www.create.xyz/docs/builder/controls):
 
-<Frame caption="Access element specific settings">
-  ![](https://ucarecdn.com/8e49232d-0fb5-4c62-bb6c-a0171f00357e/)
-</Frame>
+- **Demo mode**: the default view, work and test your application while building it right
+- **Code mode**: View and edit the underlying code
+- **Preview**: A live preview sandbox to view your site as a public user and test functions, authentication, payment systems and more.
 
-### Mode Switcher
-
-Toggle between [Demo](#demo-mode), [Select](#select-mode), and [Code](#code-mode) modes
-
-<Frame caption="Switch between Demo, Select, and Code modes">
-  ![](https://ucarecdn.com/6311426a-d462-4d91-b198-d87e014af8be/)
-</Frame>
-
-### View Switcher
-
-Choose between [Canvas and Focused views](#views)
-
-<Frame caption="Switch between Canvas and Focused. Tap on canvas for project-wide generation">
-  ![](https://ucarecdn.com/97152048-ddac-4cbf-8f7e-7be09667f262/)
-</Frame>
+<iframe src="https://www.loom.com/embed/8d3a851174d941e9be0aa6ea3619b8ef?sid=c1b508e5-91bb-4048-9410-c5be9e5a0ef0" width="600" height="400" />
 
 ### Responsive Preview
 
 Test responsive design (Desktop/Mobile)
 
-<Frame caption="Test responsive design (Desktop/Mobile)">
-  ![](https://ucarecdn.com/8fc8dae8-20bb-4337-9c97-179865e89128/)
-</Frame>
-
-### Privacy
-
-Control [community visibility](/publish-and-share/community)
-
-### Invite
-
-Add [team members](/publish-and-share/teams) to your project
+![2025 07 2114 13 17 Gi](/images/2025-07-2114.13.17.gif)
 
 ### Publish
 
 [Launch your app](/publish-and-share/publish) and set domain. Remember to re-publish after changes to go live.
-
-## Generations
-
-Control the scope of Create's changes by selecting different elements:
-
-- **Project**:
-  - Select the **project name** in [**Project Selector**](/builder/controls#project-selector) or tap the **canvas**
-  - Create's chat can modify multiple elements at once
-  - Can add new [Pages](/builder/pages), [Components](/builder/components), [Functions](/builder/functions) as needed
-  - Best for building features that span elements
-- **Element**:
-  - Select a specific **element name** in the [**Project Selector**](/builder/controls#project-selector) or tap it on the **canvas**
-  - Create's chat modifies just that element
-  - Changes confined to just that [Page](/builder/pages), [Component](/builder/components), or [Function](/builder/functions)
-  - Best for focused updates and refinements to each element
-
-<Tip>
-  See our [Guide to Prompting](/prompting#project-wide-vs-single-element) for level-specific prompting tips.
-</Tip>
-
-## Modes
-
-Switch between three modes as you build:
-
-- **Demo**: Test your app
-- **Select**: Select elements for specific updates
-- **Code**: View and edit code
-
-### Demo
-
-Test your app as users will experience it:
-
-- Fill forms and trigger interactions
-- See real-time integration updates
-- Perfect for testing flows and debugging
-
-### Select
-
-Make updates to specific elements:
-
-- Tap elements to make updates
-- Create reusable [components](/builder/components)
-- Add links between [pages](/builder/pages)
-- Modify properties and styling with direct commands
-
-### Code
-
-View and edit code directly:
-
-- Make precise adjustments
-- Add custom logic
-- Export the code as a React/Next.js project
-
-## Views
-
-Toggle between two views using the collapse icon:
-
-### Canvas
-
-See multiple elements on an infinite canvas:
-
-- Get a bird's eye view of your project
-- Drag and arrange elements freely
-- Generate across the project
-
-### Focused
-
-Work one element at a time:
-
-- Fix the element's position, which helps you test scroll
-- Switch elements using [**Project Selector**](/builder/controls#project-selector)
 
 ## Version History
 
@@ -198,18 +87,11 @@ Keep track of changes and revert to previous versions:
   - Published versions are labeled
   - Restore any version
 
-## Elements
+## Dashboard
 
-When you select an element in Select mode:
+- View your projects, delete and copy them
 
-- **Duplicate, Preview, or Delete** from the drop down menu in the top left corner in Canvas view
-- Move elements by dragging from their title
-- See quick actions appear in the chat
+![Dashboard1 Pn](/images/dashboard1.png)
 
-![](/images/page-menu.png)
-
-## Projects
-
-**Rename, Duplicate or Delete** projects from the dashboard (create.xyz/dashboard)
-
-![](/images/project-menu.png)
+- View your [databases](/builder/databases) created for existing projects
+- Author and maintain Custom Instructions - shape the way the builder interacts with you and your project. This is an advanced feature not generally required for daily use. See community examples of Custom Instructions [**here.**](https://www.create.xyz/custom-instructions)
