@@ -4,21 +4,15 @@ description: "Build iOS and Android apps with Create"
 ---
 
 <Frame>
-  <img src="/images/mobile/overview.png" />
+  ![](/images/mobile/overview.png)
 </Frame>
 
 Create will soon support prompt to mobile apps. You can launch your app on iOS and Android. This feature is in beta for early access members.
 
-**Join the beta:** Sign up at [earlyaccess.created.app](https://earlyaccess.created.app). We're adding folks from the waitlist in waves.  
-
 <Info>
   **Beta**
 
-  Mobile app support is rapidly evolving. You might encounter limitations with certain features or device capabilities. 
-
-  Your real-world examples help us prioritize improvements. Try building different apps and tell us what works and what breaks.
-
-  Share feedback on our [Discord server](https://create.xyz/discord). Please include the /build link (URL from the builder) and a short description of what's breaking. We're especially interested in code gen or device capability errors. 
+  Mobile app support is rapidly evolving. You might encounter limitations with certain features or device capabilities. Your real-world examples help us prioritize improvements. Try building different apps and tell us what works and what breaks.
 </Info>
 
 ## Why Create?
@@ -30,13 +24,12 @@ Here's what we're working towards in this beta:
 - **Prompt to app** - Just describe your app and Create turns it into React Native code that works
 - **Design out of box** - We're training our AI to design apps like a human would
 - **Preview on device** - Test your creations on your phone with Expo Go
-- **Add AI and 100+ integrations** - Integrate [GPT](/integrations#chatgpt), [Claude](/integrations#anthropic-sonnet-35), [Gemini](/integrations#google-gemini-15), and [100+ other AI models](/integrations) in seconds
 - **Full stack** - Use Create's built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/stripe) - no separate backend needed
-- **Web to Mobile, and vice versa** - Build both web and mobile apps from the same project. Convert between them. 
-- **Instant App Store and Play Store submission** - Publish your app to the App Store and Play Store from Create
+- **(Coming Soon) Instant App Store and Play Store submission** - Publish your app to the App Store and Play Store from Create
 
 ## How to build
-You get started with mobile apps by prompting Create to make one. 
+
+You get started with mobile apps by prompting Create to make one.
 
 Create builds your app in "Mobile Pages", and then adds more functionality as needed. You can manually add more mobile pages by prompting Create or manually from the [logo menu](/builder/controls#logo-menu).
 
@@ -44,119 +37,108 @@ Create builds your app in "Mobile Pages", and then adds more functionality as ne
   <Step title="Join Early Access">
     Sign up at [earlyaccess.created.app](https://earlyaccess.created.app)
   </Step>
-  
   <Step title="Start A New Project">
     Create a fresh project from your dashboard
   </Step>
-  
   <Step title="Create Your Mobile App">
     Prompt Create to make a mobile app. You can say things like "Make an iOS app that..." or "Make an Android app that..." or "Make a mobile app that..."
-    
+
     Create generates your first mobile screen. You'll know it's working if you see the mobile preview.
-    
+
     <Note>
       This is a web preview of a mobile app, so features that rely on a device (like location, camera, etc.) might not work. See [Preview on Your Device](#preview-on-your-device) to test your app on your phone.
     </Note>
-    
     <Frame>
-      <img src="/images/mobile/overview.png" />
+      ![](/images/mobile/overview.png)
     </Frame>
   </Step>
-  
   <Step title="Preview On Your Device">
     Download [Expo Go](https://expo.dev/client) and preview your app on a physical device.
-    
+
     See the [Preview on Your Device](#preview-on-your-device) section for detailed steps.
   </Step>
-  
   <Step title="Add Mobile-specific Features">
     Request specific mobile capabilities:
-    
+
     ```
     Add a barcode scanner to scan product nutrition labels
     ```
-    
+
     ```
     Let users take photos of their workout progress
     ```
-    
+
     Create comes with support for mobile-specific capabilities. For a deeper dive into what's supported, read the [Device Capabilities](#device-capabilities) section.
   </Step>
-  
   <Step title="Build Your Full-stack app">
     You can use Create's built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), and [payments](/payments) to build full-stack apps. Just describe what you want the app to do and Create will add the right functionality.
-    
+
     For example:
+
     ```
     Make a fitness tracking app where users can log workouts, 
     track progress, and set goals. Include a calendar view.
     ```
   </Step>
-  
   <Step title="Test and Refine">
     Preview on your device and make improvements through conversation.
-    
+
     Be specific about issues so Create can fix the underlying code. For example:
+
     ```
     The workout screen is cluttered. Simplify it and make the "Add Workout" button more prominent.
     ```
-    
+
     ```
     The app crashes when I try to take a photo. Can you fix this?
     ```
   </Step>
-
   <Step title="Add a Face To Your App ">
-      Head into your project settings to upload an icon and loading screen for your app.
-      <Frame>
-      <img src="/images/mobile/mobile-project-setting.png" alt="project setting image"/>
-      </Frame>
+    Head into your project settings to upload an icon and loading screen for your app.
 
-      Both icons requires a 1024 x 1024px PNG.
+    <Frame>
+      ![project setting image](/images/mobile/mobile-project-setting.png)
+    </Frame>
+    Both icons requires a 1024 x 1024px PNG.
   </Step>
-  
   <Step title="Submit To The App Stores">
     When you're ready, follow the steps in the [Publishing to App Stores](#publishing-to-app-stores) section to publish your app to Apple's App Store or Google's Play Store.
   </Step>
 </Steps>
 
 ## Preview on Your Device
-Create's web builder shows you a preview of your app as you chat. But to test the full experience, you'll want to preview on your device. Some of your app features that require device capabilities will only work in Preview. 
+
+Create's web builder shows you a preview of your app as you chat. But to test the full experience, you'll want to preview on your device. Some of your app features that require device capabilities will only work in Preview.
 
 <Steps>
   <Step title="Start a new mobile project">
     Start a new mobile project with a prompt or go to an existing one
   </Step>
-  
   <Step title="Wait for mobile preview QR code">
     Create immediately starts making your device preview. This step might take a few moments. If it takes longer than 1 minute, something is wrong and please let us know on [Discord](https://create.xyz/discord)
   </Step>
-  
   <Step title="Scan the QR code">
     You can use your camera or QR Code scanner app on iOS or Android to grab the link
-    
+
     <Frame>
-      <img src="/images/mobile/scanbarcode.png" />
+      ![](/images/mobile/scanbarcode.png)
     </Frame>
   </Step>
-  
   <Step title="Test in Expo Go">
-    Your app will open in Expo Go. You can play with it. 
+    Your app will open in Expo Go. You can play with it.
+
     <Frame>
-      <img src="/images/mobile/in-expo-go.jpeg" />
+      ![](/images/mobile/in-expo-go.jpeg)
     </Frame>
   </Step>
-  
   <Step title="Make updates in Create">
-    Continue building your app by chatting with Create in the web interface. 
+    Continue building your app by chatting with Create in the web interface.
   </Step>
-  
   <Step title="See latest changes">
-    You can close & open the Expo Go app to see latest changes. Expo Go should autoupdate with the latest version of your app every time you close and reopen. If you need to force it to latest, scan the QR code again. 
+    You can close & open the Expo Go app to see latest changes. Expo Go should autoupdate with the latest version of your app every time you close and reopen. If you need to force it to latest, scan the QR code again.
   </Step>
-  
   <Step title="Choose available pages">
-    Choose which pages are available in the Publish menu. You can turn pages on or off under mobile app settings. 
+    Choose which pages are available in the Publish menu. You can turn pages on or off under mobile app settings.
   </Step>
 </Steps>
 
@@ -166,181 +148,226 @@ Create's web builder shows you a preview of your app as you chat. But to test th
 
 ## How It Works
 
-Create generates React Native code and partners with Expo. It generates app that can work on either iOS or Android, and use device capabilities like camera, location, etc.  
+Create generates React Native code and partners with Expo. It generates app that can work on either iOS or Android, and use device capabilities like camera, location, etc.
 
 The code tab reveals React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` that work across iOS and Android.
 
 <Frame>
-  <img src="/images/mobile/viewcode.png" />
+  ![](/images/mobile/viewcode.png)
 </Frame>
 
-React Native code can be previewed on the web, so you can view a preview of your app in the builder as you chat with Create. 
+React Native code can be previewed on the web, so you can view a preview of your app in the builder as you chat with Create.
 
 <Warning>
-Some device-specific features like camera access, location services, and barcode scanning won't work in the web preview. For the most accurate testing experience and to access all native device capabilities, use the Expo Go app to preview your application directly on your iOS or Android device.
+  Some device-specific features like camera access, location services, and barcode scanning won't work in the web preview. For the most accurate testing experience and to access all native device capabilities, use the Expo Go app to preview your application directly on your iOS or Android device.
 </Warning>
-
-
 
 ## Publishing to App Stores
 
 <Note>
-Submitting to the App Store requires an Apple Developer Account which requires a yearly subscription. Create an Apple Developer account using your Apple ID right [here](https://developer.apple.com/account).
+  Submitting to the App Store requires an Apple Developer Account which requires a yearly subscription. Create an Apple Developer account using your Apple ID right [here](https://developer.apple.com/account).
 </Note>
 
 <Steps>
   <Step title="Prepare Your App">
     1. Ensure your app meets [Apple's App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/)
     2. Prepare required assets:
-      * App icon (1024x1024px)
-      * App description
-      * Screenshot for 13-inch iPad displays
-      * Screenshot for 6.5-inch iPhone displays
-      * Privacy policy URL using [Termly](https://www.termly.io)
-      * Create a support page in your project
-  </Step>
 
+    - App icon (1024x1024px)
+    - App description
+    - Screenshot for 13-inch iPad displays
+    - Screenshot for 6.5-inch iPhone displays
+    - Privacy policy URL using [Termly](https://www.termly.io)
+    - Create a support page in your project
+  </Step>
   <Step title="Configure App Settings">
     1. Click the "Publish" button in Create
     2. Select "Submit to App Store"
+
     <Frame>
-    <img src="/images/mobile/mobile-appstore-button.png" style={{ borderRadius: '0.5rem' }} />
+      <img
+        src="/images/mobile/mobile-appstore-button.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
     </Frame>
     3. Enter your Apple ID credentials
     4. Complete text authentication
     5. Create will handle the build and submission process to App Store Connect
+
     <Frame>
-    <img src="/images/mobile/mobile-success.png" style={{ borderRadius: '0.5rem' }} />
+      <img
+        src="/images/mobile/mobile-success.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
     </Frame>
   </Step>
-
   <Step title="Finding your App in App Store Connect">
     1. Check your email for notifications from Apple
+
     <Frame>
-    <img src="/images/mobile/apple-email.png" style={{ borderRadius: '0.5rem' }} />
+      <img
+        src="/images/mobile/apple-email.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
     </Frame>
     2. Visit [App Store Connect](https://appstoreconnect.apple.com/login) and login to select and view your app.
+
     <Frame>
-    <img src="/images/mobile/apple-view-app.png" style={{ borderRadius: '0.5rem' }} />
+      <img
+        src="/images/mobile/apple-view-app.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
     </Frame>
   </Step>
 </Steps>
 
-###   Completing Apple Requirements
-    <Note> Apple requires several items to be completed before your app can be reviewed for App Store launch. Here's a comprehensive guide to completing all requirements.</Note>
-    <Frame>
-      <img src="/images/mobile/apple-required-items.png" style={{ borderRadius: '0.5rem' }} />
-    </Frame>
+### Completing Apple Requirements
+
+<Note>
+   Apple requires several items to be completed before your app can be reviewed for App Store launch. Here's a comprehensive guide to completing all requirements.
+</Note>
+
+<Frame>
+  <img
+    src="/images/mobile/apple-required-items.png"
+    style={{ borderRadius:"0.5rem" }}
+  />
+</Frame>
+
 <Steps>
-    <Step title="Upload Screenshots">
-      * Scroll down the "Prepare for Submission" tab to find the Screenshot section.
-      * Upload screenshots for iPhone (6.5" and 5.5" displays)
-      * Upload screenshots for iPad (12.9" and 11" displays)
-      * Include screenshots showing key features
-      * Ensure screenshots are high quality and properly sized
-      <Frame>
-        <img src="/images/mobile/apple-screenshot.png" style={{ borderRadius: '0.5rem' }} />
-      </Frame>
-    </Step>
+  <Step title="Upload Screenshots">
+    - Scroll down the "Prepare for Submission" tab to find the Screenshot section.
+    - Upload screenshots for iPhone (6.5" and 5.5" displays)
+    - Upload screenshots for iPad (12.9" and 11" displays)
+    - Include screenshots showing key features
+    - Ensure screenshots are high quality and properly sized
 
-    <Step title="App Information">
-      * Fill out Contact Information Section
-      * If Sign-In is required for your app, please provide an example account for Apple to login to.
-      <Frame>
-        <img src="/images/mobile/apple-contact-info.png" style={{ borderRadius: '0.5rem' }} />
-      </Frame>
-    </Step>
+    <Frame>
+      <img
+        src="/images/mobile/apple-screenshot.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="App Information">
+    - Fill out Contact Information Section
+    - If Sign-In is required for your app, please provide an example account for Apple to login to.
 
-    <Step title="General Information">
-      * Fill out Contact Information Section
-      * Add Support URL from your Create project
-      * Declare Copyright information
-      * Add relevant Keywords
-      * Select appropriate Category
-      <Frame>
-        <img src="/images/mobile/apple-general-info.png" style={{ borderRadius: '0.5rem' }} />
-      </Frame>
-    </Step>
+    <Frame>
+      <img
+        src="/images/mobile/apple-contact-info.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="General Information">
+    - Fill out Contact Information Section
+    - Add Support URL from your Create project
+    - Declare Copyright information
+    - Add relevant Keywords
+    - Select appropriate Category
 
-    <Step title="Age Rating">
-      * Fill out Age Rating Section underneath the General Information section
-        <Frame>
-        <img src="/images/mobile/apple-age-rating.png" style={{ borderRadius: '0.5rem' }} />
-        </Frame>
-    </Step>
+    <Frame>
+      <img
+        src="/images/mobile/apple-general-info.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Age Rating">
+    - Fill out Age Rating Section underneath the General Information section
 
-    <Step title="Choose a build">
-      * Scroll down the "Prepare for Submission" tab to find the Build section.
-      * Select the build version you want to submit. The latest being on top.
       <Frame>
-        <img src="/images/mobile/apple-build.png" style={{ borderRadius: '0.5rem' }} />
+        <img
+          src="/images/mobile/apple-age-rating.png"
+          style={{ borderRadius:"0.5rem" }}
+        />
       </Frame>
-    </Step>
+  </Step>
+  <Step title="Choose a build">
+    - Scroll down the "Prepare for Submission" tab to find the Build section.
+    - Select the build version you want to submit. The latest being on top.
 
-    <Step title="Privacy Policy and Data">
-      * Create your own Privacy Policy URL using [Termly](https://www.termly.io)
-      * Complete Data Collection Review
-      * Declare any third-party data collection
-      * Specify data usage and storage
-      <Frame>
-        <img src="/images/mobile/apple-app-privacy.png" style={{ borderRadius: '0.5rem' }} />
-      </Frame>
-    </Step>
-    <Step title="Pricing and Distribution">
-      * Set app price (Free or Paid)
-      * Configure in-app purchases if applicable
-      * Set availability in different regions
-      * Configure promotional codes if needed
-      <Note> Apple requires you to submit your country's respective tax form to earn monetization. Refer to it [here](https://developer.apple.com/help/app-store-connect/manage-tax-information/provide-tax-information/).</Note>
-      <Frame>
-        <img src="/images/mobile/apple-app-pricing.png" style={{ borderRadius: '0.5rem' }} />
-      </Frame>
-    </Step>
+    <Frame>
+      <img
+        src="/images/mobile/apple-build.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Privacy Policy and Data">
+    - Create your own Privacy Policy URL using [Termly](https://www.termly.io)
+    - Complete Data Collection Review
+    - Declare any third-party data collection
+    - Specify data usage and storage
 
-    <Step title="Review Process">
-      * Submit for review
-      * Monitor review status in App Store Connect
-      * Respond to any feedback from the review team
-      * Address any issues promptly
-      <Tip>
+    <Frame>
+      <img
+        src="/images/mobile/apple-app-privacy.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Pricing and Distribution">
+    - Set app price (Free or Paid)
+    - Configure in-app purchases if applicable
+    - Set availability in different regions
+    - Configure promotional codes if needed
+      <Note>
+         Apple requires you to submit your country's respective tax form to earn monetization. Refer to it [here](https://developer.apple.com/help/app-store-connect/manage-tax-information/provide-tax-information/).
+      </Note>
+
+    <Frame>
+      <img
+        src="/images/mobile/apple-app-pricing.png"
+        style={{ borderRadius:"0.5rem" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Review Process">
+    - Submit for review
+    - Monitor review status in App Store Connect
+    - Respond to any feedback from the review team
+    - Address any issues promptly
+
+    <Tip>
       Initial reviews typically take 1-3 business days. Make sure all required information is complete before submission to avoid delays.
-      </Tip>
-    </Step>
+    </Tip>
+  </Step>
 </Steps>
-
 
 ## Beta Status
 
 ### Available Now
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Chat to build | 🟢 Full | Build through conversation |
-| React Native generation | 🟡 In Development | Automatic code generation |
-| Pages | 🟢 Full | Mobile app views |
-| Components | 🟢 Full | Mobile-optimized UI elements |
-| [Databases](/builder/databases) | 🟢 Full | Data storage and retrieval |
-| [Functions](/builder/functions) | 🟢 Full | Custom backend logic |
-| [Uploads](/builder/uploads) | 🟢 Full | Image and file handling |
-| Navigation | 🟡 In Development | Screen transitions |
-| [User Accounts](/builder/user-accounts) | 🟡 Early | Authentication and profiles |
-| Device APIs | 🟡 In Development | Camera, location, storage, more |
-| Offline Support | 🟡 In Development | Basic offline functionality |
-| Packages | 🟡 In Development | Expo and other packages |
+| Feature                                 | Status            | Description                     |
+| --------------------------------------- | ----------------- | ------------------------------- |
+| Chat to build                           | 🟢 Full           | Build through conversation      |
+| React Native generation                 | 🟡 In Development | Automatic code generation       |
+| Pages                                   | 🟢 Full           | Mobile app views                |
+| Components                              | 🟢 Full           | Mobile-optimized UI elements    |
+| [Databases](/builder/databases)         | 🟢 Full           | Data storage and retrieval      |
+| [Functions](/builder/functions)         | 🟢 Full           | Custom backend logic            |
+| [Uploads](/builder/uploads)             | 🟢 Full           | Image and file handling         |
+| Navigation                              | 🟡 In Development | Screen transitions              |
+| [User Accounts](/builder/user-accounts) | 🟡 Early          | Authentication and profiles     |
+| Device APIs                             | 🟡 In Development | Camera, location, storage, more |
+| Offline Support                         | 🟡 In Development | Basic offline functionality     |
+| Packages                                | 🟡 In Development | Expo and other packages         |
 
 ### Coming Soon
 
-| Feature | Expected |
-|---------|----------|
-| More Device APIs | Q1 2025 |
-| App Store Publishing | Q1 2025 |
-| Background Services | Q2 2025 |
-| Push Notifications | Q2 2025 |
-| Deep Linking | Q2 2025 |
-| Enhanced Offline Mode | Q2 2025 |
+| Feature               | Expected |
+| --------------------- | -------- |
+| More Device APIs      | Q1 2025  |
+| App Store Publishing  | Q1 2025  |
+| Background Services   | Q2 2025  |
+| Push Notifications    | Q2 2025  |
+| Deep Linking          | Q2 2025  |
+| Enhanced Offline Mode | Q2 2025  |
 
 <Note>
-  Missing a feature you need? Let us know at hello@create.xyz
+  Missing a feature you need? Let us know at [hello@create.xyz](mailto:hello@create.xyz)
 </Note>
 
 ## Device Capabilities
@@ -349,75 +376,69 @@ Create can make mobile apps that take advantage of Expo, which gives access to d
 
 Here's a list of what's currently supported:
 
-| Package | Description | Sample Prompt |
-|---------|-------------|---------------|
-| expo-image | Optimized image component for fast loading and display | "Add an image gallery with efficient loading" |
-| expo-status-bar | Customize the status bar appearance | "Make the status bar light text on dark background" |
-| expo-location | Access device GPS and location services | "Track user's running route on a map" |
-| expo-font | Load and use custom fonts | "Use the Roboto font throughout the app" |
-| react-native-maps | Display interactive maps | "Add a map showing nearby restaurants" |
-| expo-haptics | Add vibration and tactile feedback | "Make the button vibrate when pressed" |
-| expo-image-picker | Select photos from the device gallery | "Let users choose profile pictures from their photos" |
-| moti | Create smooth animations | "Add a fancy animation when items load" |
-| expo-linear-gradient | Create gradient backgrounds | "Make the header background fade from blue to purple" |
-| expo-document-picker | Select documents from the device | "Allow users to upload PDF files" |
-| expo-linking | Handle deep links and external URLs | "Open the website when user taps the link" |
-| @expo/vector-icons | Use popular icon libraries | "Add a heart icon for favorites" |
-| expo-gl | Use OpenGL for advanced graphics | "Create a 3D visualization of workout data" |
-| solito-link | Unified navigation between screens | "Make the back button work consistently" |
-| expo-contacts | Access the device's contacts | "Let users invite friends from their contacts" |
-| expo-blur | Create blur effects | "Add a frosted glass effect behind the modal" |
-| react-native-safe-area-context | Handle safe areas on different devices | "Make sure content doesn't go under the notch" |
-| expo-clipboard | Copy and paste from clipboard | "Add a button to copy the tracking number" |
-| react-native-picker | Select from dropdown options | "Add a dropdown to select workout type" |
-| expo-calendar | Access device calendar | "Let users add workouts to their calendar" |
-| expo-constants | Access app and device constants | "Display the app version in settings" |
-| @gorhom/bottom-sheet | Create pull-up sheets | "Add a bottom sheet that shows workout details" |
-| react-native-masked-view | Create masked views | "Make the profile picture circular" |
-| expo-file-system | Handle file operations | "Save workout data locally" |
-| react-native-async-storage | Store data locally | "Remember user preferences between sessions" |
-| react-native-reanimated-carousel | Create smooth image carousels | "Add a scrolling carousel of workout types" |
-| expo-secure-store | Securely store sensitive data | "Save the API key securely" |
-| solito-navigation | Navigation between screens | "Add navigation between home and profile screens" |
-| expo-camera | Access device camera | "Let users take photos of their progress" |
+| Package                          | Description                                            | Sample Prompt                                         |
+| -------------------------------- | ------------------------------------------------------ | ----------------------------------------------------- |
+| expo-image                       | Optimized image component for fast loading and display | "Add an image gallery with efficient loading"         |
+| expo-status-bar                  | Customize the status bar appearance                    | "Make the status bar light text on dark background"   |
+| expo-location                    | Access device GPS and location services                | "Track user's running route on a map"                 |
+| expo-font                        | Load and use custom fonts                              | "Use the Roboto font throughout the app"              |
+| react-native-maps                | Display interactive maps                               | "Add a map showing nearby restaurants"                |
+| expo-haptics                     | Add vibration and tactile feedback                     | "Make the button vibrate when pressed"                |
+| expo-image-picker                | Select photos from the device gallery                  | "Let users choose profile pictures from their photos" |
+| moti                             | Create smooth animations                               | "Add a fancy animation when items load"               |
+| expo-linear-gradient             | Create gradient backgrounds                            | "Make the header background fade from blue to purple" |
+| expo-document-picker             | Select documents from the device                       | "Allow users to upload PDF files"                     |
+| expo-linking                     | Handle deep links and external URLs                    | "Open the website when user taps the link"            |
+| @expo/vector-icons               | Use popular icon libraries                             | "Add a heart icon for favorites"                      |
+| expo-gl                          | Use OpenGL for advanced graphics                       | "Create a 3D visualization of workout data"           |
+| solito-link                      | Unified navigation between screens                     | "Make the back button work consistently"              |
+| expo-contacts                    | Access the device's contacts                           | "Let users invite friends from their contacts"        |
+| expo-blur                        | Create blur effects                                    | "Add a frosted glass effect behind the modal"         |
+| react-native-safe-area-context   | Handle safe areas on different devices                 | "Make sure content doesn't go under the notch"        |
+| expo-clipboard                   | Copy and paste from clipboard                          | "Add a button to copy the tracking number"            |
+| react-native-picker              | Select from dropdown options                           | "Add a dropdown to select workout type"               |
+| expo-calendar                    | Access device calendar                                 | "Let users add workouts to their calendar"            |
+| expo-constants                   | Access app and device constants                        | "Display the app version in settings"                 |
+| @gorhom/bottom-sheet             | Create pull-up sheets                                  | "Add a bottom sheet that shows workout details"       |
+| react-native-masked-view         | Create masked views                                    | "Make the profile picture circular"                   |
+| expo-file-system                 | Handle file operations                                 | "Save workout data locally"                           |
+| react-native-async-storage       | Store data locally                                     | "Remember user preferences between sessions"          |
+| react-native-reanimated-carousel | Create smooth image carousels                          | "Add a scrolling carousel of workout types"           |
+| expo-secure-store                | Securely store sensitive data                          | "Save the API key securely"                           |
+| solito-navigation                | Navigation between screens                             | "Add navigation between home and profile screens"     |
+| expo-camera                      | Access device camera                                   | "Let users take photos of their progress"             |
 
 <Tip>
   To use any device feature, just describe what you want in chat. You don't need to specify the package name - Create will figure out the right implementation.
 </Tip>
 
 <Note>
-  Missing a capability you need? Let us know at hello@create.xyz and we'll prioritize adding it.
+  Missing a capability you need? Let us know at [hello@create.xyz](mailto:hello@create.xyz) and we'll prioritize adding it.
 </Note>
-
 
 ## FAQ
 
 <AccordionGroup>
   <Accordion title="Can I convert my existing web app to mobile?">
-    We're rapidly making this 1:1. For now, try it. You can turn on web pages in mobile app settings and see how it works. Give us feedback on how it could be better.  
+    We're rapidly making this 1:1. For now, try it. You can turn on web pages in mobile app settings and see how it works. Give us feedback on how it could be better.
   </Accordion>
-
   <Accordion title="Do I need to know React Native?">
-    No! Create handles all React Native code for you. Just describe what you want.
+    No\! Create handles all React Native code for you. Just describe what you want.
   </Accordion>
-
   <Accordion title="Can I publish to app stores?">
     Yes, with some manual steps during beta. We're streamlining this process so all you'll need is your Apple or Google accounts.
   </Accordion>
-
   <Accordion title="What about app signing and certificates?">
     You handle app signing certificates yourself for now. We'll simplify this in future updates.
   </Accordion>
-
   <Accordion title="Can I use my existing Create database?">
-    Yes! Your mobile app connects to the same database as your web app.
+    Yes\! Your mobile app connects to the same database as your web app.
   </Accordion>
-
   <Accordion title="How do I handle different screen sizes?">
     Create automatically generates responsive layouts that adapt to different device sizes.
   </Accordion>
 </AccordionGroup>
 
 <Note>
-  Need help? Join our [Discord community](https://create.xyz/discord) or email hello@create.xyz
+  Need help? Join our [Discord community](https://create.xyz/discord) or email [hello@create.xyz](mailto:hello@create.xyz)
 </Note>
