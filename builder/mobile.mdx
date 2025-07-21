@@ -148,7 +148,7 @@ Create's web builder shows you a preview of your app as you chat. But to test th
 
 ## How It Works
 
-Create generates React Native code and partners with Expo. It generates app that can work on either iOS or Android, and use device capabilities like camera, location, etc.
+Create generates React Native code and partners with ExpoGo for app preview. It generates app that can work on either iOS or Android, and use device capabilities like camera, location, etc.
 
 The code tab reveals React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` that work across iOS and Android.
 
@@ -162,10 +162,14 @@ React Native code can be previewed on the web, so you can view a preview of your
   Some device-specific features like camera access, location services, and barcode scanning won't work in the web preview. For the most accurate testing experience and to access all native device capabilities, use the Expo Go app to preview your application directly on your iOS or Android device.
 </Warning>
 
-## Publishing to App Stores
+## Publishing to iOS App Store via [TestFlight](https://developer.apple.com/testflight/)
+
+TestFlight is Apple's Beta channel for testing ahead of your eventual app store launch. 
+
+![Lockup Ipad Iphone Testflight 2x Web](/images/lockup-ipad-iphone-testflight_2x.webp)
 
 <Note>
-  Submitting to the App Store requires an Apple Developer Account which requires a yearly subscription. Create an Apple Developer account using your Apple ID right [here](https://developer.apple.com/account).
+  Submitting to the TestFlight and the App Store requires an Apple Developer Account which requires a yearly subscription. Create an Apple Developer account using your Apple ID right [here](https://developer.apple.com/account).
 </Note>
 
 <Steps>
@@ -185,10 +189,7 @@ React Native code can be previewed on the web, so you can view a preview of your
     2. Select "Submit to App Store"
 
     <Frame>
-      <img
-        src="/images/mobile/mobile-appstore-button.png"
-        style={{ borderRadius:"0.5rem" }}
-      />
+      ![Mobilepublish Pn](/images/mobilepublish.png)
     </Frame>
     3. Enter your Apple ID credentials
     4. Complete text authentication
@@ -224,7 +225,7 @@ React Native code can be previewed on the web, so you can view a preview of your
 ### Completing Apple Requirements
 
 <Note>
-   Apple requires several items to be completed before your app can be reviewed for App Store launch. Here's a comprehensive guide to completing all requirements.
+  Apple requires several items to be completed before your app can be reviewed for App Store launch. Here's a comprehensive guide to completing all requirements.
 </Note>
 
 <Frame>
@@ -313,8 +314,9 @@ React Native code can be previewed on the web, so you can view a preview of your
     - Configure in-app purchases if applicable
     - Set availability in different regions
     - Configure promotional codes if needed
+
       <Note>
-         Apple requires you to submit your country's respective tax form to earn monetization. Refer to it [here](https://developer.apple.com/help/app-store-connect/manage-tax-information/provide-tax-information/).
+        Apple requires you to submit your country's respective tax form to earn monetization. Refer to it [here](https://developer.apple.com/help/app-store-connect/manage-tax-information/provide-tax-information/).
       </Note>
 
     <Frame>
