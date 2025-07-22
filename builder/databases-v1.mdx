@@ -6,22 +6,18 @@ description: "This is a legacy document for projects using our prior version of 
 Databases let you store information in your apps. They're essential for apps that need to remember data between uses - like user preferences, form submissions, user submissions, or content to display.
 
 <Warning>
-  This is a legacy article for a prior version of databases (for apps built in Create prior to February 2025).  The article for our current release is linked here!
+  This is a legacy article for a prior version of databases (for apps built in Create prior to February 2025).  The article for our current release is [linked here\!](/builder/databases)
 </Warning>
 
 ## Why Use Databases
 
 Databases help you:
 
-* Save user input across sessions
-
-* Store content for your app
-
-* Build apps with dynamic data
-
-* Create admin interfaces to manage information
-
-* Store information that's specific to each user to customize your app's experience per user
+- Save user input across sessions
+- Store content for your app
+- Build apps with dynamic data
+- Create admin interfaces to manage information
+- Store information that's specific to each user to customize your app's experience per user
 
 ## Creating a Database
 
@@ -29,48 +25,32 @@ Create databases through:
 
 **Chat**
 
-* From the chat for a Page, Function, or Component
-
-* Type`/`> "Data" > "Create a database"
-
-* Name your database (e.g., "Feedback", "Products")
-
-* Describe how you want to store data:
-
-  * "Store waitlist signups with name and email in /\[WaitlistDB]"
-
-  * "Store blog posts with title, content, and author in /\[BlogDB]"
-
-  * "Store gallery submissions in /\[GalleryDB]. In the feed, retrieve submissions from /\[GalleryDB]"
-
-* Send your prompt in the chat. Create generates the database schema and queries (inserts, updates, fetches).
-
-* Test your database by using your Page/Function/Component in Demo mode.
-
-  * If you tap on the database name in the chat, you can view the data.
-
-  * From the[three dot menu](/builder/controls#top-nav)on the Page/Function/Component, you can go to Linked Data to see databases referenced by the element. This provides quick access to the database.
+- From the chat for a Page, Function, or Component
+- Type`/`\> "Data" \> "Create a database"
+- Name your database (e.g., "Feedback", "Products")
+- Describe how you want to store data:
+  - "Store waitlist signups with name and email in /[WaitlistDB]"
+  - "Store blog posts with title, content, and author in /[BlogDB]"
+  - "Store gallery submissions in /[GalleryDB]. In the feed, retrieve submissions from /[GalleryDB]"
+- Send your prompt in the chat. Create generates the database schema and queries (inserts, updates, fetches).
+- Test your database by using your Page/Function/Component in Demo mode.
+  - If you tap on the database name in the chat, you can view the data.
+  - From the[three dot menu](/builder/controls#top-nav)on the Page/Function/Component, you can go to Linked Data to see databases referenced by the element. This provides quick access to the database.
 
 **Dashboard**
 
-* Go to create.xyz/dashboard > Databases > New Database
-
-* Name your database and submit
-
-* Tap on the database name in the list to view its data
-
-* (Optional) You can seed the initial schema / data with a CSV file
-
-* Use it in the builder from a Page, Function, or Component with`/`> "Data" > "Select Database"
+- Go to create.xyz/dashboard \> Databases \> New Database
+- Name your database and submit
+- Tap on the database name in the list to view its data
+- (Optional) You can seed the initial schema / data with a CSV file
+- Use it in the builder from a Page, Function, or Component with`/`\> "Data" \> "Select Database"
 
 <Info>
   When you include a database in your prompt, Create generates queries based on your prompt's description. From these queries, it infers the database schema. It can:
 
-  * Design tables from your description
-
-  * Infer structure / schema from your UI
-
-  * Follow specific schema requirements you provide (e.g. "Make a table for friends with name and age")
+  - Design tables from your description
+  - Infer structure / schema from your UI
+  - Follow specific schema requirements you provide (e.g. "Make a table for friends with name and age")
 </Info>
 
 ## Using Your Database
@@ -78,20 +58,15 @@ Create databases through:
 Add databases to any page, component, or function:
 
 1. Type`/`in chat
-
 2. Select your database
-
 3. Choose how to interact (insert, update, fetch)
-
 4. Create adds the necessary queries to the code. It sets the schema for the database from the queries.
 
 Your database appears in:
 
-* Chat - tap to view data
-
-* [Three dot menu](/builder/controls#three-dot-menu)on a Page/Function/Component - Linked Data
-
-* Dashboard - create.xyz/dashboard > Databases
+- Chat - tap to view data
+- [Three dot menu](/builder/controls#three-dot-menu)on a Page/Function/Component - Linked Data
+- Dashboard - create.xyz/dashboard \> Databases
 
 <Info>
   Use the same database across multiple elements or projects. This lets you build different interfaces for the same data.
@@ -103,77 +78,53 @@ You can manage the data in your database from the dashboard, the database viewer
 
 **Add Data**
 
-* From the database viewer > upload CSV files to populate tables. The table schema is inferred from the CSV column headers.
-
-* From your app after it's integrated > in either Demo mode or Publish, go through your app flows to insert into the database.
-
-* Build your own admin tools:
-
-  * Create custom admin interfaces:
-
-    * New Page > / in chat > "Data" > "Select Database"
-
-    * Describe your admin interface (e.g. "Make an admin interface for /\[your database] that lets me add/edit/delete submissions")
-
-    * Create generates forms and tables to manage your data
-
-    * Add fields, filters, and sorting as needed
-
-  * Generate test data with AI:
-
-    * New Page > / in chat > "Data" > "Select Database"
-
-    * Ask for a data generator (e.g. "Create a tool to generate test data for /\[your database] using /ChatGPT")
-
-    * Review generated entries before saving
-
-    * Bulk add approved data to your database
-
-    * Works with ChatGPT, Sonnet 3.5, and other AI models
+- From the database viewer \> upload CSV files to populate tables. The table schema is inferred from the CSV column headers.
+- From your app after it's integrated \> in either Demo mode or Publish, go through your app flows to insert into the database.
+- Build your own admin tools:
+  - Create custom admin interfaces:
+    - New Page \> / in chat \> "Data" \> "Select Database"
+    - Describe your admin interface (e.g. "Make an admin interface for /[your database] that lets me add/edit/delete submissions")
+    - Create generates forms and tables to manage your data
+    - Add fields, filters, and sorting as needed
+  - Generate test data with AI:
+    - New Page \> / in chat \> "Data" \> "Select Database"
+    - Ask for a data generator (e.g. "Create a tool to generate test data for /[your database] using /ChatGPT")
+    - Review generated entries before saving
+    - Bulk add approved data to your database
+    - Works with ChatGPT, Sonnet 3.5, and other AI models
 
 **Update Schema**
 
-* Upload new CSV with modified columns from the database viewer
-
-* Create custom update tools with pages/functions from the builder
-
-* Contact support for manual changes. Email us at[hello@create.xyz](mailto:hello@create.xyz)
+- Upload new CSV with modified columns from the database viewer
+- Create custom update tools with pages/functions from the builder
+- Contact support for manual changes. Email us at[hello@create.xyz](mailto:hello@create.xyz)
 
 **Joining Data**
 
 You can create multiple related tables in your database:
 
-* Describe the different tables you want in your prompt
-
-* Create generates the appropriate schema and relationships
-
-* Each table gets unique IDs automatically
+- Describe the different tables you want in your prompt
+- Create generates the appropriate schema and relationships
+- Each table gets unique IDs automatically
 
 Each row in your database has a unique ID. This lets you:
 
-* Join data across tables in the same database
-
-* Connect data between different databases
-
-* Build relationships between user data and content
+- Join data across tables in the same database
+- Connect data between different databases
+- Build relationships between user data and content
 
 For example, imagine building a blog with user accounts:
 
 1. Create a BlogPostsDB to store AI-generated posts
-
 2. Enable User Accounts which creates UsersDB
-
 3. When storing posts, include the current user's ID
-
 4. Later, fetch posts filtered by user ID
 
 The flow works because:
 
-* Create stores the user ID from UsersDB with each blog post
-
-* This connection lets you query posts by user
-
-* You can join the data to show user details with posts
+- Create stores the user ID from UsersDB with each blog post
+- This connection lets you query posts by user
+- You can join the data to show user details with posts
 
 <Info>
   Create handles the relationship logic automatically when you describe how you want to connect the data in your prompt.
@@ -183,42 +134,32 @@ The flow works because:
 
 From the database viewer you can:
 
-* Rename database
-
-* Delete database
-
-* Download data as CSV
+- Rename database
+- Delete database
+- Download data as CSV
 
 ## Pro Tips
 
-* AI excels at database design. In ChatGPT or other LLMs, ask "What schema would work for \[your use case]?" and use the response in your database creation prompt
-
-* Create your own admin pages to manage your data. You don't need to publish these, but they can help for managing.
-
-* Use the same database across multiple pages for different views of your data
+- AI excels at database design. In ChatGPT or other LLMs, ask "What schema would work for [your use case]?" and use the response in your database creation prompt
+- Create your own admin pages to manage your data. You don't need to publish these, but they can help for managing.
+- Use the same database across multiple pages for different views of your data
 
 ## Examples
 
 You can use databases to build:
 
-* Contact form submissions
-
-* Content management systems
-
-* CRMs
-
-* Gallery submissions
-
-* Storing image urls
-
-* User feedback collection
-
-* Catalogs
-
-* And more
+- Contact form submissions
+- Content management systems
+- CRMs
+- Gallery submissions
+- Storing image urls
+- User feedback collection
+- Catalogs
+- And more
 
 👉 Watch our [video tutorial](https://www.youtube.com/watch?v=cUcd3t6yJdM) for a detailed walkthrough.
 
 <div className="relative aspect-video">
-  <iframe src="https://www.youtube.com/embed/cUcd3t6yJdM" title="Create Tutorial: Using Databases" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+<iframe src="https://www.youtube.com/embed/cUcd3t6yJdM" title="Create Tutorial: Using Databases" className="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+
 </div>
