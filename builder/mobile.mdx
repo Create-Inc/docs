@@ -176,9 +176,9 @@ React Native code can be previewed on the web, so you can view a preview of your
     2. Obtain your [Apple Developer Account](https://developer.apple.com/account)
 
        <Warning>
-         New Apple Developer Accounts may have a processing delay by Apple of 48 hours or more and/or require ID verification to finalize. Pay close attention to your email as they will update you or ask for further information there. \
+         **New Apple Developer Accounts may have a processing delay** by Apple of 48 hours or more and/or require ID verification to finalize. Pay close attention to your email as they will update you or ask for further information there. \
          \
-         You will not be able to publish to the app store or TestFlight while your Apple Developer Account is processing or verifying.
+         You will not be able to publish to the app store or TestFlight while your Apple Developer Account is processing or verifying. You'll receive an email from Apple stating "Welcome to AppConnect" that should indicate you are aready to use your developer account. 
        </Warning>
     3. Prepare required assets:
 
@@ -197,18 +197,23 @@ React Native code can be previewed on the web, so you can view a preview of your
       ![Mobilepublish Pn](/images/mobilepublish.png)
     </Frame>
     3. Enter your Apple ID credentials
-    4. Complete text authentication
+    4. Complete text or device authentication
+
+       ![Mobileappstorecode Pn](/images/mobileappstorecode.png)
     5. Create will handle the build and submission process to App Store Connect
 
+       ![Mobileuploadwaiting Pn](/images/mobileuploadwaiting.png)
+
     <Frame>
-      <img
-        src="/images/mobile/mobile-success.png"
-        style={{ borderRadius:"0.5rem" }}
-      />
+      
     </Frame>
   </Step>
   <Step title="After Submission">
     1. Download [TestFlight](https://apps.apple.com/us/app/testflight/id899247664) from the app store and log into your developer account
+
+       <Note>
+         No iPhone? You can use TestFlight on recent mac laptops as well to test your app
+       </Note>
     2. Check your email for notifications from Apple, you should see an email from App Store Connect
     3. Inside should be an invitation with an invite code
     4. Redeem the code within TestFlight
@@ -229,7 +234,7 @@ React Native code can be previewed on the web, so you can view a preview of your
       />
     </Frame>
   </Step>
-  <Step title="New Step">
+  <Step title="Testing">
     
   </Step>
 </Steps>
