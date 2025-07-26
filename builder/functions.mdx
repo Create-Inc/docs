@@ -2,27 +2,28 @@
 title: "Functions"
 ---
 
-Functions let you build powerful backend logic by turning your words into code. They handle powerful operations while keeping your UI clean and focused.
+Functions enable you to build powerful backend logic by transforming your natural language into code. They handle complex operations while keeping your UI clean and focused.
 
 <Warning>
-  This information is for a legacy version of Create. Function creation will soon be natively handled by the AI builder using simple instruction during your project editing. 
+  This information is for a legacy version of Create. Function creation will soon be natively handled by the AI builder using simple instructions during your project editing.
 </Warning>
 
-## Why Use Functions
+## Benefits of functions
 
-Functions offer several key benefits:
+Functions offer several key advantages:
 
-- **Turn words into logic** - Describe what you want in plain language and Create generates the code
-- **Separate UI from Logic** - Keep pages focused on presentation while Functions handle powerful operations
-- **Test in Isolation** - Debug and perfect logic independently from your UI
-- **Reuseable** - Use Functions across pages and components once they're working
+- **Transform words into logic** - Describe what you want in plain language and Create generates the code
+- **Separate UI from logic** - Keep pages focused on presentation while Functions handle complex operations
+- **Test in isolation** - Debug and perfect logic independently from your UI
+- **Reusable** - Use Functions across pages and components once they're working
 - **External APIs** - Functions can connect securely to thousands of APIs using [Secrets](#secrets)
-- **Composeable** - Build powerful features by combining Functions with [Integrations](/builder/integrations), [Databases](/builder/databases), and other Functions
+- **Composable** - Build powerful features by combining Functions with [Integrations](/builder/integrations), [Databases](/builder/databases), and other Functions
 
-For example, imagine building an app that analyzes documents with AI:
+### Example: Document analysis application
 
-Without Functions, you would need to handle everything in one place:
+Imagine building an application that analyzes documents with AI:
 
+**Without Functions** - everything in one place:
 - Upload interface for PDFs
 - Code to display the document
 - AI analysis of images
@@ -30,29 +31,27 @@ Without Functions, you would need to handle everything in one place:
 - Error messages
 - Loading screens
 
-With Functions, you can split this into simpler parts:
+**With Functions** - split into manageable parts:
 
-Page:
-
+**Page:**
 - A clean upload interface
 - Document display
 - A button that calls your analysis Function
 
-Function:
-
+**Function:**
 - AI image analysis
 - AI text summarization
 - Error handling
 
-This separation makes your app easier to build, test, and maintain.
+This separation makes your application easier to build, test, and maintain.
 
-## Creating Functions
+## Create functions
 
 Create Functions in several ways:
 
-- **Logo Menu** \> New Function
+- **Logo Menu** > New Function
 - Press `option-F` (or `alt-F` on Windows)
-- Type `/` in chat \> Create Function
+- Type `/` in chat > Create Function
 
 <Frame caption="Creating a new Function">
   ![](/images/functions/new.gif)
@@ -70,16 +69,16 @@ Create generates:
 - The underlying serverless code (viewable in the "Code" tab)
 - Input/output interfaces
 
-## Making Functions that Work
+## Build effective functions
 
 When building Functions:
 
 - For external APIs, find their documentation first. You can paste API endpoint URLs directly into the Function chat - Create will analyze the screenshot and write the code.
 - If you get test errors, paste the error message back into your Function definition. Create often knows how to fix the specific issue.
 
-## Using Integrations, Databases, and Other Functions
+## Use integrations, databases, and other functions
 
-Make your Functions more powerful by combining them with:
+Enhance your Functions by combining them with:
 
 - [Integrations](/builder/integrations) - Add AI capabilities and other features
 - [Databases](/builder/databases) - Store and retrieve data
@@ -103,11 +102,13 @@ For example, you could build a Function that:
 
 Create handles connecting everything together based on your description. If you need specific behavior, add more details to your prompt about how you want the pieces to interact.
 
-## Testing Functions
+## Test functions
 
 Every Function has a full test runner available by clicking on the three dot menu to the far right of the function page itself and selecting Run Test.
 
 ![Screenshot2025 06 25at4 42 33PM Pn](/images/Screenshot2025-06-25at4.42.33PM.png)
+
+### Testing features
 
 - **Sample Inputs** - Enter test data as Form or JSON
 - **Run Tests** - Execute the Function with your inputs
@@ -120,7 +121,7 @@ Every Function has a full test runner available by clicking on the three dot men
   Functions have a 5-minute timeout. Chain Functions together for longer operations.
 </Tip>
 
-## Using Functions
+## Use functions
 
 Add Functions to pages, components, or other Functions:
 
@@ -139,7 +140,7 @@ Create handles:
 - Loading indicators
 - UI integration
 
-## Updating Functions
+## Update functions
 
 After changing a Function:
 
@@ -148,10 +149,10 @@ After changing a Function:
 3. Create will refresh with latest changes
 
 <Info>
-  Changes to Functions don't automatically update everywhere they're used. This prevents unwanted changes from breaking your app.
+  Changes to Functions don't automatically update everywhere they're used. This prevents unwanted changes from breaking your application.
 </Info>
 
-## External APIs and Secrets
+## External APIs and secrets
 
 Functions can connect to any external API. To use an API:
 
@@ -159,7 +160,7 @@ Functions can connect to any external API. To use an API:
 2. Tell Create which API to use - it will handle the integration
 3. Test carefully since calls hit live APIs
 
-Popular APIs and where to find credentials:
+### Popular APIs and credential sources
 
 - **Stripe**: [How to get your API Key](https://docs.stripe.com/keys)
 - **GitHub**: [How to get your Personal Access Token](https://github.com/settings/tokens)
@@ -168,6 +169,8 @@ Popular APIs and where to find credentials:
 - **Sendgrid**: [How to get your API Key](https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys)
 - **MailGun**: [How to get your API Key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-keys-and-SMTP-credentials)
 - **HubSpot**: [How to get your API key](https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key)
+
+### Video tutorials
 
 Here is an in-depth YouTube video tutorial on how to connect to an external API, using the [Exa AI Search API](https://exa.ai/):
 
@@ -187,20 +190,22 @@ You can also use Zapier, Make, and other platforms that connect to APIs by using
 
 Secrets securely store sensitive data like API keys and passwords. They're available to all Functions in your project.
 
+### Add secrets
+
 To add a Secret:
 
 1. Open the "Secrets" panel from the 3-dot menu at the top of chat in any Function
-2. Click "\+ Add a new secret"
-3. Name it clearly (e.g. "Stripe API Key")
+2. Click "+ Add a new secret"
+3. Name it clearly (e.g., "Stripe API Key")
 4. Enter the secret value
 
 Create automatically uses well-named secrets when generating Function code. For example, if you have a "Stripe API Key" secret and mention Stripe in your prompt, Create will use that key securely.
 
 <Info>
-  When using popular APIs like Stripe or Twilio, Create will often ask for specific secret names in chat (e.g. "Stripe Secret Key"). Use these as hints for what credentials you need.
+  When using popular APIs like Stripe or Twilio, Create will often ask for specific secret names in chat (e.g., "Stripe Secret Key"). Use these as hints for what credentials you need.
 </Info>
 
-Supported secret types:
+### Supported secret types
 
 - API Keys
 - Access Tokens
@@ -220,7 +225,7 @@ When ready to launch:
 3. Set routes if needed (all Function routes start with /api)
 4. Enable/disable as needed
 
-Published Functions are locked versions your published app uses. Continue development without breaking live features.
+Published Functions are locked versions your published application uses. Continue development without breaking live features.
 
 <Tip>
   Need help? [Join our Discord](https://create.xyz/discord) and post in #help-me-build

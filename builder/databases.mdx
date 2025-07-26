@@ -10,34 +10,29 @@ hidden: true
 
 ## Overview
 
-Every Create project comes with a free database built in. As you chat with Create, it handles all database details - from designing the structure to writing the code that lets your app save and retrieve data from it.
+Every Create project includes a free database. As you chat with Create, it handles all database details - from designing the structure to writing the code that enables your application to save and retrieve data.
 
 Use databases to:
 
 * Store user submissions (forms, feedback, uploads)
-
 * Save content (blog posts, products, galleries)
-
-* Persist data between uses of the app
-
+* Persist data between application sessions
 * Build dynamic data-driven features
 
+## Chat-based database management
 
-## Chat
-
-Create automatically updates your database structure & how your app retrieves and stores data as you chat.
+Create automatically updates your database structure and how your application retrieves and stores data as you chat.
 
 When a feature requires storing data, it:
 
 1. **Designs the database structure** based on your description
+2. **Creates Functions** to save and retrieve data from the database
+3. **Designs Pages and Components** to display and interact with the data
+4. **Connects everything** to ensure your Pages use the Functions that retrieve/store data
 
-2. **Makes Functions** to save and retrieve data from the database
+### Example: Task management application
 
-3. **Designs the Pages and Components** to display and interact with the data
-
-4. **Connects everything** to make sure your Pages use the Functions that retrieve/store data.
-
-For example, if you say "Make me a tasks app", Create:
+If you say "Make me a tasks app", Create:
 
 <Steps>
   <Step title="Creates a tasks table with title, due date, and other fields">
@@ -65,15 +60,17 @@ For example, if you say "Make me a tasks app", Create:
   </Step>
 </Steps>
 
-As you continue describing your app, Create updates your database structure, Functions and Pages to match what you want.
+As you continue describing your application, Create updates your database structure, Functions, and Pages to match your requirements.
+
+## Common database modifications
 
 Here are common ways to modify your database through chat:
 
-### Setting the scene
+### Set the scene
 
-It helps to start with a specific description of what you want your app to do.
+Start with a specific description of what you want your application to do.
 
-Prompt:
+**Prompt:**
 
 ```
 Make a tasks app. Users should be able to add, view, and delete tasks. 
@@ -83,120 +80,99 @@ Each task has title, description and comments
 Comments should show up under the task and show who wrote them.  
 ```
 
-Create will:
+**Create will:**
 
-* Make the tables needed
-
+* Create the necessary tables
   * Make a Tasks table with title, description, and comments fields
-
   * Make a Users table with name and avatar fields
-
   * Make a Comments table with text and author fields
-
 * Create Functions to save and fetch tasks, users, and comments
-
 * Build a Page with a task list, add form, and comment list
-
 * Make the Page use your Functions to save tasks when submitted and grab tasks to display
 
-### Adding Fields
+### Add fields
 
 ```
 Add a description to todos. Show it below the title in italics.
 ```
 
-Create will:
+**Create will:**
 
 * Add the description column to the Todos table
-
 * Update Functions to handle the new field
-
 * Modify the UI to display descriptions
 
-### Removing Fields
+### Remove fields
 
 ```
 Remove the priority from todos, we won't use it anymore
 ```
 
-Create will:
+**Create will:**
 
 * Remove the priority column
-
 * Update queries to exclude the field
-
 * Clean up any UI elements showing priority
 
-### Adding Tables
+### Add tables
 
 ```
 Let users add comments on todos. Each comment should have the text and who wrote it
 ```
 
-Create will:
+**Create will:**
 
 * Make a new Comments table
-
 * Link it to the Todos table
-
 * Add UI for viewing/adding comments
-
 * Handle saving comments to the database
 
-### Changing Structure
+### Change structure
 
 ```
 Instead of due dates, let's use status (Todo, In Progress, Done) to track progress
 ```
 
-Create will:
+**Create will:**
 
-* Convert the due\_date field to a status field
-
+* Convert the due_date field to a status field
 * Update existing data
-
 * Modify the UI to show status options
 
-### Relationships
+### Manage relationships
 
 ```
 Let users assign todos to team members. Show their avatar next to each todo
 ```
 
-Create will:
+**Create will:**
 
 * Add user relationships to todos
-
 * Update queries to fetch user data
-
 * Show assignee info in the UI
 
-### Filling Data
+### Generate sample data
 
 ```
 Generate 10 sample todos with different statuses and assignees
 ```
 
-Create will:
+**Create will:**
 
 * Generate 10 sample todos with different statuses and assignees based on your structure
-
 * Insert the data into your database
-
 * Preserve relationships between tables
 
-### Validation
+### Add validation
 
 ```
 Make sure every todo has a title
 ```
 
-Create will:
+**Create will:**
 
 * Add validation rules to the database
-
 * Update Functions to check data
-
 * Show validation errors in the UI
 
 <Tip>
@@ -208,80 +184,65 @@ Create will:
 
   If you describe something at a high level, "make a todo app", Create will guess what fields each todo should have.
 
-  If you describe what you want in detail, "make a todo app with a title, due date, and priority field", Create will make sure each todo has those fields.
+  If you describe what you want in detail, "make a todo app with a title, due date, and priority field", Create will ensure each todo has those fields.
 </Tip>
 
-## Viewing & Editing Data
+## View and edit data
 
-Create comes with a built-in database viewer for manual edits to your data. You can quickly verify that data is being stored in the right way when you use your app.
+Create includes a built-in database viewer for manual edits to your data. You can quickly verify that data is being stored correctly when you use your application.
 
-Access it from:
+### Access the database viewer
 
 * Chat - tap the database
+* [Project Selector](/builder/controls#project-selector) - choose your database name
 
-* [Project Selector](/builder/controls#project-selector)- choose your database name
-
-The database viewer lets you:
+### Database viewer features
 
 * See all tables
-
 * Edit individual rows
-
 * Sort and filter data
-
 * Download data in bulk
-
 * Run custom SQL queries to fetch data
 
-You can also make your own internal tools to update multiple tables at once:
+You can also create your own internal tools to update multiple tables at once:
 
-* Make a new[Page](/builder/pages)
-
+* Make a new [Page](/builder/pages)
 * Describe your tool and how it should update the database
-
-* Try out your UI
+* Test your UI
 
 <Info>
   Changes in Demo mode in the Builder use a test database. This lets you experiment safely without affecting your live data.
 </Info>
 
-## Test vs. Live DB
+## Test vs. live databases
 
 Create maintains separate test and live databases for each project:
 
-**Test Database**
+### Test database
 
 * Used in Demo mode from the builder
+* Allows you to verify your application is saving data correctly before publishing
 
-* Allows you to make sure your app is saving data correctly before publishing
+### Live database
 
-**Live Database**
-
-* Used in your published app
-
+* Used in your published application
 * Access your live database from the builder
 
-### Publishing
+## Publishing
 
-When you publish your app, Create automatically:
+When you publish your application, Create automatically:
 
 * Creates your live database
-
 * Applies the latest structure from the Test database to your Live database so that it has the same tables and fields
-
-* Runs your app with that structure
+* Runs your application with that structure
 
 <Warn>
   When making changes to your database structure after publishing, be careful about conflicts with your live database. For example:
 
-  * You make an app that has a User table with email, image, and phone fields
-
-  * You publish your app so your live database has the same tables. You launch it and users start signing up.
-
-  * You later decide that you don't need phone numbers, so in an update to the app you remove it.
-
-  * You try to publish your app again. Your live database now has users with phone numbers.
-
+  * You make an application that has a User table with email, image, and phone fields
+  * You publish your application so your live database has the same tables. You launch it and users start signing up.
+  * You later decide that you don't need phone numbers, so in an update to the application you remove it.
+  * You try to publish your application again. Your live database now has users with phone numbers.
   * Create will warn you about this conflict on publish. If you publish, it will remove the existing phone numbers.
 
   This is called a "migration conflict". You've changed the structure of your test database, but it now conflicts with your live database structure.
@@ -289,40 +250,33 @@ When you publish your app, Create automatically:
   To resolve migration conflicts:
 
   1. Check the error message for details
-
   2. Either:
-
      * Modify your test database to match production (keep "phone" around)
-
      * Manually migrate the live data (move data from "phone")
-
   3. Try publishing again
 
-  Create warns you about destructive changes before your publish to protect your live data.
+  Create warns you about destructive changes before you publish to protect your live data.
 </Warn>
 
-## Errors
+## Troubleshooting
 
-Here are some good ways to troubleshoot common errors:
+Here are effective ways to troubleshoot common errors:
 
 ### Data isn't saving or retrieving
 
-If data isn't saving when you use your app, there are 3 common failure points to check. Go in this order to test each isolation:
+If data isn't saving when you use your application, there are 3 common failure points to check. Go in this order to test each in isolation:
 
-#### 1. Database Structure
+#### 1. Database structure
 
 **How to check:**
 
 * Open the database viewer
-
 * Verify tables and fields match what you expect
 
 **If there's an issue:**
 
 * Describe the correct structure you want in chat
-
 * Example: "Update the Tasks table to have title, description, and dueDate fields"
-
 * Create will modify the database to match
 
 #### 2. Function -> Database
@@ -330,56 +284,42 @@ If data isn't saving when you use your app, there are 3 common failure points to
 **How to check:**
 
 * Identify which function saves or retrieves data from the database. Tap on it.
-
 * Open the [Test Runner](/builder/functions#test-runner) (3-dot menu > Test)
-
 * Enter sample data and run the test
-
 * Check database viewer to verify data was saved
-
 * Delete test records if needed
 
 **If there's an issue:**
 
 * Copy any error messages
-
 * Paste them into the function chat
-
 * Ask Create to fix the specific error
-
-* Example: "I see this error when I run saveTask and test it with this data: \[error] \[example data]"
+* Example: "I see this error when I run saveTask and test it with this data: [error] [example data]"
 
 #### 3. UI -> Function
 
 **How to check:**
 
-* Try the app in Demo mode from the UI
-
-* Check that data is being saved when you use the app in the database viewer
-
+* Try the application in Demo mode from the UI
+* Check that data is being saved when you use the application in the database viewer
 * Verify your page/component references the correct function
-
 * Type `/` in chat to see if function is linked
-
 * Try the flow in Demo mode
-
 * Watch database viewer to see if records appear
 
 **If there's an issue:**
 
 * Verify your page/component references the correct function
-
 * Example: "Connect the tasks form to the saveTask function when I submit a task"
-
 * Create will update the code to properly wire everything together
 
 <Tip>
   For any errors you encounter, you can paste them directly into Create's chat. It often recognizes specific error patterns and knows how to fix them.
 </Tip>
 
-## Reset
+## Reset database structure
 
-When you publish your app, Create pushes your test database structure to your live database. If you continue making changes to your test database structure in the builder and don't like the changes, you can reset to the structure of your last published version.
+When you publish your application, Create pushes your test database structure to your live database. If you continue making changes to your test database structure in the builder and don't like the changes, you can reset to the structure of your last published version.
 
 <Frame caption="Reset your database structure to match your published app">
   <img src="/images/databases/reset-db.png" />
@@ -391,6 +331,8 @@ This is helpful when:
 * Your database structure has become complex or incorrect
 * You want to start fresh from your last stable version
 
+### Reset process
+
 To reset your database structure:
 
 1. Open your database in the builder
@@ -401,7 +343,7 @@ To reset your database structure:
   Resetting your database structure will revert all schema changes made since publishing. This includes removing any tables or fields added since the last publish. Any data in those tables or fields will be lost.
 </Warn>
 
-## Removing Multiple Databases
+## Remove multiple databases
 
 In 99.99% of cases, you don't need multiple databases per project. A single database can have an arbitrary number of tables. It's easy to add more tables (just describe what you want to store, and Create adds a table for it). It's better to have multiple tables in the same database than multiple databases as it makes joins easier.
 
@@ -428,15 +370,17 @@ If you have multiple databases in a single project, you can remove ones you don'
 </Info>
 
 <Tip>
-  Before removing a database, make sure you understand which app features are using it. Create will attempt to warn you if removing a database would break functionality.
+  Before removing a database, make sure you understand which application features are using it. Create will attempt to warn you if removing a database would break functionality.
 </Tip>
 
-## Using an Existing Database
+## Use existing databases
 
 Create will automatically create a new database for your project. However, there are some scenarios where you might want to use an existing database for a new project:
 
-* You already have data in one database that you want to reuse for a new app 
-* You're making a new app or frontend for the same data (e.g. an internal tool or another app)
+* You already have data in one database that you want to reuse for a new application
+* You're making a new application or frontend for the same data (e.g., an internal tool or another application)
+
+### Add an existing database
 
 To add an existing database to your project:
 
@@ -449,7 +393,7 @@ To add an existing database to your project:
 </Info>
 
 <Tip>
-  This approach is excellent for creating multiple views of the same data, such as customer-facing apps alongside internal admin tools.
+  This approach is excellent for creating multiple views of the same data, such as customer-facing applications alongside internal admin tools.
 </Tip>
 
 If you no longer want to use this database in your project, you can [remove it from the project](#removing-multiple-databases).
@@ -458,7 +402,7 @@ If you no longer want to use this database in your project, you can [remove it f
 
 <AccordionGroup>
   <Accordion title="Will this scale?">
-    Yes. Create's built in databases are designed to scale. Under the hood, it's PostgreSQL, which is powerful and scalable. We partner with [Neon](https://neon.tech) to autoscale your database as your app grows.
+    Yes. Create's built-in databases are designed to scale. Under the hood, it's PostgreSQL, which is powerful and scalable. We partner with [Neon](https://neon.tech) to autoscale your database as your application grows.
   </Accordion>
 
   <Accordion title="How much data can I store?">
@@ -478,7 +422,7 @@ If you no longer want to use this database in your project, you can [remove it f
   </Accordion>
 
   <Accordion title="Can I write custom queries?">
-    Create handles making queries to your database automatically. For custom queries, create a [Function](/builder/functions) and describe what you need. You can then use your Function. Or use the built in SQL editor in the database viewer.
+    Create handles making queries to your database automatically. For custom queries, create a [Function](/builder/functions) and describe what you need. You can then use your Function. Or use the built-in SQL editor in the database viewer.
   </Accordion>
 
   <Accordion title="I have a legacy database from an app built prior to February 2025" defaultOpen={false}>
@@ -490,7 +434,7 @@ If you no longer want to use this database in your project, you can [remove it f
   Need help? Join our [Discord community](https://create.xyz/discord) or email hello@create.xyz
 </Note>
 
-## Helpful Database Terms
+## Database terminology
 
 Create handles the technical details of your database, but understanding some key concepts can help you work more effectively.
 
@@ -501,11 +445,11 @@ Think of a database as a collection of connected spreadsheets:
 * **Rows** are individual entries
 * **Relationships** connect data between tables using **foreign keys**
 
-Key terms explained:
+### Key terms
 
 | Term | Definition | Example |
 |------|------------|---------|
-| **Schema** | The structure of your database (tables and fields) | Your app's blueprint showing Users table with name, email fields |
+| **Schema** | The structure of your database (tables and fields) | Your application's blueprint showing Users table with name, email fields |
 | **Query** | Instructions to get or save data | "Get all products where price < $100" |
 | **Join** | Combining data from different tables | Showing posts with their authors' names from the Users table |
 | **Foreign Key** | A field that references another table | Post's `authorId` connects to User's `id` |

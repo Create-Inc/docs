@@ -3,31 +3,31 @@ title: "Prompting"
 description: "Our top tips from the team and community on how to chat with Create to build apps"
 ---
 
-Create understands both **text** and **images** to build your app. You'll get better results if you're clear. Soon, you'll notice it's way faster than coding.
+Create understands both **text** and **images** to build your application. Clear, specific instructions yield better results and faster development than traditional coding.
 
 <Info>
-  **Prompting** is a fancy word for "writing instructions to an AI". AI models can make mistakes, so there are better and worse ways to write the same instructions to get what you want.
+  **Prompting** refers to writing instructions for AI models. Since AI can make mistakes, the quality of your instructions significantly impacts the results you receive.
 </Info>
 
-## Tips
+## Best practices
 
-Many of these tips work in combo :)
+Combine these techniques for optimal results.
 
-### Set the scene at the start
+### Set clear context
 
-❌ **Don't:** be vague - `landing page`
+❌ **Avoid:** vague descriptions - `landing page`
 
-✅ **Do:** set a clear context and goals:
+✅ **Use:** specific context and goals:
 
 ```
 Landing page for B2B SaaS product selling an AI app builder. Show a header, pricing options for free, pro, and enterprise, testimonials section, footer
 ```
 
-### Make small changes
+### Make incremental changes
 
-❌ **Don't:** try to do many things all at once - `Make a social media site that lets users logs in, saves their posts, shows them in a feed, lets you like each card in the feed, and lets send invites to new friends`
+❌ **Avoid:** complex multi-step requests - `Make a social media site that lets users logs in, saves their posts, shows them in a feed, lets you like each card in the feed, and lets send invites to new friends`
 
-✅ **Do:** break down complex tasks into smaller steps:
+✅ **Use:** step-by-step approach:
 
 ```
 Update the cards to be 12px apart in the feed 
@@ -37,76 +37,76 @@ Update the cards to be 12px apart in the feed
 Add a way to store posts
 ```
 
-### Use Images
+### Leverage images
 
-You can paste images into the chat. You'll get best results if you add more context with a description of what about the image you want.
+Paste images directly into the chat for visual reference. Add context to describe what aspects of the image you want to incorporate.
 
 <Info>
-  On a Mac, try Control \+ Command \+ Shift \+ 4 to easily save a screenshot to your clipboard- ready to paste with Command \+ V\!
+  On Mac, use Control + Command + Shift + 4 to save a screenshot to your clipboard, then paste with Command + V.
 </Info>
 
-Examples:
+### Image usage examples
 
-✅ **Do:** replicate exactly (might require multiple passes / images):
+✅ **Exact replication** (may require multiple iterations):
 
 ```
 Replicate this exactly: <page-image>. Details: [...more details on things you want it to copy]
 ```
 
-✅ **Do:** make something similar:
+✅ **Similar features:**
 
 ```
 Make something with similar features to this: <page-image>. Details: [...more on specific things you want it to copy]
 ```
 
-✅ **Do:** style specific elements:
+✅ **Style specific elements:**
 
 ```
 Make the card look like this: <card-image>. Details: [...more details you want it to copy]
 ```
 
-✅ **Do:** extract text content:
+✅ **Extract content:**
 
 ```
 Fill the pricing options with all the text from this image: <image of pricing options>
 ```
 
-✅ **Do:** use for inspiration:
+✅ **Use for inspiration:**
 
 ```
 Start with something that looks like this: <competitor image>. Now add: [more details]
 ```
 
-✅ **Do:** apply styles:
+✅ **Apply styling:**
 
 ```
 Style it like this: <image of styles>.
 ```
 
-### Use [Discussion Mode](/essentials)
+### Use discussion mode
 
-- It can help to start by discussing/planning your project before you start building it. make sure the AI has a good plan to follow, etc. then start building
-- if you're stuck on a bug, it can help to switch to discuss mode to investigate without making edits or changes
+- Plan your project before building to ensure the AI has a clear roadmap
+- Switch to discussion mode when debugging to investigate without making changes
 
-### **Deep Thinking Mode**
+### Deep thinking mode
 
-- Engage additional AI resources to think critically about your project, strategize or have the AI research best practices for your given segment, target audience, etc
+Engage additional AI resources for critical thinking, strategy development, and research on best practices for your target audience and market segment.
 
-  ![Deepthink2 Pn](/images/deepthink2.png)
+![Deepthink2 Pn](/images/deepthink2.png)
 
-### You can get very specific
+### Specify details precisely
 
-To make something exact, you can even specify details like hex codes, fonts, or spacing, if you want. If you don't know, just describe in English and Create will get close.
+You can specify exact values like hex codes, fonts, or spacing for precise results. If you're unsure, describe in plain English and Create will approximate.
 
-Example:
+### Examples
 
-✅ **Do:** get close in English if you don't know:
+✅ **Approximate with English:**
 
 ```
 light gray subtitles that have some space between them and the title
 ```
 
-✅ **Do:** get specific on values
+✅ **Specify exact values:**
 
 ```
 #d3d3d3 subtitles
@@ -120,51 +120,49 @@ Title 32px, Subtitle 24px, with 12px space between them
 Use Inter for the titles and subtitles
 ```
 
-### Be specific on errors
+### Report errors specifically
 
 <Tip>
-  The AI builder will attempt to help you recover from errors by providing specific information to feed back into the chat automatically. You can also check error logs directly in your dashboard via the bottom right corner
+  The AI builder attempts to help recover from errors by providing specific information automatically. You can also check error logs directly in your dashboard via the bottom right corner.
 </Tip>
 
-❌ **Don't:** vague- `It's still not working. Ugh`
+❌ **Avoid:** vague complaints - `It's still not working. Ugh`
 
-✅ **Do:** describe the exact issue:
+✅ **Use:** specific descriptions:
 
 ```
 When I click on the button, it's not leading to the next page
 ```
 
-❌ **Don't:** vague- `Nothing works!`
+❌ **Avoid:** general statements - `Nothing works!`
 
-✅ **Do:** explain the specific problem:
+✅ **Use:** detailed explanations:
 
 ```
 The screen is blank. Why is that and how can I fix it?
 ```
 
-❌ **Don't:** vague- `The date picker is wrong`
+❌ **Avoid:** unclear issues - `The date picker is wrong`
 
-✅ **Do:** describe the exact issue with context:
+✅ **Use:** contextual details:
 
 ```
 This date picker [screenshot] is showing 1/9/2025 when I select 1/10/2025. Can you fix it?
 ```
 
-❌ **Don't:** vague- `The back button isn't working`
+❌ **Avoid:** incomplete descriptions - `The back button isn't working`
 
-✅ **Do:** explain the specific problem with details:
+✅ **Use:** comprehensive context:
 
 ```
 When I hit the 'manage teachers' button [screenshot] it should take me back to [page name/route] right now, nothing is happening when I click it
 ```
 
-If you see a error message, you can often just paste it back into the chat to give Create more context.
+Paste error messages directly into the chat to provide additional context.
 
-### Using previous versions
+### Reference previous versions
 
-When you generate something new, Create has knowledge of your previous versions.
-
-You can sometimes be specific on what you liked about previous versions to bring that functionality back.
+Create maintains knowledge of your previous versions. Reference specific functionality you want to restore.
 
 ```
 In a previous version, the paste image when the page was selected worked. It's now not working. 
@@ -174,15 +172,17 @@ Figure out how to bring that back.
 
 ### Global prompting
 
-Create can make changes across the entire project in parallel and/or create new elements if they don't exist.
+Create can make changes across your entire project in parallel and create new elements as needed.
 
-✅ **Add new elements across your app:**
+### Add multiple elements
+
+✅ **Create new elements across your application:**
 
 ```
 Make a dashboard with table, nav, and search. Also have an about page in the nav
 ```
 
-This will update existing elements in parallel and/or create new elements if they don't exist:
+This creates or updates:
 
 - Dashboard (page)
 - Table (component)
@@ -190,7 +190,9 @@ This will update existing elements in parallel and/or create new elements if the
 - Search (component)
 - About (page)
 
-✅ **Handle interactions between elements:**
+### Handle element interactions
+
+✅ **Manage page navigation:**
 
 ```
 On the about page the back button should go to the home page
@@ -201,7 +203,9 @@ This will:
 - Update the linking on the back button in the about page
 - Get the route from the home page
 
-✅ **Break down complex pages:**
+### Refactor complex pages
+
+✅ **Break down into components:**
 
 ```
 Turn this dashboard page into separate components
@@ -210,10 +214,12 @@ Turn this dashboard page into separate components
 This will:
 
 - Break down the page into separate components
-- Make new components as needed
+- Create new components as needed
 - Update the page to use the new components
 
-✅ **Connect data across pages:**
+### Connect data across pages
+
+✅ **Manage data flow:**
 
 ```
 Store data in /database when the user enters the form on the dashboard page. When you tap an element in the table, show that info in the details page
@@ -225,7 +231,9 @@ This handles:
 - Routing between pages
 - Passing data via query params
 
-✅ **Style across pages and components**
+### Apply consistent styling
+
+✅ **Style across components:**
 
 ```
 Make everything look more like this for style: <screenshot>
@@ -234,11 +242,11 @@ Make everything look more like this for style: <screenshot>
 This will:
 
 - Update the dashboard page to match the screenshot
-- Update all components that are used on the dashboard page to match the new style
+- Update all components used on the dashboard page to match the new style
 
-### Single Element prompts
+### Target specific elements
 
-Target individual pages or elements by name
+Reference individual pages or elements by name for focused changes.
 
 ✅ **Style specific elements:**
 

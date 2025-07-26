@@ -3,98 +3,80 @@ title: "Components"
 description: "Create reusable UI building blocks"
 ---
 
-Components are reusable building blocks for your app. They help you create consistent, maintainable interfaces by breaking down complex UIs into smaller pieces.
+Components are reusable building blocks for your application. They help you create consistent, maintainable interfaces by breaking down complex UIs into smaller, manageable pieces.
 
-## Why Use Components
+## Benefits of components
 
 Components offer several advantages:
 
 * **Break down large projects** - Split large projects into manageable pieces
-
 * **Maintain consistency** - Once perfected, components work the same way everywhere
-
 * **Save time** - Reuse components instead of regenerating similar elements
-
 * **Improve accuracy** - Shorter, focused prompts help Create generate more precise code
-
 * **Share with team** - Build a library of components for your organization
 
-As pages grow longer in terms of lines of code, AI models become more likely to make errors. Breaking your project into components helps save lines of code, and improve accuracy.
+As pages grow longer in terms of lines of code, AI models become more likely to make errors. Breaking your project into components helps reduce code complexity and improve accuracy.
 
 <Frame>
   <img src="/images/components/component-overview.png" />
 </Frame>
 
-## Creating Components
+## Create components
 
 You can create components in several ways:
 
-* **From Select Mode**:
+### From Select Mode
 
-  * Tap a generated element you want to convert in a page or component
+* Tap a generated element you want to convert in a page or component
+* Choose "Convert to Component" from the chat
 
-  * Choose "Convert to Component" from the chat
+### From Logo Menu
 
-* **From Logo Menu**:
+* Open top left menu > New Component
+* Or press `option-C` (or `alt-C` on Windows)
 
-  * Open top left menu > New Component
+### From Chat
 
-  * Or press `option-C` (or `alt-C` on Windows)
+* Type `/` > Create Component
 
-* **From Chat**:
+### From Canvas Mode
 
-  * Type `/` > Create Component
-
-* **From Canvas Mode, generating across elements**:
-
-  * Create will automatically create components that can help with your request
+* Create will automatically generate components that help with your request
 
 Describe what you want the component to do in the chat. Be specific about:
 
 * Visual design - colors, fonts, sizes, etc.
-
 * Behavior - how it should work in different states
-
 * Arguments it should accept
-
 * Variants it should support
 
-## Managing Components
+## Manage components
 
 You can manage your components in several ways:
 
 * **Rename**: Click the project group selector dropdown > Click component name to edit
-
 * **Duplicate**: In Canvas Mode, click the element's top left corner menu > Duplicate
-
 * **Delete**: In Canvas Mode, click the element's top left corner menu > Delete
 
-When you delete a component, you'll need to remove or replace it anywhere it's used in your app.
+When you delete a component, you'll need to remove or replace it anywhere it's used in your application.
 
-## Style Your Components
+## Style components
 
-Make components look good using:
+Transform component appearance using:
 
 * **Screenshots** pasted in chat - see our [prompting guide](/prompting)
-
 * **URLs** in chat - Create screenshots any URL
-
 * [**Integrations**](/builder/integrations) for component packs like shadcn/ui
-
 * [**Style Guides**](/builder/style-guides) for consistency
-
 * Other components as building blocks
 
-## Using Components
+## Use components
 
 Add components to any page or other component:
 
 * Type `/` in chat
-
 * Select your component
-
 * Describe how you want to use it
-
 * Send message to integrate
 
 <Frame>
@@ -103,58 +85,45 @@ Add components to any page or other component:
 
 After updating a component, you'll need to click "Update" wherever it's used to see the changes.
 
-## Updating Components
+## Update components
 
 When you make changes to a component, you'll need to update any pages or components that use it:
 
 * Find the places where you integrated the component
-
 * Click the "Update" button next to the component integration
-
 * Create will refresh the component with your latest changes
 
-Changes to components don't automatically update everywhere they're used. This helps prevent unwanted changes from breaking your app.
+Changes to components don't automatically update everywhere they're used. This helps prevent unwanted changes from breaking your application.
 
-## Common Components
+## Common component types
 
 Consider making components for:
 
 * Navigation elements (headers, footers, menus)
-
 * UI patterns (cards, lists, tables)
-
 * Form elements (inputs, buttons, selectors)
-
 * Layout sections (hero areas, feature grids)
-
 * Interactive elements (modals, tooltips)
 
-These are just ideas, but you can make components for anything you want.
+These are just suggestions - you can make components for anything you need.
 
 ## Arguments
 
 Components can accept arguments to customize their appearance or behavior. For example:
 
 * Button text and colors
-
 * Card content and images
-
 * Form field labels and validation
-
 * Section headings and descriptions
 
 To add arguments, describe what you want the component to accept.
 
-Example prompt: "Create a banner component that accepts:
+**Example prompt**: "Create a banner component that accepts:
 
 * Title
-
 * Subtitle
-
 * CTA text
-
 * Background image
-
 * Theme (light/dark)"
 
 <Frame>
@@ -167,28 +136,23 @@ Example prompt: "Create a banner component that accepts:
 
 You'll want to explain how to use these arguments.
 
-Later, when using the component, Create will guess the right values to pass in for the component's arguments from its context, or you can be explicit on what you want.
+Later, when using the component, Create will guess the right values to pass in for the component's arguments from its context, or you can be explicit about what you want.
 
 ## Variants
 
 Components can have multiple variations for different contexts. For example:
 
-* sizes (small, medium, large)
-
-* layouts (horizontal, vertical)
-
-* types (success, warning, error)
-
+* Sizes (small, medium, large)
+* Layouts (horizontal, vertical)
+* Types (success, warning, error)
 * Theme variations (light, dark, branded)
 
 To create variants:
 
-Example prompt: "Add variants to the button component:
+**Example prompt**: "Add variants to the button component:
 
 * Primary: solid background, white text
-
 * Secondary: outlined, colored text
-
 * Danger: red background for destructive actions"
 
 <Frame>
@@ -199,39 +163,32 @@ Example prompt: "Add variants to the button component:
   <img src="/images/components/variant-example-2.png" />
 </Frame>
 
-## Preview Stories
+## Preview stories
 
-Preview stories help you test how your component works with different inputs. They show examples of your component in action, letting you check that it works correctly in various scenarios. Create automatically generates these previews to help you validate your component's design and functionality.
+Preview stories help you test how your component works with different inputs. They show examples of your component in action, letting you verify that it works correctly in various scenarios. Create automatically generates these previews to help you validate your component's design and functionality.
+
+### Preview scenarios
 
 * Different text lengths and content
-
 * Various image sizes
-
 * Multiple color themes
-
 * Custom argument combinations
 
 The preview wraps your component in a container that lets you:
 
 * Change the preview width
-
 * Test responsive layouts
-
 * See how it looks embedded in other components
-
 * Verify spacing and alignment
 
 Control previews by describing what you want to test:
 
-Example prompt: "Show preview stories with:
+**Example prompt**: "Show preview stories with:
 
 * Short vs long text content
-
 * Light and dark themes
-
 * Different container widths (mobile to desktop)
-
 * Various image aspect ratios"
 
-While you'll see all preview stories on the component's canvas, when you use the component in your app, you'll only see the specific instance you create. The preview stories help you test and validate your component but don't affect how it works in your final app.
+While you'll see all preview stories on the component's canvas, when you use the component in your application, you'll only see the specific instance you create. The preview stories help you test and validate your component but don't affect how it works in your final application.
 
