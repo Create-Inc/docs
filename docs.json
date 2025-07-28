@@ -36,7 +36,7 @@
               "builder/databases",
               "builder/user-accounts",
               "builder/uploads",
-              "stripe-v2",
+              "stripe",
               "builder/mobile"
             ]
           },
@@ -223,6 +223,10 @@
     {
       "source": "/stripe",
       "destination": "/stripe-v2"
+    },
+    {
+      "source": "/stripe-legacy",
+      "destination": "/stripe-legacy"
     }
   ]
 }
