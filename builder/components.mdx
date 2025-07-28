@@ -1,84 +1,56 @@
 ---
 title: "Components"
-description: "Reusable UI building blocks automatically created by Create"
+description: "Create reusable UI building blocks"
 ---
 
-<Frame caption="Create automatically generates components as you build your application">
+Components are reusable building blocks for your application. They help you create consistent, maintainable interfaces by breaking down complex UIs into smaller, manageable pieces.
+
+## Benefits of components
+
+Components offer several advantages:
+
+* **Break down large projects** - Split large projects into manageable pieces
+* **Maintain consistency** - Once perfected, components work the same way everywhere
+* **Save time** - Reuse components instead of regenerating similar elements
+* **Improve accuracy** - Shorter, focused prompts help Create generate more precise code
+* **Share with team** - Build a library of components for your organization
+
+As pages grow longer in terms of lines of code, AI models become more likely to make errors. Breaking your project into components helps reduce code complexity and improve accuracy.
+
+<Frame>
   <img src="/images/components/component-overview.png" />
 </Frame>
 
-## Overview
+## Create components
 
-Components are reusable building blocks that Create automatically generates for your application. They help create consistent, maintainable interfaces by breaking down complex UIs into smaller, manageable pieces that work seamlessly together.
+You can create components in several ways:
 
-Use components to:
+### From Select Mode
 
-* Break down large projects into manageable pieces
-* Maintain consistency across your application
-* Save development time with reusable elements
-* Improve code quality and reduce complexity
-* Build a library of components for your team
+* Tap a generated element you want to convert in a page or component
+* Choose "Convert to Component" from the chat
 
-As your application grows, Create automatically identifies opportunities to create components, helping reduce code complexity and improve maintainability.
+### From Logo Menu
 
-## Chat-based component generation
+* Open top left menu > New Component
+* Or press `option-C` (or `alt-C` on Windows)
 
-Create automatically updates your component structure as you chat about your application.
+### From Chat
 
-When a feature requires reusable UI elements, it:
+* Type `/` > Create Component
 
-1. **Identifies reusable patterns** in your requests
-2. **Creates Components** with appropriate structure and arguments
-3. **Integrates Components** into your pages and other components
-4. **Maintains consistency** across your entire application
+### From Canvas Mode
 
-### Example: E-commerce application
+* Create will automatically generate components that help with your request
 
-If you say "Make me an e-commerce site with product cards", Create:
+Describe what you want the component to do in the chat. Be specific about:
 
-<Steps>
-  <Step title="Creates a ProductCard component with title, price, and image fields">
-    <Frame>
-      <img src="/images/components/component-overview.png" />
-    </Frame>
-  </Step>
+* Visual design - colors, fonts, sizes, etc.
+* Behavior - how it should work in different states
+* Arguments it should accept
+* Variants it should support
 
-  <Step title="Builds a product listing page that uses the ProductCard component">
-    <Frame>
-      <img src="/images/components/using-components.png" />
-    </Frame>
-  </Step>
-
-  <Step title="Automatically reuses the ProductCard component across your application">
-    <Frame>
-      <img src="/images/components/component-arguments.png" />
-    </Frame>
-  </Step>
-</Steps>
-
-As you continue describing your application, Create updates your component structure to match your requirements.
-
-## Common component creation methods
-
-Here are common ways to create components through chat:
-
-### Automatic generation
-
-Create automatically generates components when you:
-
-* Describe complex UI patterns (navigation, forms, layouts)
-* Request reusable elements that appear multiple times
-* Build interactive features (modals, tooltips, dropdowns)
-
-### Manual requests
-
-You can also explicitly request components:
-
-```
-Create a button component with primary and secondary variants
-```
-
-## Managing components
+## Manage components
 
 You can manage your components in several ways:
 
@@ -88,24 +60,19 @@ You can manage your components in several ways:
 
 When you delete a component, you'll need to remove or replace it anywhere it's used in your application.
 
-## Style your components
+## Style components
 
-Transform component appearance using simple prompts:
+Transform component appearance using:
 
-```
-Update the button component with a modern glass theme, style fonts similar to Apple.com
-```
+* **Screenshots** pasted in chat - see our [prompting guide](/prompting)
+* **URLs** in chat - Create screenshots any URL
+* [**Integrations**](/builder/integrations) for component packs like shadcn/ui
+* [**Style Guides**](/builder/style-guides) for consistency
+* Other components as building blocks
 
-### Styling options
+## Use components
 
-- **Screenshots** pasted in chat - see our [prompting guide](/prompting)
-- **URLs** in chat - Create screenshots any URL and adds it to context
-- [**Integrations**](/builder/integrations) for component packs like shadcn/ui
-- [**Style Guides**](/builder/style-guides) for consistency
-
-## Add components
-
-Use the `/` command menu to add components to any page or other component:
+Add components to any page or other component:
 
 * Type `/` in chat
 * Select your component
@@ -118,7 +85,7 @@ Use the `/` command menu to add components to any page or other component:
 
 After updating a component, you'll need to click "Update" wherever it's used to see the changes.
 
-## Updating components
+## Update components
 
 When you make changes to a component, you'll need to update any pages or components that use it:
 
@@ -217,6 +184,7 @@ The preview wraps your component in a container that lets you:
 Control previews by describing what you want to test:
 
 **Example prompt**: "Show preview stories with:
+
 * Short vs long text content
 * Light and dark themes
 * Different container widths (mobile to desktop)
