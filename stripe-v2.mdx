@@ -11,8 +11,304 @@ Article under construction
   **New Version**: This is the latest Stripe integration. For the legacy version, see [Payments (Legacy)](/stripe-legacy).
 </Note>
 
-Stripe enables you to set up payments for your application, allowing you to charge users for access or premium features.
+## Overview
 
-Our integration streamlines the setup process in minutes, providing:
+Create's Stripe v2 integration makes it easy to add payments to your app without technical setup. Simply connect your Stripe account and tell the agent what you want.
+
+## Quick Start
+
+### 1. Connect Your Stripe Account
+
+1. Go to your Create dashboard
+2. Click **Accept Payments**
+3. Click **Connect with Stripe**
+4. Follow the setup process
+5. You're ready to accept payments!
+
+### 2. Add Payments to Your App
+
+Tell the agent what you want using simple language:
+
+**For subscriptions:**
+- "Add a $9.99/month subscription to my app"
+- "Create a yearly plan for $99/year"
+
+**For one-time payments:**
+- "Add a one-time payment option for premium features"
+- "Create a tip jar where users can pay what they want"
+
+**For custom pricing:**
+- "Set up different pricing tiers: Basic ($5), Pro ($15), Enterprise ($50)"
+
+### 3. The Agent Builds Everything
+
+The agent will automatically create:
+- Payment pages
+- Checkout functionality
+- Database updates
+- Error handling
+
+## What Gets Created
+
+When you ask for payments, the agent typically builds:
+
+### Payment Pages
+- **Subscription page**: Where users sign up for recurring payments
+- **Checkout page**: Where users complete their purchase
+- **Account page**: Where users manage their subscription
+
+### Backend Functions
+- **Create checkout**: Starts the payment process
+- **Check payment status**: Confirms when payments complete
+- **Update database**: Records successful payments
+
+## Common Use Cases
+
+### Subscription App
+```
+"Add a $9.99/month subscription to my app with a 7-day free trial"
+```
+
+**What you get:**
+- Users can subscribe with a free trial
+- Automatic billing after trial ends
+- Users can cancel anytime
+
+### One-Time Purchase
+```
+"Add a one-time payment of $29 for premium features"
+```
+
+**What you get:**
+- Users pay once for lifetime access
+- Immediate access after payment
+- No recurring charges
+
+### Multiple Pricing Tiers
+```
+"Create three pricing tiers: Basic ($5/month), Pro ($15/month), Enterprise ($50/month)"
+```
+
+**What you get:**
+- Users can choose their plan
+- Different features per tier
+- Easy upgrade/downgrade options
+
+## Best Practices
+
+### Before Going Live
+1. **Test everything** - Create by default puts your Stripe instance in Test Mode while building so you can immediately input faux credit card numbers to attempt purchases
+2. **Verify payment flow** works end-to-end
+3. **Check error handling** for failed payments
+4. **Test user experience** from start to finish
+
+### User Experience
+- **Clear pricing**: Show exactly what users get
+- **Simple checkout**: Minimize steps to complete payment
+- **Clear feedback**: Show payment status and confirmations
+- **Easy cancellation**: Make it simple to cancel subscriptions
+
+### Monitoring
+- **Check Stripe dashboard** regularly
+- **Monitor failed payments**
+- **Track subscription status**
+- **Watch for error messages**
+
+## Testing & Debugging
+
+### Testing Your Payments
+
+
+**Note**: Create automatically defaults to test mode while you're building your app. No action required!
+
+#### Test Card Numbers
+
+Use these test card numbers to simulate different payment scenarios:
+
+##### Successful Payments
+- **Visa**: `4242424242424242`
+- **Mastercard**: `5555555555554444`
+- **American Express**: `378282246310005`
+
+##### Failed Payments
+- **Card declined**: `4000000000000002`
+- **Insufficient funds**: `4000000000009995`
+- **Expired card**: `4000000000000069`
+- **Incorrect CVC**: `4000000000000127`
+
+##### Special Scenarios
+- **Requires authentication**: `4000002500003155`
+- **3D Secure authentication**: `4000002760003184`
+
+#### Test Card Details
+
+For any test card, use these details:
+- **Expiry date**: Any future date (e.g., `12/25`)
+- **CVC**: Any 3 digits (e.g., `123`)
+- **ZIP code**: Any valid ZIP (e.g., `12345`)
+
+#### Testing Your Payment Flow
+
+##### Step 1: Test Successful Payment
+1. Use test card `4242424242424242`
+2. Complete the checkout process
+3. Verify payment appears in Stripe dashboard
+4. Check that user gets access in your app
+
+##### Step 2: Test Failed Payment
+1. Use test card `4000000000000002`
+2. Try to complete checkout
+3. Verify error message appears
+4. Check that user doesn't get charged
+
+##### Step 3: Test Subscription Flow
+1. Use test card `4242424242424242`
+2. Sign up for subscription
+3. Verify subscription appears in Stripe
+4. Test cancellation process
+
+#### What to Look For
+
+##### In Your App
+- **Payment success**: User gets access to premium features
+- **Payment failure**: Clear error message shown
+- **Loading states**: Payment processing indicators
+- **Confirmation**: Success message after payment
+
+##### In Stripe Dashboard
+- **Test Mode indicator**: Should show "Test Mode" in top right
+- **Payment records**: Test payments appear in Payments section
+- **Customer records**: Test customers appear in Customers section
+- **Subscription records**: Test subscriptions appear in Subscriptions section
+
+#### Common Testing Scenarios
+
+##### 1. Basic Payment Test
+```
+Test card: 4242424242424242
+Expected: Payment succeeds, user gets access
+```
+
+##### 2. Declined Payment Test
+```
+Test card: 4000000000000002
+Expected: Payment fails, error message shown
+```
+
+##### 3. Insufficient Funds Test
+```
+Test card: 4000000000009995
+Expected: Payment fails, "insufficient funds" error
+```
+
+##### 4. Subscription Test
+```
+Test card: 4242424242424242
+Expected: Subscription created, recurring billing set up
+```
+
+#### Testing Checklist
+
+Before going live, test these scenarios:
+
+- [ ] **Successful payment** with valid test card
+- [ ] **Failed payment** with declined test card
+- [ ] **Subscription creation** and cancellation
+- [ ] **Payment confirmation** emails (if enabled)
+- [ ] **Error handling** for various failure scenarios
+- [ ] **User access** after successful payment
+- [ ] **Database updates** when payments complete
+- [ ] **Mobile payment flow** (if applicable)
+
+#### Switching to Live Mode
+
+When you're ready to accept real payments:
+
+1. **Complete testing** in test mode
+2. **Verify everything works** as expected
+3. **Switch to live mode** in your Create dashboard
+4. **Test with small amounts** first
+5. **Monitor closely** for any issues
+
+#### Test Mode Best Practices
+
+1. **Always test first**: Never test with real cards in development
+2. **Use different scenarios**: Test both success and failure cases
+3. **Test end-to-end**: Verify the complete user experience
+4. **Document issues**: Note any problems for the agent to fix
+5. **Test regularly**: Re-test after any changes to payment flow
+
+### Troubleshooting
+
+#### Payment Not Working?
+
+**Check these first:**
+1. Is your Stripe account connected?
+2. Are you using test mode? (Create defaults to test mode automatically)
+3. Did the agent complete the setup?
+
+**Tell the agent:**
+- "My payments aren't working"
+- "Users can't complete checkout"
+- "Payments aren't showing up in my app"
+
+#### Common Issues
+
+**"Users can't pay"**
+- **Tell agent**: "Users are getting errors when trying to pay"
+- **Usually**: Stripe account not connected or test mode issue
+
+**"Payment completed but user doesn't have access"**
+- **Tell agent**: "Payment completed in Stripe but my app isn't recognizing it"
+- **Usually**: Database update logic needs fixing
+
+**"Users charged twice"**
+- **Tell agent**: "Users are being charged multiple times for the same purchase"
+- **Usually**: Polling logic running too frequently
+
+#### Troubleshooting Test Mode
+
+##### "Test payments aren't working"
+- **Check**: Is test mode enabled in Stripe dashboard? (Create defaults to test mode automatically)
+- **Check**: Are you using test card numbers?
+- **Check**: Is your Stripe account properly connected?
+
+##### "Test payments don't appear in Stripe"
+- **Check**: Are you looking in the right Stripe account?
+- **Check**: Is test mode enabled in Stripe dashboard? (should match Create's automatic test mode)
+- **Check**: Are payments actually completing?
+
+##### "Test mode not available"
+- **Check**: Is your Stripe account fully activated?
+- **Check**: Have you completed Stripe's onboarding?
+- **Note**: Create automatically uses test mode while building - no manual setup needed
+- **Tell agent**: "I can't see test payments in my Stripe dashboard"
+
+#### Getting Help with Testing
+
+If you're having trouble with test payments:
+
+**Tell the agent:**
+- "Test payments aren't working"
+- "I can't enable test mode"
+- "Test payments don't appear in Stripe"
+- "Users can't complete test payments"
+
+**Provide details:**
+- What test card you're using
+- What error messages you see
+- What you expect to happen
+- Screenshots of any error pages
+
+## Getting Help
+
+For issues with payments:
+
+1. **Check this guide** - many issues are covered here
+2. **Test the payment flow** - try making a payment yourself
+3. **Check Stripe dashboard** - verify payments are processing
+4. **Ask the agent** - describe the specific problem you're seeing
+
+The agent can fix most payment issues quickly. Just be specific about what's happening and what you expect to happen instead.
 
 
