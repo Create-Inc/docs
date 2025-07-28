@@ -205,27 +205,6 @@ Test card: 4242424242424242
 Expected: Subscription created, recurring billing set up
 ```
 
-#### Testing Checklist
-
-Before going live, test these scenarios:
-
-- [ ] **Successful payment** with valid test card
-- [ ] **Failed payment** with declined test card
-- [ ] **Subscription creation** and cancellation
-- [ ] **Payment confirmation** emails (if enabled)
-- [ ] **Error handling** for various failure scenarios
-- [ ] **User access** after successful payment
-- [ ] **Database updates** when payments complete
-- [ ] **Mobile payment flow** (if applicable)
-
-#### Test Mode Best Practices
-
-1. **Always test first**: Never test with real cards in development
-2. **Use different scenarios**: Test both success and failure cases
-3. **Test end-to-end**: Verify the complete user experience
-4. **Document issues**: Note any problems for the agent to fix
-5. **Test regularly**: Re-test after any changes to payment flow
-
 ### Troubleshooting
 
 #### Payment Not Working?
@@ -236,23 +215,9 @@ Before going live, test these scenarios:
 3. Did the agent complete the setup?
 
 **Tell the agent:**
-- "My payments aren't working"
+- "My payments aren't working" and describe behavior
 - "Users can't complete checkout"
 - "Payments aren't showing up in my app"
-
-#### Common Issues
-
-**"Users can't pay"**
-- **Tell agent**: "Users are getting errors when trying to pay"
-- **Usually**: Stripe account not connected or test mode issue
-
-**"Payment completed but user doesn't have access"**
-- **Tell agent**: "Payment completed in Stripe but my app isn't recognizing it"
-- **Usually**: Database update logic needs fixing
-
-**"Users charged twice"**
-- **Tell agent**: "Users are being charged multiple times for the same purchase"
-- **Usually**: Polling logic running too frequently
 
 #### Troubleshooting Test Mode
 
