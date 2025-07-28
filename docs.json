@@ -37,6 +37,7 @@
               "builder/user-accounts",
               "builder/uploads",
               "stripe (payments)",
+              "stripe-legacy",
               "builder/mobile"
             ]
           },
