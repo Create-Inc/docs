@@ -6,7 +6,6 @@ version: "2.0"
 <warn>
 Article under construction
 </warn>
-
 <Note>
   **New Version**: This is the latest Stripe integration. For the legacy version, see [Payments (Legacy)](/stripe-legacy).
 </Note>
@@ -178,80 +177,6 @@ For any test card, use these details:
 - **Payment records**: Test payments appear in Payments section
 - **Customer records**: Test customers appear in Customers section
 - **Subscription records**: Test subscriptions appear in Subscriptions section
-
-#### Common Testing Scenarios
-
-##### 1. Basic Payment Test
-```
-Test card: 4242424242424242
-Expected: Payment succeeds, user gets access
-```
-
-##### 2. Declined Payment Test
-```
-Test card: 4000000000000002
-Expected: Payment fails, error message shown
-```
-
-##### 3. Insufficient Funds Test
-```
-Test card: 4000000000009995
-Expected: Payment fails, "insufficient funds" error
-```
-
-##### 4. Subscription Test
-```
-Test card: 4242424242424242
-Expected: Subscription created, recurring billing set up
-```
-
-### Troubleshooting
-
-#### Payment Not Working?
-
-**Check these first:**
-1. Is your Stripe account connected?
-2. Are you using test mode? (Create defaults to test mode automatically)
-3. Did the agent complete the setup?
-
-**Tell the agent:**
-- "My payments aren't working" and describe behavior
-- "Users can't complete checkout"
-- "Payments aren't showing up in my app"
-
-#### Troubleshooting Test Mode
-
-##### "Test payments aren't working"
-- **Check**: Is test mode enabled in Stripe dashboard? (Create defaults to test mode automatically)
-- **Check**: Are you using test card numbers?
-- **Check**: Is your Stripe account properly connected?
-
-##### "Test payments don't appear in Stripe"
-- **Check**: Are you looking in the right Stripe account?
-- **Check**: Is test mode enabled in Stripe dashboard? (should match Create's automatic test mode)
-- **Check**: Are payments actually completing?
-
-##### "Test mode not available"
-- **Check**: Is your Stripe account fully activated?
-- **Check**: Have you completed Stripe's onboarding?
-- **Note**: Create automatically uses test mode while building - no manual setup needed
-- **Tell agent**: "I can't see test payments in my Stripe dashboard"
-
-#### Getting Help with Testing
-
-If you're having trouble with test payments:
-
-**Tell the agent:**
-- "Test payments aren't working"
-- "I can't enable test mode"
-- "Test payments don't appear in Stripe"
-- "Users can't complete test payments"
-
-**Provide details:**
-- What test card you're using
-- What error messages you see
-- What you expect to happen
-- Screenshots of any error pages
 
 ## Getting Help
 
