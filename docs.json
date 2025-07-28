@@ -36,7 +36,7 @@
               "builder/databases",
               "builder/user-accounts",
               "builder/uploads",
-              "stripe",
+              "payments",
               "builder/mobile"
             ]
           },
@@ -219,6 +219,10 @@
     {
       "source": "/create",
       "destination": "/welcome"
+    },
+    {
+      "source": "/stripe",
+      "destination": "/payments"
     }
   ]
 }
