@@ -4,8 +4,18 @@ description: "Store and manage data in your apps"
 hidden: true
 ---
 
-<Frame caption="Create comes with built in databases for each project">
-  <img src="/images/databases/viewer.png" />
+<Frame caption="Database Overview Video">
+  <iframe
+    width="100%"
+    height="400"
+    src="https://www.loom.com/embed/fb688b52623b46d5b8f0a9eefb42d3dc"
+    title="Database Overview Video"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowFullScreen
+    webkitallowfullscreen="true"
+    mozallowfullscreen="true"
+  />
 </Frame>
 
 ## Overview
@@ -283,9 +293,9 @@ If data isn't saving when you use your application, there are 3 common failure p
 
 **How to check:**
 
-* Identify which function saves or retrieves data from the database. Tap on it.
-* Open the [Test Runner](/builder/functions#test-runner) (3-dot menu > Test)
-* Enter sample data and run the test
+* Identify the specific part of your application that is not saving data
+* Ask the builder to test this for you and describe your current behavior
+* The builder will construct a test parameter and run it
 * Check database viewer to verify data was saved
 * Delete test records if needed
 
@@ -302,14 +312,11 @@ If data isn't saving when you use your application, there are 3 common failure p
 
 * Try the application in Demo mode from the UI
 * Check that data is being saved when you use the application in the database viewer
-* Verify your page/component references the correct function
-* Type `/` in chat to see if function is linked
-* Try the flow in Demo mode
 * Watch database viewer to see if records appear
 
 **If there's an issue:**
 
-* Verify your page/component references the correct function
+* Verify with the builder your flow and expectations of input to output (doing x should create y in z)
 * Example: "Connect the tasks form to the saveTask function when I submit a task"
 * Create will update the code to properly wire everything together
 
@@ -429,10 +436,6 @@ If you no longer want to use this database in your project, you can [remove it f
     We still have documentation for you, [linked here.](https://www.create.xyz/docs/builder/databases)
   </Accordion>
 </AccordionGroup>
-
-<Note>
-  Need help? Join our [Discord community](https://create.xyz/discord) or email hello@create.xyz
-</Note>
 
 ## Database terminology
 
