@@ -4,7 +4,7 @@ description: "Store and manage data in your apps"
 hidden: true
 ---
 
-<Frame caption="Database Overview Video">
+<Frame caption="Database Overview Video" id="database-overview-video">
   <iframe
     width="100%"
     height="400"
@@ -329,7 +329,9 @@ If data isn't saving when you use your application, there are 3 common failure p
 When you publish your application, Create pushes your test database structure to your live database. If you continue making changes to your test database structure in the builder and don't like the changes, you can reset to the structure of your last published version.
 
 <Frame caption="Reset your database structure to match your published app">
-  <img src="/images/databases/reset-db.png" />
+  <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
+    <p style={{ margin: 0, color: '#666' }}>Reset button located in the top right corner of the database viewer</p>
+  </div>
 </Frame>
 
 This is helpful when:
@@ -435,6 +437,8 @@ If you no longer want to use this database in your project, you can [remove it f
   <Accordion title="I have a legacy database from an app built prior to February 2025" defaultOpen={false}>
     We still have documentation for you, [linked here.](https://www.create.xyz/docs/builder/databases)
   </Accordion>
+  <Accordion title="I want users to see test data when they login!">
+  Ask the builder to add sample data and be specific about its purpose and location. <a href="#database-overview-video">See video here</a> for a demo of this. 
 </AccordionGroup>
 
 ## Database terminology
