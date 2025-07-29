@@ -1,192 +1,123 @@
 ---
 title: "Payments"
-description: "Next-generation Stripe integration for collecting payments"
+description: "Add Stripe payments to your app"
 version: "2.0"
 ---
+
 <warn>
 Article under construction
 </warn>
+
 <Note>
   **New Version**: This is the latest Stripe integration. For the legacy version, see [Payments (Legacy)](/stripe-legacy).
 </Note>
 
 ## Overview
 
-Create's Stripe v2 integration makes it easy to add payments to your app without technical setup. Simply connect your Stripe account and tell the agent what you want.
+Create's built-in Stripe integration lets you easily add payments to your app without complex setup. You can collect payments for:
 
-## Quick Start
+- Monthly subscriptions (like $20/month for Pro access)
+- One-time purchases (like $100 for lifetime access)
+- Multiple pricing tiers (Basic, Pro, Enterprise)
+- B2B invoicing (for custom work or consulting)
 
-### 1. Connect Your Stripe Account
+## Setup
 
-1. Go to your Create dashboard
-2. Click **Accept Payments**
-3. Click **Connect with Stripe**
-4. Follow the setup process
-5. Ensure you have created a Product or Products in Stripe
-6. You're ready to accept payments!
+<Steps>
+  <Step title="Connect Stripe Account">
+    Complete your Stripe onboarding in your Create dashboard. This links your app to your Stripe account so you can receive payments.
+    <Frame>
+      <img src="/images/stripe Accept Payments.png" />
+    </Frame>
+  </Step>
+  
+  <Step title="Enable Authentication">
+    You'll want users to sign in so you can track who has paid for what.
+    ```
+    "Allow users to login so we can track free vs paid customers"
+    ```
+  </Step>
+    <Step title="Update the builder with your desired pricing model or pricing system">
+    ```
+    "Setup a Pro plan, allow them to create 50 to-do tasks after paying 19.99 a month in Stripe, keep free users at 10."
+    ```
+  </Step>
+</Steps>
 
-### 2. Add Payments to Your App
+## How It Works
 
-Tell the agent what you want using simple language:
+**Simple Version:**
+1. User clicks "Upgrade" button in your app
+2. Stripe checkout page opens in a popup window
+3. User enters payment info and completes purchase
+4. Your app automatically detects they've paid and unlocks features
 
-**For subscriptions:**
-- "Add a $9.99/month subscription to my app"
-- "Create a yearly plan for $99/year"
+## Key Features
 
-**For one-time payments:**
-- "Add a one-time payment option for premium features"
-- "Create a tip jar where users can pay what they want"
+**✨ No Complex Setup Required**
+- No need to create "Price IDs" in Stripe dashboard
+- No webhook configuration needed
+- Prices are defined right in your code
 
-**For custom pricing:**
-- "Set up different pricing tiers: Basic ($5), Pro ($15), Enterprise ($50)"
+**✨ Smart Status Checking**
+- Your app automatically polls to check if users have paid
+- Works on both web and mobile
+- Caches results for better performance
 
-### 3. The Agent Builds Everything
+**✨ Production Ready**
+- Automatically handles test vs live Stripe keys
+- Creates and manages Stripe customers for you
+- Works seamlessly in Create's preview environment
 
-The agent will automatically create:
-- Payment pages
-- Checkout functionality
-- Database updates
-- Error handling
+## Common Pricing Models
 
-## What Gets Created
+### Monthly Subscriptions
 
-When you ask for payments, the agent typically builds:
-
-### Payment Pages
-- **Subscription page**: Where users sign up for recurring payments
-- **Checkout page**: Where users complete their purchase
-- **Account page**: Where users manage their subscription
-
-### Backend Functions
-- **Create checkout**: Starts the payment process
-- **Check payment status**: Confirms when payments complete
-- **Update database**: Records successful payments
-
-## Common Use Cases
-
-### Subscription App
 ```
-"Add a $9.99/month subscription to my app with a 7-day free trial"
-```
-
-**What you get:**
-- Users can subscribe with a free trial
-- Automatic billing after trial ends
-- Users can cancel anytime
-
-### One-Time Purchase
-```
-"Add a one-time payment of $29 for premium features"
+Pro Plan: $20/month
+Business Plan: $50/month  
+Enterprise: $100/month
 ```
 
-**What you get:**
-- Users pay once for lifetime access
-- Immediate access after payment
-- No recurring charges
+### One-Time Purchases
 
-### Multiple Pricing Tiers
 ```
-"Create three pricing tiers: Basic ($5/month), Pro ($15/month), Enterprise ($50/month)"
+Lifetime Access: $200 one-time
+Premium Features: $50 one-time
+Event Ticket: $25 one-time
 ```
 
-**What you get:**
-- Users can choose their plan
-- Different features per tier
-- Easy upgrade/downgrade options
 
-## Best Practices
+## What You Get
 
-### Before Going Live
-1. **Test everything** - Create by default puts your Stripe instance in Test Mode while building so you can immediately input faux credit card numbers to attempt purchases
-2. **Verify payment flow** works end-to-end
-3. **Check error handling** for failed payments
-4. **Test user experience** from start to finish
+When you implement Stripe, Create automatically provides:
 
-### User Experience
-- **Clear pricing**: Show exactly what users get
-- **Simple checkout**: Minimize steps to complete payment
-- **Clear feedback**: Show payment status and confirmations
-- **Easy cancellation**: Make it simple to cancel subscriptions
+- Backend routes for creating checkout sessions
+- Frontend hooks for checking payment status
+- Customer management in Stripe
+- Proper error handling
+- Mobile payment flows
 
-### Monitoring
-- **Check Stripe dashboard** regularly
-- **Monitor failed payments**
-- **Track subscription status**
-- **Watch for error messages**
+## Testing
 
-## Testing & Debugging
+Create defaults to test mode while in the builder/preview system, so you can test checkout immediately.
 
-### Testing Your Payments
+**Test Credit Cards:**
 
+**Successful payments:**
+- Visa: `4242424242424242`
+- Mastercard: `5555555555554444`
+- American Express: `378282246310005`
 
-**Note**: Create automatically defaults to test mode while you're building your app. No action required!
+**Failed payments:**
+- Card declined: `4000000000000002`
+- Insufficient funds: `4000000000009995`
+- Expired card: `4000000000000069`
 
-#### Test Card Numbers
+**Test details:**
+- Expiry date: Any future date (e.g., `12/25`)
+- CVC: Any 3 digits (e.g., `123`)
+- ZIP code: Any valid ZIP (e.g., `12345`)
 
-Use these test card numbers to simulate different payment scenarios:
-
-##### Successful Payments
-- **Visa**: `4242424242424242`
-- **Mastercard**: `5555555555554444`
-- **American Express**: `378282246310005`
-
-##### Failed Payments
-- **Card declined**: `4000000000000002`
-- **Insufficient funds**: `4000000000009995`
-- **Expired card**: `4000000000000069`
-- **Incorrect CVC**: `4000000000000127`
-
-##### Special Scenarios
-- **Requires authentication**: `4000002500003155`
-- **3D Secure authentication**: `4000002760003184`
-
-#### Test Card Details
-
-For any test card, use these details:
-- **Expiry date**: Any future date (e.g., `12/25`)
-- **CVC**: Any 3 digits (e.g., `123`)
-- **ZIP code**: Any valid ZIP (e.g., `12345`)
-
-#### Testing Your Payment Flow
-
-##### Step 1: Test Successful Payment
-1. Use test card `4242424242424242`
-2. Complete the checkout process
-3. Verify payment appears in Stripe dashboard
-4. Check that user gets access in your app
-
-##### Step 2: Test Failed Payment
-1. Use test card `4000000000000002`
-2. Try to complete checkout
-3. Verify error message appears
-4. Check that user doesn't get charged
-
-##### Step 3: Test Subscription Flow
-1. Use test card `4242424242424242`
-2. Sign up for subscription
-3. Verify subscription appears in Stripe
-4. Test cancellation process
-
-#### What to Look For
-
-##### In Your App
-- **Payment success**: User gets access to premium features
-- **Payment failure**: Clear error message shown
-
-##### In Stripe Dashboard
-- **Payment records**: Test payments appear in Payments section
-- **Customer records**: Test customers appear in Customers section
-- **Subscription records**: Test subscriptions appear in Subscriptions section
-
-## Getting Help
-
-For issues with payments:
-
-1. **Check this guide** - many issues are covered here
-2. **Test the payment flow** - try making a payment yourself
-3. **Check Stripe dashboard** - verify payments are processing
-4. **Ask the agent** - describe the specific problem you're seeing
-
-The agent can fix most payment issues quickly. Just be specific about what's happening and what you expect to happen instead.
 
 
