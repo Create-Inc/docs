@@ -99,8 +99,8 @@
     }
   },
   "logo": {
-    "light": "/logo/Anything_LogoIcon_Light.png",
-    "dark": "/logo/Anything_LogoIcon_Dark.png"
+    "light": "/Anything_LogoIcon_Light.png",
+    "dark": "/Anything_LogoIcon_Dark.png"
   },
   "appearance": {
     "default": "light"
