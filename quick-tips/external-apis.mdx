@@ -1,9 +1,10 @@
 ---
 title: "External APIs"
-description: "Learn how to integrate any external API into your Create applications using Functions"
+description: "Learn how to integrate any external API into your Anything applications using Functions"
 ---
+
 <warn>
-This article is outdated and will be updated soon to reflect new capabilities in Create to have the builder offload all primary work to connect to external APIs, just by showing it documentation.
+This article is outdated and will be updated soon to reflect new capabilities in Anything to have the builder offload all primary work to connect to external APIs, just by showing it documentation.
 </warn>
 
 Functions let you connect to any external API by turning your words into code. This guide will show you how, using the [Exa AI Search API](https://exa.ai/) as an example.
@@ -14,7 +15,7 @@ Watch this step-by-step tutorial to see these principles in action:
   width="100%"
   height="400"
   src="https://www.youtube.com/embed/Le_b7AORg-A"
-  title="Connect External APIs to Create Tutorial"
+  title="Connect External APIs to Anything Tutorial"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
@@ -27,7 +28,7 @@ Watch this step-by-step tutorial to see these principles in action:
     Locate the API documentation and endpoints
   </Card>
   <Card title="Create Function" icon="code">
-    Let Create analyze the API and generate code
+    Let Anything analyze the API and generate code
   </Card>
   <Card title="Add Credentials" icon="key">
     Store API keys as secrets
@@ -58,7 +59,7 @@ Watch this step-by-step tutorial to see these principles in action:
     ```
 
     <Tip>
-      You can paste API documentation URLs directly into the Function chat - Create will screenshot them and write the necessary code.
+      You can paste API documentation URLs directly into the Function chat - Anything will screenshot them and write the necessary code.
     </Tip>
   </Step>
 
@@ -75,7 +76,7 @@ Watch this step-by-step tutorial to see these principles in action:
   </Step>
 
   <Step title="Configure the Function">
-    Tell Create what you want the Function to do:
+    Tell Anything what you want the Function to do:
     1. Paste the API documentation URL
     2. Describe the desired inputs and outputs
     3. Specify any error handling needs
@@ -97,7 +98,7 @@ Watch this step-by-step tutorial to see these principles in action:
     4. Check the response
     
     <Tip>
-      If you get errors, paste them back into your Function chat. Create often knows how to fix specific API issues.
+      If you get errors, paste them back into your Function chat. Anything often knows how to fix specific API issues.
     </Tip>
   </Step>
 
@@ -107,7 +108,7 @@ Watch this step-by-step tutorial to see these principles in action:
     2. Select your Function
     3. Describe how you want to use it
     
-    Create will handle:
+    Anything will handle:
     * Loading states
     * Error messages
     * UI around the results
@@ -119,7 +120,7 @@ Watch this step-by-step tutorial to see these principles in action:
 When working with external APIs:
 
 * **Authentication**: Most APIs require credentials (API keys, tokens, etc.)
-* **Error Handling**: Plan for different types of errors and prompt Create how you want to handle
+* **Error Handling**: Plan for different types of errors and prompt Anything how you want to handle
 * **Data Transformation**: You may need to format data before/after API calls
 
 <Note>
@@ -131,7 +132,7 @@ Functions have a 5-minute timeout. For longer operations, consider chaining mult
 Can't find an API's documentation? You can also:
 
 * Use automation platforms like [Zapier or Make](/quick-tips/zapier-make-n8n)
-* Screenshot API documentation for Create to analyze
+* Screenshot API documentation for Anything to analyze
 * Paste example CURL commands or request formats
 
 <Tip>
