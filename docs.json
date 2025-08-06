@@ -99,7 +99,7 @@
     }
   },
   "logo": {
-    "light": "/Anything_LogoIcon_Light.png",
+    "light": "/Anything_LogoIcon_Dark.png",
     "dark": "/Anything_LogoIcon_Dark.png"
   },
   "appearance": {
