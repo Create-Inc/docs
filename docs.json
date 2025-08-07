@@ -88,7 +88,7 @@
       "anchors": [
         {
           "anchor": "Product updates",
-          "href": "https://x.com/create_xyz",
+          "href": "https://x.com/anythingai",
           "icon": "x-twitter"
         }
       ]
@@ -105,7 +105,7 @@
     "links": [
       {
         "label": "Updates",
-        "href": "https://x.com/create_xyz"
+        "href": "https://x.com/anythingai"
       }
     ],
     "primary": {
@@ -116,9 +116,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/create_xyz",
-      "github": "https://github.com/Create-Inc",
-      "linkedin": "https://www.linkedin.com/company/createxyz"
+      "x": "https://x.com/anythingai",
+      "youtube": "https://www.youtube.com/@anythinguniversity",
+      "linkedin": "https://www.linkedin.com/company/anythingai/"
     }
   },
   "fonts": {
