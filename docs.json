@@ -70,6 +70,7 @@
           {
             "group": "Support",
             "pages": [
+              "support/rebranding",
               "support/help",
               "support/ambassadors"
             ]
