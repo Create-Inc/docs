@@ -90,11 +90,6 @@
           "anchor": "Product updates",
           "href": "https://x.com/create_xyz",
           "icon": "x-twitter"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://create.xyz/discord",
-          "icon": "discord"
         }
       ]
     }
