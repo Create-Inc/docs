@@ -5,24 +5,24 @@ description: "Let users sign in to your app with their Google account"
 
 Let users sign in to your app with their Google accounts. They'll share their email, name, profile picture, and language settings.
 
-You'll need to set up a few things in Google first, then add those settings to Create.
+You'll need to set up a few things in Google first, then add those settings to Anything.
 
 ## Before You Start
 
 Make sure you have:
 
 <Check>
-  A Create project with [User Accounts](/builder/user-accounts) turned on
+  An Anything project with [User Accounts](/builder/user-accounts) turned on
 </Check>
 
 <Check>
-  Your app running on a custom domain through [Create's domain setup](/publish-and-share/custom-domains)
+  Your app running on a custom domain through [Anything's domain setup](/publish-and-share/custom-domains)
 </Check>
 
 <Warning>
   Google Sign In needs a custom domain - you can't use the default `created.app` domains. You'll need:
   - A domain you own
-  - [Create Pro subscription](https://create.xyz/pricing)
+  - [Anything Pro subscription](https://create.xyz/pricing)
   - DNS records properly configured
 </Warning>
 
@@ -32,8 +32,8 @@ Make sure you have:
   <Card title="Create Google Credentials" icon="key">
     Set up OAuth in Google Cloud Console
   </Card>
-  <Card title="Add to Create" icon="plug">
-    Add Google Client ID/Secret in Create
+  <Card title="Add to Anything" icon="plug">
+    Add Google Client ID/Secret in Anything
   </Card>
   <Card title="Add the Google Login UI to your sign in pages" icon="pencil">
     Make the page look how you want
@@ -110,7 +110,7 @@ Make sure you have:
     <Warning>
       Must include:
       - `www` prefix in both fields
-      - Exact domain used for the app in Create's custom domain settings
+      - Exact domain used for the app in Anything's custom domain settings
       - Valid CNAME record for `www` subdomain configured in DNS ([see Custom Domains guide](/publish-and-share/custom-domains#dns-configuration))
     </Warning>
   </Step>
@@ -118,14 +118,14 @@ Make sure you have:
   <Step title="Copy Client ID">
     1. Create the OAuth Client
     2. Copy the generated Client ID
-    3. Save it for adding to your Create project later
+    3. Save it for adding to your Anything project later
     <img src="/images/auth/google/11-copyclientid.png" style={{ borderRadius: '0.5rem' }} />
   </Step>
 
   <Step title="Copy Client Secret">
     1. Click the Edit button
     2. Copy the Client Secret
-    3. Save it for adding to your Create project later
+    3. Save it for adding to your Anything project later
     <img src="/images/auth/google/12-copyclientsecret.png" style={{ borderRadius: '0.5rem' }} />
   </Step>
 
@@ -153,9 +153,9 @@ Make sure you have:
 ## Add to Create Project
 
 <Steps>
-  <Step title="Enable User Accounts in your Create project">
+  <Step title="Enable User Accounts in your Anything project">
     You have two options:
-    1. Prompt Create with "Let users sign in"
+    1. Prompt Anything with "Let users sign in"
     2. Enable User Accounts from the logo menu
     
     <Warning>
@@ -186,7 +186,7 @@ Make sure you have:
   <Step title="Add Sign In UI">
     1. Return to the chat
     2. Prompt Create with something like "Add Google Sign In as an option"
-    3. Create will automatically update your sign-in pages with Google Sign In
+    3. Anything will automatically update your sign-in pages with Google Sign In
     4. You can customize the UI further if you'd like. 
     <img src="/images/auth/google/18-promptcreateaddsignin.png" style={{ borderRadius: '0.5rem' }} />
   </Step>
@@ -231,7 +231,7 @@ Make sure you have:
 <Accordion title="Getting 'Access Blocked: This app's request is not valid'">
   <img src="/images/auth/google/error-requestinvalid.png" style={{ borderRadius: '0.5rem' }} />
   <img src="/images/auth/google/error-requestinvaliddetails.png" style={{ borderRadius: '0.5rem' }} />
-  - Check that your Client ID and Client Secret are correctly pasted in Create
+  - Check that your Client ID and Client Secret are correctly pasted in Anything
   - Ensure your domain is added as an Authorized JavaScript Origin in Google Cloud
   - Verify your app is published and accessible at your custom domain
   <Tip>
@@ -241,7 +241,7 @@ Make sure you have:
 </Accordion>
 
 <Accordion title="Login not working">
-  - Double check your domain is exactly the same in Create and Google Cloud
+  - Double check your domain is exactly the same in Anything and Google Cloud
   - Make sure your callback URL is right: `www.[your-domain].com/api/auth/callback/google`
   - Check if your Client ID and Secret are pasted correctly
   - Make sure your domain is set up in Google Cloud
@@ -267,7 +267,7 @@ Make sure you have:
 <Accordion title="Can I use created.app domains?">
   No, Google Sign In needs your own domain. You'll need:
   - A domain you own
-  - Create Pro subscription
+  - Anything Pro subscription
   - Properly configured DNS records
 </Accordion>
 
@@ -283,8 +283,8 @@ Make sure you have:
 <Accordion title="Can I change how the login button looks?">
   Yes! Just:
   1. Go back to chat
-  2. Tell Create how you want it to look
-  3. Create will help style it while following Google's rules
+  2. Tell Anything how you want it to look
+  3. Anything will help style it while following Google's rules
 </Accordion>
 
 <Accordion title="Do I need Google to verify my app?">

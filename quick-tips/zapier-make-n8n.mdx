@@ -1,6 +1,6 @@
 ---
 title: "Zapier, Make, n8n, etc."
-description: "Learn how to integrate Create with Zapier, Make.com, n8n, and other automation platforms"
+description: "Learn how to integrate Anything with Zapier, Make.com, n8n, and other automation platforms"
 ---
 
 <Note>
@@ -9,7 +9,7 @@ description: "Learn how to integrate Create with Zapier, Make.com, n8n, and othe
 
 ## Overview
 
-Create can connect to any workflow automation tool that supports webhooks. This guide will show you how to set up a webhook integration wit h Zapier, allowing you to:
+Anything can connect to any workflow automation tool that supports webhooks. This guide will show you how to set up a webhook integration wit h Zapier, allowing you to:
 - Send data from Create to other apps
 - Trigger automated workflows
 - Connect with 5,000+ apps in the Zapier ecosystem
@@ -18,7 +18,7 @@ Create can connect to any workflow automation tool that supports webhooks. This 
   width="100%"
   height="400"
   src="https://www.youtube.com/embed/BJvJHMUXSSM"
-  title="Connect Create to Zapier Tutorial"
+  title="Connect Anything to Zapier Tutorial"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
@@ -41,14 +41,14 @@ Create can connect to any workflow automation tool that supports webhooks. This 
   </Step>
 </Steps>
 
-### Make a Function in Create
+### Make a Function in Anything
 
 <Steps>
   <Step title="Create a New Function">
-    In your Create project, go to the Functions tab and click "New Function"
+    In your Anything project, go to the Functions tab and click "New Function"
   </Step>
   <Step title="Prompt">
-    Say you want to send data to Zapier. Create will recognize it and ask you for the webhook URL.
+    Say you want to send data to Zapier. Anything will recognize it and ask you for the webhook URL.
   </Step>
   <Step title="Add Webhook URL">
     Add a new secret called `ZAPIER_WEBHOOK_URL` and paste your Zapier webhook URL
@@ -65,7 +65,7 @@ Create can connect to any workflow automation tool that supports webhooks. This 
     ```
   </Step>
   <Step title="Test the Connection">
-    Click "Generate" in Create and test your function
+    Click "Generate" in Anything and test your function
     Check Zapier to confirm the test data was received
   </Step>
 </Steps>
@@ -85,9 +85,9 @@ Create can connect to any workflow automation tool that supports webhooks. This 
   </Step>
 </Steps>
 
-### Use your Function in Create
+### Use your Function in Anything
 
-You can now use your function in Create. For example, you can use it in a page, or another function. Just press / to reference it and Create will hook it up. 
+You can now use your function in Anything. For example, you can use it in a page, or another function. Just press / to reference it and Anything will hook it up. 
 
 You now have an app that can trigger its own workflows in Zapier with custom information. You can use that inforamtion in downstream automations.  
 
@@ -97,7 +97,7 @@ You now have an app that can trigger its own workflows in Zapier with custom inf
 
 ## Data Format
 
-When sending data to Zapier, Create will automatically format it as JSON. Example payload:
+When sending data to Zapier, Anything will automatically format it as JSON. Example payload:
 
 ```json 
 {
