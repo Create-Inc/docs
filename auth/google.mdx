@@ -102,13 +102,14 @@ Make sure you have:
   </Step>
 
   <Step title="Configure Authorized Origin and Redirect URI">
-    1. Add `www.your-custom-domain.com` as an Authorized JavaScript Origin (replace with your actual domain)
-    2. Add `www.your-custom-domain.com/api/auth/callback/google` as an Authorized redirect URI
+    1. Add `https://www.your-custom-domain.com` as an Authorized JavaScript Origin (replace with your actual domain)
+    2. Add `https://www.your-custom-domain.com/api/auth/callback/google` as an Authorized redirect URI
 
     <img src="/images/auth/google/10-authorizedorigin.png" style={{ borderRadius: '0.5rem' }} />
 
     <Warning>
       Must include:
+      - `https://` protocol prefix in both fields
       - `www` prefix in both fields
       - Exact domain used for the app in Anything's custom domain settings
       - Valid CNAME record for `www` subdomain configured in DNS ([see Custom Domains guide](/publish-and-share/custom-domains#dns-configuration))
@@ -235,14 +236,14 @@ Make sure you have:
   - Ensure your domain is added as an Authorized JavaScript Origin in Google Cloud
   - Verify your app is published and accessible at your custom domain
   <Tip>
-    In Google Cloud, always use 'www.your-domain.com' not just 'your-domain.com'. Many login problems happen because people forget the 'www'.
+    In Google Cloud, always use 'https://www.your-domain.com' not just 'your-domain.com'. Many login problems happen because people forget the 'https://' protocol and 'www' prefix.
   </Tip>
 
 </Accordion>
 
 <Accordion title="Login not working">
   - Double check your domain is exactly the same in Anything and Google Cloud
-  - Make sure your callback URL is right: `www.[your-domain].com/api/auth/callback/google`
+  - Make sure your callback URL is right: `https://www.[your-domain].com/api/auth/callback/google`
   - Check if your Client ID and Secret are pasted correctly
   - Make sure your domain is set up in Google Cloud
   - Make sure your app is live at your custom domain
@@ -298,6 +299,17 @@ Make sure you have:
   2. Add additional scopes in the "Scopes" section
   3. Provide justification for each scope
   4. Note: Additional scopes may require Google verification
+</Accordion>
+
+<Accordion title="Can I use Google Auth for internal tools and permissioning?">
+  Yes! Configure your app as "Internal" in Google Cloud Console to unlock enterprise features:
+
+  - **Skip verification** - No Google app review required
+  - **Automatic user sync** - Users managed through your Google Workspace
+  - **Built-in permissions** - Use Google Workspace groups and roles
+  - **Enterprise SSO** - Seamless sign-in with existing credentials
+
+  Perfect for internal dashboards, employee portals, and any app where you need to restrict access to your organization.
 </Accordion>
 
 ## See Also
