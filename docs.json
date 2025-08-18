@@ -95,8 +95,8 @@
     }
   },
   "logo": {
-    "light": "/Anything_LogoIcon_Dark.png",
-    "dark": "/Anything_LogoIcon_Dark.png"
+    "light": "/images/Anything_Logo_Dark.svg",
+    "dark": "/images/Anything_Logo_Dark.svg"
   },
   "appearance": {
     "default": "light"
