@@ -45,7 +45,7 @@ Adding AI is simple - just use a slash command, describe how you want to use the
 
 By default, responses appear word-by-word as they're generated, creating an engaging real-time experience. This works great for chatbots and interactive experiences.
 
-If you prefer to show a loading spinner and display the complete response at once, simply tell Create "don't stream the response" in your prompt. This is useful for:
+If you prefer to show a loading spinner and display the complete response at once, simply tell Anything "don't stream the response" in your prompt. This is useful for:
 
 - Applications that process the full response
 - UIs that need to wait for complete data
@@ -53,7 +53,7 @@ If you prefer to show a loading spinner and display the complete response at onc
 
 ### Prompting
 
-Create offers multiple ways to handle AI prompts:
+Anything offers multiple ways to handle AI prompts:
 
 1. **Basic Integration**
    - Just include the AI integration (e.g. `/[ChatGPT]`) in your message
@@ -64,7 +64,7 @@ Create offers multiple ways to handle AI prompts:
 3. **Dynamic Variables**
    - Use `[brackets]` for dynamic values
    - Example: "Take in a subject line from the user. Then use /[ChatGPT] with prompt: 'Generate a concise email for [subject line]'"
-   - Create handles all the code to pass variables to your prompts. You can chain multiple variables
+   - Anything handles all the code to pass variables to your prompts. You can chain multiple variables
 4. **Prompt Optimization**
    - Let Anything help: "Optimize the prompt for /[ChatGPT]. I want to [your goals]"
    - Anything will craft an effective prompt for your AI integration and include them in the code to call the integration
@@ -298,7 +298,7 @@ Example prompts:
 - `Create a newsletter signup using /[Resend]`
 
 <Tip>
-  You'll need to set up your own Resend API key to use this integration in Create.
+  You'll need to set up your own Resend API key to use this integration in Anything.
   [Full setup guide here](/integrations/resend) (2 mins set up time)
 </Tip>
 
