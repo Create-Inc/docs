@@ -13,31 +13,41 @@ Mobile app support is rapidly evolving. You might encounter limitations with cer
 
 ## Why Anything?
 
-We're pioneering a much faster, easier way to build mobile apps.
+Build mobile apps by describing what you want. Anything generates React Native code that works on iOS and Android.
 
-Here's what we're working towards in this beta:
-
-- **Prompt to app** - Just describe your app and Anything turns it into React Native code that works
-- **Design out of box** - We're training our AI to design apps like a human would
-- **Preview on device** - Test your creations on your phone with Expo Go
-- **Full stack** - Use Anything's built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/stripe) - no separate backend needed
-- **Instant App Store and Play Store submission** - Publish your app to the App Store and Play Store from Anything
+**What you get:**
+- **Prompt to app** - Describe your app, get working code
+- **Design included** - AI designs apps like a human would
+- **Test on device** - Preview with Expo Go on your phone
+- **Full stack** - Built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/stripe)
+- **Publish anywhere** - Deploy to App Store and Play Store
 
 ## Getting Started
 
-Ready to build your first mobile app? Start with our comprehensive [Getting Started Guide](/builder/mobile/getting-started) that walks you through the entire process from concept to deployment.
+Build your first mobile app. Follow our [Getting Started Guide](/builder/mobile/getting-started) from concept to deployment.
 
 ## What You Can Build
 
 ### Device Capabilities
-Access native device features like camera, location, sensors, and more. See our complete [Device Capabilities Guide](/builder/mobile/device-capabilities) for all supported features.
+Use camera, location, sensors, and 39+ other device features. See the complete [Device Capabilities Guide](/builder/mobile/device-capabilities).
+
+**Example projects:**
+
+**Fitness Companion**
+- GPS tracking, camera, charts, calendar, haptics
+
+**Local Business Finder**
+- Maps, location, contacts, galleries, offline caching
+
+**AR Shopping Assistant**
+- 3D graphics, barcode scanning, location, payments, animations
 
 ### Publishing Your App
-- [iOS App Store](/builder/mobile/publishing-ios) - Publish to Apple's App Store via TestFlight
-- [Google Play Store](/builder/mobile/publishing-android) - Publish to Google's Play Store (coming soon)
+- [iOS App Store](/builder/mobile/publishing-ios) - Deploy via TestFlight
+- [Google Play Store](/builder/mobile/publishing-android) - Deploy to Play Store (coming soon)
 
 ### Testing & Quality Assurance
-Ensure your app works perfectly with our [Testing & Debugging Guide](/builder/mobile/testing).
+Test and debug your app with our [Testing & Debugging Guide](/builder/mobile/testing).
 
 
 
@@ -45,18 +55,18 @@ Ensure your app works perfectly with our [Testing & Debugging Guide](/builder/mo
 
 ## How It Works
 
-Anything generates React Native code and partners with ExpoGo for app preview. It generates app that can work on either iOS or Android, and use device capabilities like camera, location, etc.
+Anything generates React Native code. Preview with Expo Go on your device.
 
-The code tab reveals React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` that work across iOS and Android.
+The code tab shows React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` that work on iOS and Android.
 
 <Frame>
   ![](/images/mobile/viewcode.png)
 </Frame>
 
-React Native code can be previewed on the web, so you can view a preview of your app in the builder as you chat with Create.
+Preview your app in the builder as you chat with Anything.
 
 <Warning>
-  Some device-specific features like camera access, location services, and barcode scanning won't work in the web preview. For the most accurate testing experience and to access all native device capabilities, use the Expo Go app to preview your application directly on your iOS or Android device.
+  Device features like camera, location, and barcode scanning won't work in web preview. Use Expo Go on your device for full testing.
 </Warning>
 
 ## FAQ
@@ -66,7 +76,7 @@ React Native code can be previewed on the web, so you can view a preview of your
     We've built features to support this, you can ask the builder to "generate a mobile app from this web app" and it will work to create a mobile based design of your existing web project.
   </Accordion>
   <Accordion title="Do I need to know React Native?">
-    No\! Create handles all React Native code for you. Just describe what you want.
+    No\! Anything handles all React Native code for you. Just describe what you want.
   </Accordion>
   <Accordion title="Can I publish to app stores?">
     Yes, with some manual steps during beta. We're streamlining this process so all you'll need is your Apple or Google accounts.
@@ -74,11 +84,11 @@ React Native code can be previewed on the web, so you can view a preview of your
   <Accordion title="What about app signing and certificates?">
     You handle app signing certificates yourself for now. We'll simplify this in future updates.
   </Accordion>
-  <Accordion title="Can I use my existing Create database?">
+  <Accordion title="Can I use my existing Anything database?">
     Yes\! Your mobile app connects to the same database as your web app.
   </Accordion>
   <Accordion title="How do I handle different screen sizes?">
-    Create automatically generates responsive layouts that adapt to different device sizes.
+    Anything automatically generates responsive layouts that adapt to different device sizes.
   </Accordion>
 </AccordionGroup>
 
