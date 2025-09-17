@@ -98,19 +98,19 @@ Preview your app in the builder as you chat with Anything.
     Anything automatically generates responsive layouts that adapt to different device sizes.
   </Accordion>
   <Accordion title="Can I use Stripe in an iOS app?">
-    It depends on what you're selling! Apple's App Store guidelines are specific about payment methods:
+    Yes! You can use Stripe for digital goods on iOS by linking to external checkout pages:
 
-    **You must use Apple's In-App Purchase (IAP) for:**
-    - Digital goods and services consumed within the app (premium features, in-app currencies, digital subscriptions)
+    Due to a US District Court order, Apple updated its guidelines to allow developers more freedom to direct iOS app users to external payment options. See the [Reuters coverage](https://www.reuters.com/sustainability/boards-policy-regulation/us-judge-rules-apple-violated-order-reform-app-store-2025-04-30/) and [Apple's official announcement](https://developer.apple.com/news/?id=9txfddzf).
 
-    **You can use third-party payments like Stripe for:**
-    - Physical goods and services (e-commerce, food delivery, ride-hailing)
-    - Person-to-person services (tutoring, fitness training, consulting)
+    **What Stripe Enables:**
+    - **Digital goods and subscriptions** - Sell in-app credits, premium features, or subscriptions
+    - **External checkout flow** - Redirect users to Stripe's hosted payment page
+    - **Universal Links** - Seamlessly return users to your app after payment
+    - **Cross-platform purchases** - Users can buy on web and access in your app
 
-    **Recent US Changes (2024):**
-    Apple now allows US developers to include external payment links, but with strict requirements and Apple still takes 12-27% commission. This applies to the US App Store only.
+    **Note:** This approach requires users to leave your app temporarily. Apple Payment and further ecosystem additions are in progress for our mobile builder.
 
-    For most Anything apps selling physical products or services, you can use Stripe. Apple Payment and further ecosystem additions are in progress for our mobile builder.
+    For complete implementation details, see our [payments system](/payments) documentation.
   </Accordion>
 </AccordionGroup>
 
