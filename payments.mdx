@@ -117,5 +117,33 @@ Anything defaults to test mode while in the builder/preview system, so you can t
 - CVC: Any 3 digits (e.g., `123`)
 - ZIP code: Any valid ZIP (e.g., `12345`)
 
+## Technical Implementation
 
+Anything automatically handles the complex iOS payment flow for you:
+
+1. User taps payment button in your iOS app
+2. App opens Safari with Stripe's secure checkout page
+3. User completes payment with Apple Pay or other methods
+4. Universal Link redirects back to your app
+5. Webhook updates user's account with purchased items
+
+This approach requires users to temporarily leave your app, but provides significant benefits including lower fees (2.9% + $0.30 vs Apple's 15-30% commission) and faster payouts (2-7 days vs 30-60 days).
+
+## iOS Compatibility
+
+Stripe is fully compatible with iOS apps and follows Apple's latest guidelines for external payment processing. Due to a US District Court order, Apple updated its guidelines to allow developers more freedom to direct iOS app users to external payment options. See the [Reuters coverage](https://www.reuters.com/sustainability/boards-policy-regulation/us-judge-rules-apple-violated-order-reform-app-store-2025-04-30/) and [Apple's official announcement](https://developer.apple.com/news/?id=9txfddzf).
+
+**What Stripe Enables for iOS:**
+- **Digital goods and subscriptions** - Sell in-app credits, premium features, or subscriptions
+- **External checkout flow** - Redirect users to Stripe's hosted payment page
+- **Universal Links** - Seamlessly return users to your app after payment
+- **Cross-platform purchases** - Users can buy on web and access in your app
+
+**Best Practices We Follow:**
+- **Compliance with Apple Guidelines** - Our implementation follows Apple's updated App Store Review Guidelines
+- **Optimized Mobile Experience** - Uses Stripe's mobile-optimized checkout UI with `origin_context: "mobile_app"`
+- **Universal Links Integration** - Proper deep linking back to your app after payment completion
+- **Webhook Security** - Secure payment confirmation and user account updates
+- **Customer Management** - Automatic Stripe customer creation and management
+- **Error Handling** - Graceful handling of payment failures and edge cases
 
