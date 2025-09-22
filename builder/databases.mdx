@@ -107,7 +107,7 @@ Comments should show up under the task and show who wrote them.
 Add a description to todos. Show it below the title in italics.
 ```
 
-**Create will:**
+**Anything will:**
 
 * Add the description column to the Todos table
 * Update Functions to handle the new field
@@ -119,7 +119,7 @@ Add a description to todos. Show it below the title in italics.
 Remove the priority from todos, we won't use it anymore
 ```
 
-**Create will:**
+**Anything will:**
 
 * Remove the priority column
 * Update queries to exclude the field
@@ -131,7 +131,7 @@ Remove the priority from todos, we won't use it anymore
 Let users add comments on todos. Each comment should have the text and who wrote it
 ```
 
-**Create will:**
+**Anything will:**
 
 * Make a new Comments table
 * Link it to the Todos table
@@ -144,7 +144,7 @@ Let users add comments on todos. Each comment should have the text and who wrote
 Instead of due dates, let's use status (Todo, In Progress, Done) to track progress
 ```
 
-**Create will:**
+**Anything will:**
 
 * Convert the due_date field to a status field
 * Update existing data
@@ -156,7 +156,7 @@ Instead of due dates, let's use status (Todo, In Progress, Done) to track progre
 Let users assign todos to team members. Show their avatar next to each todo
 ```
 
-**Create will:**
+**Anything will:**
 
 * Add user relationships to todos
 * Update queries to fetch user data
@@ -168,7 +168,7 @@ Let users assign todos to team members. Show their avatar next to each todo
 Generate 10 sample todos with different statuses and assignees
 ```
 
-**Create will:**
+**Anything will:**
 
 * Generate 10 sample todos with different statuses and assignees based on your structure
 * Insert the data into your database
@@ -180,27 +180,27 @@ Generate 10 sample todos with different statuses and assignees
 Make sure every todo has a title
 ```
 
-**Create will:**
+**Anything will:**
 
 * Add validation rules to the database
 * Update Functions to check data
 * Show validation errors in the UI
 
 <Tip>
-  Always describe both what data you want to store AND how you want to use it. This helps Create build the right database structure, Functions, and UI.
+  Always describe both what data you want to store AND how you want to use it. This helps Anything build the right database structure, Functions, and UI.
 </Tip>
 
 <Tip>
-  The more specific you are in your prompt, the better Create can help.
+  The more specific you are in your prompt, the better Anything can help.
 
-  If you describe something at a high level, "make a todo app", Create will guess what fields each todo should have.
+  If you describe something at a high level, "make a todo app", Anything will guess what fields each todo should have.
 
-  If you describe what you want in detail, "make a todo app with a title, due date, and priority field", Create will ensure each todo has those fields.
+  If you describe what you want in detail, "make a todo app with a title, due date, and priority field", Anything will ensure each todo has those fields.
 </Tip>
 
 ## View and edit data
 
-Create includes a built-in database viewer for manual edits to your data. You can quickly verify that data is being stored correctly when you use your application.
+Anything includes a built-in database viewer for manual edits to your data. You can quickly verify that data is being stored correctly when you use your application.
 
 ### Access the database viewer
 
@@ -227,7 +227,7 @@ You can also create your own internal tools to update multiple tables at once:
 
 ## Test vs. live databases
 
-Create maintains separate test and live databases for each project:
+Anything maintains separate test and live databases for each project:
 
 ### Test database
 
@@ -241,7 +241,7 @@ Create maintains separate test and live databases for each project:
 
 ## Publishing
 
-When you publish your application, Create automatically:
+When you publish your application, Anything automatically:
 
 * Creates your live database
 * Applies the latest structure from the Test database to your Live database so that it has the same tables and fields
@@ -254,7 +254,7 @@ When you publish your application, Create automatically:
   * You publish your application so your live database has the same tables. You launch it and users start signing up.
   * You later decide that you don't need phone numbers, so in an update to the application you remove it.
   * You try to publish your application again. Your live database now has users with phone numbers.
-  * Create will warn you about this conflict on publish. If you publish, it will remove the existing phone numbers.
+  * Anything will warn you about this conflict on publish. If you publish, it will remove the existing phone numbers.
 
   This is called a "migration conflict". You've changed the structure of your test database, but it now conflicts with your live database structure.
 
@@ -266,7 +266,7 @@ When you publish your application, Create automatically:
      * Manually migrate the live data (move data from "phone")
   3. Try publishing again
 
-  Create warns you about destructive changes before you publish to protect your live data.
+  Anything warns you about destructive changes before you publish to protect your live data.
 </Warn>
 
 ## Troubleshooting
@@ -288,7 +288,7 @@ If data isn't saving when you use your application, there are 3 common failure p
 
 * Describe the correct structure you want in chat
 * Example: "Update the Tasks table to have title, description, and dueDate fields"
-* Create will modify the database to match
+* Anything will modify the database to match
 
 #### 2. Function -> Database
 
@@ -304,7 +304,7 @@ If data isn't saving when you use your application, there are 3 common failure p
 
 * Copy any error messages
 * Paste them into the function chat
-* Ask Create to fix the specific error
+* Ask Anything to fix the specific error
 * Example: "I see this error when I run saveTask and test it with this data: [error] [example data]"
 
 #### 3. UI -> Function
@@ -319,15 +319,15 @@ If data isn't saving when you use your application, there are 3 common failure p
 
 * Verify with the builder your flow and expectations of input to output (doing x should create y in z)
 * Example: "Connect the tasks form to the saveTask function when I submit a task"
-* Create will update the code to properly wire everything together
+* Anything will update the code to properly wire everything together
 
 <Tip>
-  For any errors you encounter, you can paste them directly into Create's chat. It often recognizes specific error patterns and knows how to fix them.
+  For any errors you encounter, you can paste them directly into Anything's chat. It often recognizes specific error patterns and knows how to fix them.
 </Tip>
 
 ## Reset database structure
 
-When you publish your application, Create pushes your test database structure to your live database. If you continue making changes to your test database structure in the builder and don't like the changes, you can reset to the structure of your last published version.
+When you publish your application, Anything pushes your test database structure to your live database. If you continue making changes to your test database structure in the builder and don't like the changes, you can reset to the structure of your last published version.
 
 <Frame caption="Reset your database structure to match your published app">
   <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
@@ -355,7 +355,7 @@ To reset your database structure:
 
 ## Remove multiple databases
 
-In 99.99% of cases, you don't need multiple databases per project. A single database can have an arbitrary number of tables. It's easy to add more tables (just describe what you want to store, and Create adds a table for it). It's better to have multiple tables in the same database than multiple databases as it makes joins easier.
+In 99.99% of cases, you don't need multiple databases per project. A single database can have an arbitrary number of tables. It's easy to add more tables (just describe what you want to store, and Anything adds a table for it). It's better to have multiple tables in the same database than multiple databases as it makes joins easier.
 
 If you have multiple databases in a single project, you can remove ones you don't need:
 
@@ -376,16 +376,16 @@ If you have multiple databases in a single project, you can remove ones you don'
 </Steps>
 
 <Info>
-  If you had data in the database you removed, you can ask Create to update your single database with tables that support all of your use cases. It will update the remaining database to have multiple tables instead of having multiple databases.
+  If you had data in the database you removed, you can ask Anything to update your single database with tables that support all of your use cases. It will update the remaining database to have multiple tables instead of having multiple databases.
 </Info>
 
 <Tip>
-  Before removing a database, make sure you understand which application features are using it. Create will attempt to warn you if removing a database would break functionality.
+  Before removing a database, make sure you understand which application features are using it. Anything will attempt to warn you if removing a database would break functionality.
 </Tip>
 
 ## Use existing databases
 
-Create will automatically create a new database for your project. However, there are some scenarios where you might want to use an existing database for a new project:
+Anything will automatically create a new database for your project. However, there are some scenarios where you might want to use an existing database for a new project:
 
 * You already have data in one database that you want to reuse for a new application
 * You're making a new application or frontend for the same data (e.g., an internal tool or another application)
@@ -396,7 +396,7 @@ To add an existing database to your project:
 
 1. Go to the new project 
 2. Press `/` > Databases > select the database you want to use 
-3. Prompt Create on what you want to build with the database chip in the chat 
+3. Prompt Anything on what you want to build with the database chip in the chat 
 
 <Info>
   When you add an existing database to a project, both projects will share the same data. Changes made in one project will be visible in the other.
@@ -412,7 +412,7 @@ If you no longer want to use this database in your project, you can [remove it f
 
 <AccordionGroup>
   <Accordion title="Will this scale?">
-    Yes. Create's built-in databases are designed to scale. Under the hood, it's PostgreSQL, which is powerful and scalable. We partner with [Neon](https://neon.tech) to autoscale your database as your application grows.
+    Yes. Anything's built-in databases are designed to scale. Under the hood, it's PostgreSQL, which is powerful and scalable. We partner with [Neon](https://neon.tech) to autoscale your database as your application grows.
   </Accordion>
 
   <Accordion title="How much data can I store?">
@@ -432,7 +432,7 @@ If you no longer want to use this database in your project, you can [remove it f
   </Accordion>
 
   <Accordion title="Can I write custom queries?">
-    Create handles making queries to your database automatically. For custom queries, create a [Function](/builder/functions) and describe what you need. You can then use your Function. Or use the built-in SQL editor in the database viewer.
+    Anything handles making queries to your database automatically. For custom queries, create a [Function](/builder/functions) and describe what you need. You can then use your Function. Or use the built-in SQL editor in the database viewer.
   </Accordion>
 
   <Accordion title="I have a legacy database from an app built prior to February 2025" defaultOpen={false}>
@@ -445,7 +445,7 @@ If you no longer want to use this database in your project, you can [remove it f
 
 ## Database terminology
 
-Create handles the technical details of your database, but understanding some key concepts can help you work more effectively.
+Anything handles the technical details of your database, but understanding some key concepts can help you work more effectively.
 
 Think of a database as a collection of connected spreadsheets:
 
@@ -462,9 +462,9 @@ Think of a database as a collection of connected spreadsheets:
 | **Query** | Instructions to get or save data | "Get all products where price < $100" |
 | **Join** | Combining data from different tables | Showing posts with their authors' names from the Users table |
 | **Foreign Key** | A field that references another table | Post's `authorId` connects to User's `id` |
-| **SQL** | The language databases understand | Create writes this for you! |
+| **SQL** | The language databases understand | Anything writes this for you! |
 | **Migration** | Changes to your database structure | Adding a "phone" field to Users table |
 
 <Tip>
-  Don't worry about memorizing these! Just describe what data you want to store and how you want to use it - Create handles the technical implementation.
+  Don't worry about memorizing these! Just describe what data you want to store and how you want to use it - Anything handles the technical implementation.
 </Tip>
