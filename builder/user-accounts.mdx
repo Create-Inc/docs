@@ -43,7 +43,7 @@ When Anything recognizes you want to add user accounts, it:
 
 1. **Enables User Accounts** in your project
 2. **Adds special pages for Sign up, Sign in, and Logout**
-3. [**Creates special tables in your app's database**](/builder/databases) to store user information (auth_users, auth_accounts, etc.)
+3. [**Anythings special tables in your app's database**](/builder/databases) to store user information (auth_users, auth_accounts, etc.)
 4. **Adds checks to your pages and functions** to protect content that needs to be signed in to view
 5. **Updates everything** to make sure your pages and functions work with the new users tables and signed in user
 
@@ -57,7 +57,7 @@ You will know it's working when you see the sign up, sign in, and logout pages i
 
 ## How It Works - In the App
 
-When you enable User Accounts, Create adds:
+When you enable User Accounts, Anything adds:
 
 ### Authentication Pages
 
@@ -65,7 +65,7 @@ When you enable User Accounts, Create adds:
 - Sign Up Page - `/account/signup`
 - Logout Page - `/account/logout`
 
-You can customize the look and feel of these pages by prompting Create to change them.
+You can customize the look and feel of these pages by prompting Anything to change them.
 
 Once User Accounts is enabled, you can also create components for the sign in, sign up, and logout functionality. This lets you embed this functionality anywhere. Under the hood, it uses the same auth routes as the pages.
 
@@ -73,7 +73,7 @@ These pages contain special code to update the user in the database when they si
 
 ### User Tables
 
-Create makes 4 special tables:
+Anything makes 4 special tables:
 
 - `auth_users`: Tracks users in your app
 - `auth_accounts`: Tracks auth methods (email/password, Google, etc.)
@@ -85,7 +85,7 @@ Most used: `auth_users` (core profiles) and `auth_accounts` (login methods)
 ![](/images/auth/database.png)
 
 <Tip>
-  Most of the time, you won't need to worry about these implementation details. Create handles storing and managing user data automatically. However, understanding the underlying structure can help build more complex features or debug authentication flows.
+  Most of the time, you won't need to worry about these implementation details. Anything handles storing and managing user data automatically. However, understanding the underlying structure can help build more complex features or debug authentication flows.
 </Tip>
 
 Built-in fields in `auth_users`:
@@ -113,28 +113,28 @@ Built-in fields in `auth_accounts`:
 - `session_state`: Session state
 - `password`: Hashed password (for credentials provider)
 
-**Storing Additional User Information**: You can prompt Create to store additional profile information per user, like "Store the user's bio, location, and phone number". Create will either add these fields directly to the `auth_users` table or create a linked profile table with these fields that connects to `auth_users` via the user's ID. This keeps your user data organized while maintaining the core authentication tables.
+**Storing Additional User Information**: You can prompt Anything to store additional profile information per user, like "Store the user's bio, location, and phone number". Anything will either add these fields directly to the `auth_users` table or create a linked profile table with these fields that connects to `auth_users` via the user's ID. This keeps your user data organized while maintaining the core authentication tables.
 
-**Linking Data to Users**: When you prompt Create to store data per user (like posts, preferences, or settings), Create automatically adds a `user_id` field to those database tables. This `user_id` connects each piece of data to the specific user in the `auth_users` table who owns it. That lets your app later grab the data for a specific user.
+**Linking Data to Users**: When you prompt Anything to store data per user (like posts, preferences, or settings), Anything automatically adds a `user_id` field to those database tables. This `user_id` connects each piece of data to the specific user in the `auth_users` table who owns it. That lets your app later grab the data for a specific user.
 
 ### Signed In User
 
-When you prompt Create to protect a page or show content per user on a page, e.g. "When user is signed in, show their profile in top right" or "If the user isn't signed in, don't show the notification settings", Create can now add code to grab the current signed in user's info and change the behavior of the app based on it.
+When you prompt Anything to protect a page or show content per user on a page, e.g. "When user is signed in, show their profile in top right" or "If the user isn't signed in, don't show the notification settings", Anything can now add code to grab the current signed in user's info and change the behavior of the app based on it.
 
 Pages, Functions, and Components can now all check the current signed in user, grab their information from the database, and use it to show/hide info, or change their behavior.
 
-Create automatically handles auth redirects. You can link pages as normal. If a user needs to be signed in to view a page, Create will check if they are. If they're not, it will redirect them to the Sign In page, and once signed in, redirect them back to the original page. Just prompt Create on which pages should be protected with sign in vs. public.
+Anything automatically handles auth redirects. You can link pages as normal. If a user needs to be signed in to view a page, Anything will check if they are. If they're not, it will redirect them to the Sign In page, and once signed in, redirect them back to the original page. Just prompt Anything on which pages should be protected with sign in vs. public.
 
 ## How It Works - For your Users
 
-Create uses Next Auth and JWT (JSON Web Token) authentication to manage user sessions:
+Anything uses Next Auth and JWT (JSON Web Token) authentication to manage user sessions:
 
-- When users sign up or sign in, Create saves the user's information in the database and stores a secure cookie in their browser
+- When users sign up or sign in, Anything saves the user's information in the database and stores a secure cookie in their browser
 - This cookie keeps users logged in as they browse your app
-- When users visit a protected page or use a protected function, Create checks this cookie
-- If no valid cookie exists, Create redirects them to the sign-in page
+- When users visit a protected page or use a protected function, Anything checks this cookie
+- If no valid cookie exists, Anything redirects them to the sign-in page
 - To let users log out, add a link to `/account/logout` in your app's signed-in experience
-- When users visit the logout route, Create removes the cookie and ends their session
+- When users visit the logout route, Anything removes the cookie and ends their session
 
 ## Real World Example
 
@@ -169,7 +169,7 @@ Add a logo to the signin page
 Make the sign in and sign up pages look like the rest of the app
 ```
 
-Create will:
+Anything will:
 
 - Update the look and feel of your pages
 - Add your logo
@@ -190,7 +190,7 @@ Common customizations:
 
 ## Flows and Redirects
 
-Prompt Create on how you want the flow to work.
+Prompt Anything on how you want the flow to work.
 
 ```
 Let users hit the sign up button and go to the sign up page
@@ -198,29 +198,29 @@ Let users hit the sign up button and go to the sign up page
 Then after sign up, send them to the dashboard logged in
 ```
 
-Create handles authentication flows automatically:
+Anything handles authentication flows automatically:
 
 - **Sign Up**:
   1. User submits signup form
-  2. Create validates and stores account
+  2. Anything validates and stores account
   3. Sets auth cookie
   4. Redirects to page you prompt
 - **Sign In**:
   1. User visits page that requires sign in
-  2. Create checks for auth cookie
+  2. Anything checks for auth cookie
   3. If no cookie, redirects to sign in page you prompt
   4. User enters credentials
-  5. Create verifies account
+  5. Anything verifies account
   6. Sets auth cookie
   7. Returns to original page
 - **Sign Out**:
   1. User clicks logout
-  2. Create clears auth cookie with the route `/account/logout`
+  2. Anything clears auth cookie with the route `/account/logout`
   3. Redirects to public page you prompt
 
 ## Storing User Data
 
-By default, Create stores the following information about users:
+By default, Anything stores the following information about users:
 
 - **Email** (required) - Used for login and account recovery
 - **Password** (hashed) - Securely stored using industry best practices
@@ -228,7 +228,7 @@ By default, Create stores the following information about users:
 - **Created Date** - When the account was created
 - **Last Login** - Most recent sign in
 
-You can prompt Create to store additional information per user. Create will update your database to make sure that each piece of user specific information is stored with a user_id that links back to the user in your auth_users table.
+You can prompt Anything to store additional information per user. Anything will update your database to make sure that each piece of user specific information is stored with a user_id that links back to the user in your auth_users table.
 
 Example prompts:
 
@@ -244,7 +244,7 @@ Store user preferences like theme and notification settings
 Let users upload a profile picture
 ```
 
-Create will:
+Anything will:
 
 - Add the new fields to your database schema
 - Update queries to store/retrieve the data
@@ -253,13 +253,13 @@ Create will:
 
 ## Using User Data
 
-You can use the information you store about each user in your app. Just prompt Create. Some examples:
+You can use the information you store about each user in your app. Just prompt Anything. Some examples:
 
 - "Show the logged in user's tasks in the main feed"
 - "Show a feed with all users posts"
 - "If the user is logged in, show a profile image in the top right. Otherwise, show the sign up / sign in buttons"
 
-Create will update your [Pages](/builder/pages), [Functions](/builder/functions), and Components to use the user data.
+Anything will update your [Pages](/builder/pages), [Functions](/builder/functions), and Components to use the user data.
 
 You can also manually access and change user information from the [Database Viewer](/builder/databases).
 
@@ -268,32 +268,32 @@ You can also manually access and change user information from the [Database View
 Build user profiles by:
 
 1. **Adding Profile Fields**:
-   - Prompt Create to add profile fields
+   - Prompt Anything to add profile fields
    - Add avatar, bio, social links
-   - Create will update the database to add the fields and update the queries to use them
+   - Anything will update the database to add the fields and update the queries to use them
 2. **Creating Profile Pages**:
-   - Prompt Create to create profile pages
-   - Create will update the pages to grab the user's profile data and display it
+   - Prompt Anything to create profile pages
+   - Anything will update the pages to grab the user's profile data and display it
 3. **Handling Updates**:
-   - Prompt Create to create profile edit forms
-   - Create will update the pages/functions to update a user in the database
+   - Prompt Anything to create profile edit forms
+   - Anything will update the pages/functions to update a user in the database
 
 ## Roles and Permissions
 
 Add custom roles to control access:
 
 1. **Add Role Field**:
-   - Prompt Create to add "role" or similar field for each user
+   - Prompt Anything to add "role" or similar field for each user
    - Describe the values you want to use like "admin", "member" and how you want behavior to change
-   - Create will update the database to add the field and update the queries to use it
+   - Anything will update the database to add the field and update the queries to use it
 2. **Check Roles**:
    - Reference roles in prompts
    - Example: "If signed in user is admin, show settings"
-   - Create handles the logic
+   - Anything handles the logic
 
 ## Auth Methods
 
-Create supports multiple auth methods. Choose the ones that fit your app's needs.
+Anything supports multiple auth methods. Choose the ones that fit your app's needs.
 
 You can turn on or off each auth method in the Project Settings.
 
@@ -381,7 +381,7 @@ Common error codes and fixes:
 ## FAQs
 
 <Accordion title="Can I customize the sign-in page?">
-  Yes. Just prompt Create on how you'd like to change them.
+  Yes. Just prompt Anything on how you'd like to change them.
 </Accordion>
 
 <Accordion title="Can I add social login (Google, Facebook, Twitter)?">
@@ -395,7 +395,7 @@ Common error codes and fixes:
 </Accordion>
 
 <Accordion title="Can I add fields beyond email?">
-  Yes\! Prompt Create to store additional user information and it will update the database for you.
+  Yes\! Prompt Anything to store additional user information and it will update the database for you.
 </Accordion>
 
 ## See Also
