@@ -5,18 +5,18 @@ description: "Let users login to your app with their Facebook accounts"
 
 Let users sign in to your app with their Facebook accounts. They'll share their email, name, and profile picture.
 
-You'll need to set up a few things in Facebook first, then add those settings to Create.
+You'll need to set up a few things in Facebook first, then add those settings to Anything.
 
 ## Before You Start
 
 Make sure you have:
 
 <Check>
-  A Create project with [User Accounts](/builder/user-accounts) turned on
+  A Anything project with [User Accounts](/builder/user-accounts) turned on
 </Check>
 
 <Check>
-  Your app running on a custom domain through [Create's domain setup](/publish-and-share/custom-domains)
+  Your app running on a custom domain through [Anything's domain setup](/publish-and-share/custom-domains)
 </Check>
 
 ## Overview
@@ -25,8 +25,8 @@ Make sure you have:
   <Card title="Set Up Facebook App" icon="key">
     Create an app in Facebook
   </Card>
-  <Card title="Add keys to Create" icon="plug">
-    Add your Facebook App ID and Secret to Create
+  <Card title="Add keys to Anything" icon="plug">
+    Add your Facebook App ID and Secret to Anything
   </Card>
   <Card title="Add the Facebook Login UI your sign in pages" icon="pencil">
     Make the login button look how you want
@@ -104,7 +104,7 @@ Make sure you have:
       Must include:
       - `https://` protocol
       - `www` prefix in the domain
-      - Exact domain used in Create's custom domain settings
+      - Exact domain used in Anything's custom domain settings
       - Valid CNAME record for `www` subdomain in DNS
     </Warning>
   </Step>
@@ -124,7 +124,7 @@ Make sure you have:
   <Step title="Copy App Credentials">
     1. Find your App ID
     2. Click "Show" to reveal your App Secret
-    3. Save both values - you'll need them for Create setup
+    3. Save both values - you'll need them for Anything setup
     <img src="/images/auth/facebook/12-copyidsecret.png" style={{ borderRadius: '0.5rem' }} />
     <Warning>
       Keep your App Secret secure - never share it publicly
@@ -141,7 +141,7 @@ Make sure you have:
     4. Add Terms of Service URL
     <img src="/images/auth/facebook/13-domainprivacydatadeletion.png" style={{ borderRadius: '0.5rem' }} />
     <Tip>
-      You can use services like Termly to generate these required policy documents and then host them on pages in your Create app. 
+      You can use services like Termly to generate these required policy documents and then host them on pages in your Anything app. 
     </Tip>
   </Step>
 
@@ -166,12 +166,12 @@ Make sure you have:
   </Step>
 </Steps>
 
-## Add to Create Project
+## Add to Anything Project
 
 <Steps>
   <Step title="Enable User Accounts">
     You have two options:
-    1. Prompt Create with "Let users sign in"
+    1. Prompt Anything with "Let users sign in"
     2. Enable User Accounts from the logo menu
   </Step>
 
@@ -197,8 +197,8 @@ Make sure you have:
 
   <Step title="Add Sign In UI">
     1. Return to the chat
-    2. Prompt Create with "Add Facebook Login as an option"
-    3. Create will update your sign-in pages automatically
+    2. Prompt Anything with "Add Facebook Login as an option"
+    3. Anything will update your sign-in pages automatically
     <img src="/images/auth/facebook/17-promptcreate.png" style={{ borderRadius: '0.5rem' }} />
   </Step>
 
@@ -227,7 +227,7 @@ Make sure you have:
 </Accordion>
 
 <Accordion title="Login not working">
-  - Double check your domain is exactly the same in Create and Facebook
+  - Double check your domain is exactly the same in Anything and Facebook
   - Make sure your callback URL is right: `www.your-domain.com/api/auth/callback/facebook`
   - Check if your App ID and Secret are pasted correctly
   - Verify your domain is set up in Facebook
@@ -254,8 +254,8 @@ Make sure you have:
 <Accordion title="Can I change how the login button looks?">
   Yes! Just:
   1. Go back to chat
-  2. Tell Create how you want it to look
-  3. Create will help style it while following Facebook's rules
+  2. Tell Anything how you want it to look
+  3. Anything will help style it while following Facebook's rules
 </Accordion>
 
 <Accordion title="Do I need Facebook to review my app?">
