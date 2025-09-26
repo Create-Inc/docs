@@ -142,6 +142,7 @@
     { "source": "/databases", "destination": "/builder/databases" },
     { "source": "/auth", "destination": "/builder/user-accounts" },
     { "source": "/mobile", "destination": "/builder/mobile" },
+    { "source": "/max", "destination": "/builder/max" },
     { "source": "/credits", "destination": "/account/credits" },
     { "source": "/publish", "destination": "/publish-and-share/publish" },
     { "source": "/custom-domains", "destination": "/publish-and-share/custom-domains" },
