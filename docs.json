@@ -29,7 +29,7 @@
               "builder/overview",
               "builder/controls",
               "Modes",
-              "Max",
+              "builder/max",
               "builder/pages",
               "builder/integrations",
               "builder/components",
