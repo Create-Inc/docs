@@ -28,6 +28,8 @@
             "pages": [
               "builder/overview",
               "builder/controls",
+              "Modes",
+              "builder/max",
               "builder/pages",
               "builder/integrations",
               "builder/components",
@@ -55,8 +57,7 @@
             "pages": [
               "quick-tips/animations",
               "quick-tips/format-markdown",
-              "quick-tips/external-apis",
-              "quick-tips/zapier-make-n8n"
+              "quick-tips/external-apis"
             ]
           },
           {
@@ -141,6 +142,7 @@
     { "source": "/databases", "destination": "/builder/databases" },
     { "source": "/auth", "destination": "/builder/user-accounts" },
     { "source": "/mobile", "destination": "/builder/mobile" },
+    { "source": "/max", "destination": "/builder/max" },
     { "source": "/credits", "destination": "/account/credits" },
     { "source": "/publish", "destination": "/publish-and-share/publish" },
     { "source": "/custom-domains", "destination": "/publish-and-share/custom-domains" },
