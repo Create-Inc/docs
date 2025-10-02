@@ -222,6 +222,10 @@
     {
       "source": "/stripe",
       "destination": "/payments"
+    },
+    {
+      "source": "/docs/export",
+      "destination": "/builder/export"
     }
   ]
 }
