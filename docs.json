@@ -28,6 +28,7 @@
             "pages": [
               "builder/overview",
               "builder/controls",
+              "builder/export-code",
               "Modes",
               "builder/max",
               "builder/pages",
