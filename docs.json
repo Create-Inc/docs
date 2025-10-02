@@ -28,7 +28,6 @@
             "pages": [
               "builder/overview",
               "builder/controls",
-              "builder/export-code",
               "Modes",
               "builder/max",
               "builder/pages",
@@ -40,7 +39,8 @@
               "builder/user-accounts",
               "builder/uploads",
               "payments",
-              "builder/mobile"
+              "builder/mobile",
+              "builder/export"
             ]
           },
           {
