@@ -14,115 +14,42 @@ description: "Test and debug your mobile apps effectively"
   />
 </div>
 
-## Testing Your Mobile App
+## Testing with ExpoGo
 
-Testing is crucial for ensuring your mobile app works correctly across different devices and scenarios. Here are the key areas to focus on:
+ExpoGo allows you to test your mobile app on real devices without building and installing separate app files. It's the fastest way to see your app running on iOS and Android devices.
 
-## Testing Strategies
+![Test Phone](/images/testphone.png)
 
-### 1. Device Testing
-- **Physical devices**: Test on actual iOS and Android devices
-- **Different screen sizes**: Test on phones, tablets, and different orientations
-- **OS versions**: Test on different iOS and Android versions
-- **Performance**: Check app performance on older devices
+### How to Test
 
-### 2. Feature Testing
-- **Core functionality**: Test all main features of your app
-- **Edge cases**: Test unusual user interactions
-- **Error handling**: Test what happens when things go wrong
-- **Offline functionality**: Test app behavior without internet
+1. **Download ExpoGo** - Install the ExpoGo app from the App Store (iOS) or Google Play Store (Android)
 
-### 3. User Experience Testing
-- **Navigation**: Ensure all navigation flows work correctly
-- **Loading states**: Test how your app handles loading
-- **Error messages**: Verify error messages are helpful
-- **Accessibility**: Test with screen readers and accessibility features
+2. **Find QR Code** - In your Anything project editor, look for the QR code displayed in the mobile preview area
 
-## Common Issues and Solutions
+3. **Scan and Test** - Open ExpoGo on your device and scan the QR code from the editor to load your app instantly
 
-### App Crashes
-```
-The app crashes when I try to take a photo
-```
-**Solution**: Check camera permissions and error handling in your code.
+4. **Real-time Updates** - Any changes you make in the Anything builder will automatically update in ExpoGo, allowing you to test iterations in real-time
 
-### Performance Issues
-```
-The app is slow when loading images
-```
-**Solution**: Use optimized image loading and caching strategies.
+5. **Device Features** - Test camera, location, notifications, and other device capabilities directly through ExpoGo
 
-### Navigation Problems
-```
-The back button doesn't work properly
-```
-**Solution**: Ensure proper navigation stack management.
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
+  <iframe
+    src="https://www.loom.com/embed/4473d72290e24af3b11f4c22e148ae07?sid=29530ddc-7e9a-4711-b2de-9aa8c0d77756"
+    frameBorder="0"
+    webkitAllowFullScreen
+    mozAllowFullScreen
+    allowFullScreen
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+  />
+</div>
 
+## Apple App Compliance Check
 
+Before submitting your app to the App Store, ensure it meets Apple's guidelines and requirements with our automated tool.
 
-## Debugging Techniques
+1. **Download your project code** - [Learn how to export your code](/builder/export)
 
-### 1. Console Logging
-Use console.log statements to track app behavior:
-```javascript
-console.log('User tapped button:', buttonId);
-console.log('API response:', response);
-```
+2. **Upload your project** - Head to [https://www.createanything.com/app-store](https://www.createanything.com/app-store) and upload your project zip file
 
-### 2. React Native Debugger
-- Use React Native Debugger for advanced debugging
-- Set breakpoints in your code
-- Inspect component state and props
+3. **Review** - We will run a compliance check for you with detailed results
 
-### 3. Expo DevTools
-- Use Expo DevTools for real-time debugging
-- Monitor network requests
-- Check device logs
-
-## Performance Optimization
-
-### 1. Image Optimization
-- Use appropriate image formats (WebP, PNG)
-- Implement lazy loading for images
-- Compress images before uploading
-
-### 2. Code Optimization
-- Avoid unnecessary re-renders
-- Use React.memo for expensive components
-- Optimize list rendering with FlatList
-
-### 3. Network Optimization
-- Implement proper caching strategies
-- Use pagination for large data sets
-- Handle offline scenarios gracefully
-
-## Testing Checklist
-
-Before publishing your app, ensure you've tested:
-
-- [ ] App launches without crashes
-- [ ] All navigation flows work correctly
-- [ ] Forms submit and validate properly
-- [ ] Images load correctly
-- [ ] App works offline (if applicable)
-- [ ] Performance is acceptable on target devices
-- [ ] Error messages are helpful
-- [ ] App handles edge cases gracefully
-
-<Tip>
-  Test your app on multiple devices and with different network conditions to ensure a robust user experience.
-</Tip>
-
-<Note>
-  Need help with testing or debugging? Reach out at [hello@createanything.com](mailto:hello@createanything.com)
-</Note>
-
----
-
-## Related Articles
-
-- [Getting Started](/builder/mobile/getting-started) - Build your first mobile app
-- [Device Capabilities](/builder/mobile/device-capabilities) - Available device features and APIs
-- [Publishing to iOS](/builder/mobile/publishing-ios) - Deploy to App Store
-- [Publishing to Android](/builder/mobile/publishing-android) - Deploy to Play Store
-- [← Back to Mobile Overview](/builder/mobile) - Return to main mobile guide

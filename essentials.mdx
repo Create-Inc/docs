@@ -1,131 +1,120 @@
 ---
 title: "Essentials"
-description: "Quickstart for Anything"
+description: "Build full-stack apps with natural language. No coding required."
 ---
 
-<Frame caption="Anything Essentials Video">
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
   <iframe
-    width="100%"
-    height="400"
-    src="https://www.loom.com/embed/16c63852a1464cb9a7c9fbc824e63783"
-    title="Anything Essentials Video"
+    src="https://www.loom.com/embed/77450e4f1c6d4b31939e09556015b7de?sid=1fe4f7a4-72c4-430b-ac9e-5fedc56c9854"
     frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    webkitAllowFullScreen
+    mozAllowFullScreen
     allowFullScreen
-    webkitallowfullscreen="true"
-    mozallowfullscreen="true"
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
   />
-</Frame>
+</div>
 
-## Getting started
+## What you can build
 
-Build your application by conversing with Anything. Describe your requirements using **text** or **images** (paste them directly into the chat).
+Anything generates complete applications from natural language descriptions. Build web apps, mobile apps, and full-stack systems with databases, authentication, and integrations.
 
 <Frame caption="Anything builder interface showing the main canvas, chat, and key controls">
   ![Mobile Build Sample](/images/mobilebuildsample.png)
 </Frame>
 
+### Core capabilities
+
+- **Full-stack applications** - [Frontend](/builder/pages), [backend](/builder/functions), and [databases](/builder/databases) in one project
+- **Real-time collaboration** - [Multiple users can build simultaneously](/publish-and-share/teams)
+- **Mobile and web apps** - Publish to [app stores](/builder/mobile) and [web platforms](/publish-and-share/publish)
+- **AI-powered development** - [Multiple agents](/Modes) available to help build and repair your app
+- **Third-party integrations** - Connect to [APIs](/quick-tips/external-apis), services, and [external tools](/builder/integrations)
+
+![Create Start](/images/createstart.gif)
+
+## Getting started
+
+Describe your application in natural language. Anything understands requirements, generates code, and builds your project in real-time.
+
+1. **Describe your app** - "Build a task management app with user authentication"
+2. **Iterate with feedback** - "Add a calendar view" or "Make the design more modern"
+3. **[Test](/builder/mobile/testing) and deploy** - [Preview](/Modes#view-modes) your app and publish when ready
+
 ### Keyboard shortcuts
 
-Speed up your workflow with these shortcuts:
+- `cmd-enter` (or `ctrl-enter`) - Send messages
+- `/` - Access commands for [integrations](/builder/integrations) and new elements
+- `cmd + option + shift + h` - View version history
 
-- Press `cmd-enter` (or `ctrl-enter` on Windows) to send messages
-- Use `/` **commands** to add [Integrations](/builder/integrations) or create new elements
+## Project architecture
 
-### Project components
-
-Anything projects can contain multiple elements to build end-to-end applications:
+Anything projects contain all the components needed for production applications:
 
 - [**Pages**](/builder/pages) - Application screens and user interfaces
-- [**Components**](/builder/components) - Reusable UI elements
-- [**Functions**](/builder/functions) - Backend logic and external API calls
-- [**Databases**](/builder/databases) - Data storage and persistence
-- [**User Accounts**](/builder/user-accounts) - Authentication and user management
-- **Assets** - Images, logos, and media files
-
-New projects begin with a single page that you can expand upon.
-
-## Iterating and improving
-
-Enhance your application by sending instructional messages to the assistant. Anything updates your application based on your input and the current project state.
-
-### Best practices
-
-- Be specific and concise in your instructions
-- Reference specific elements or pages for targeted edits
-- Review our [prompting guide](/prompting) for optimal results
-- Lean on our [Discussion Mode](/Modes#discussion-mode) to plan integrations, changes or debug issues
-- Learn how to [triage issues](/support/help#how-to-triage) with our troubleshooting guide
-
-## Navigating your application
-
-- Use the top-level navigation to switch between pages
-- Features and pages are automatically added as you build
-- Completion notifications appear in the chat
-- Preview functionality may require navigation to specific areas or sample user login
-
-![Xnapper 2025 07 21 10 33 56 Pn](/images/Xnapper-2025-07-21-10.33.56.png)
-
-## Code generation
-
-When you send a message, Anything uses your input, message history, and application code history to generate new versions.
-
-During generation, you'll see a **code stream** or **building icon**. Once complete, test your application in **Preview or Demo Mode.**
-
-<Tip>
-  [Pro members](https://create.xyz/pricing) receive enhanced generations with more context and history for smarter changes.
-</Tip>
-
-<Tip>
-  Read our [prompting guide](/prompting) to learn effective communication techniques.
-</Tip>
-
-## Version history
-
-Anything automatically saves your version history as you build.
-
-### Version management
-
-- Tap **previous versions** in the chat to view them
-- **Restore** any previous version using the revert button
-
-![Xnapper-2025-07-08-11.38.06.png](/images/Xnapper-2025-07-08-11.38.06.png)
-
-Access your complete version history via the dropdown menu in the upper left or use `cmd + option + shift + h`
+- [**Components**](/builder/components) - Reusable UI elements and design systems
+- [**Functions**](/builder/functions) - Backend logic, API endpoints, and external connections
+- [**Databases**](/builder/databases) - Data storage, relationships, and queries
+- [**User Accounts**](/builder/user-accounts) - Authentication, authorization, and user management
+- **Assets** - Images, media files, and brand resources
 
 
-## Adding new elements
+### AI modes
 
-Expand your project through direct instructions to the builder:
+Choose the right AI for your task:
 
-- Chat with the builder about new requirements: "Create a new page for blog posts" or "Add user accounts for paid members"
-- Use "/" commands to set up [Integrations](/builder/integrations) or upload assets
+- **[Auto](/Modes)** - Intelligently selects the best model for your needs
+- **[Thinking Mode](/Modes#thinking-mode)** - Deep reasoning for complex code work
+- **[Discussion Mode](/Modes#discussion-mode)** - Planning and problem-solving
+- **[Max](/builder/max)** - Autonomous software engineer that builds and fixes applications
 
+### Project expansion
 
-## Project settings
+Add new features through natural conversation:
 
-Configure important project-specific settings including assets, secret keys, custom instructions, generation settings, authentication providers, branding, social sharing, and mobile app settings.
+- **New pages** - "Create an admin dashboard with user management"
+- **[Integrations](/builder/integrations)** - "Connect to [Stripe](/payments) for payments" or "Add email notifications"
+- **Advanced features** - "Implement real-time chat" or "Add file uploads"
 
-![Ezgif 6c735490bbae99 Gi](/images/ezgif-6c735490bbae99.gif)
+## Project Settings
 
-### Available settings
+To access Project Settings click on the Anything logo in the upper left of your project builder
 
-- **Assets** - Upload images for repeated use in your project
-- **Custom Instructions** - Shape builder interactions and project behavior (advanced feature)
-- **Generation Settings** - Pro users can select their preferred LLM
-- **Saved Secrets** - Store API keys for integrations
-- **Providers** - Configure authentication options for user accounts
-- **Branding and Icons** - Mobile app resources (coming soon)
-- **Social Share** - Configure titles and descriptions for search engines and social media
+![Project Navigation](/images/projectnavigation2.gif)
+
+- **Assets** - Upload images and media for repeated use
+- **Saved Secrets** - Store API keys and credentials securely
+- **Authentication Providers** - Configure user login and social auth
+- **Generation Settings** - Select your preferred AI model (Pro feature)
+- **Custom Instructions** - Shape how the builder interacts with your project
+- **Social Share** - Configure SEO and social media metadata
 
 <Warning>
-  Certain custom instructions can prevent the builder from functioning correctly if they conflict with default behavior.
+  Custom instructions can affect builder functionality if they conflict with default behavior.
 </Warning>
 
-## Publishing your application
+## Best practices
+
+### [Effective prompting](/prompting)
+
+- **Be specific** - "Add a blue submit button" vs "make it better"
+- **Reference elements** - "Update the header component to include navigation"
+- **Iterate incrementally** - Build features step by step for better results
+- **[Triage issues](/support/help#how-to-triage)** - Learn systematic approaches to debug problems
+
+### Credit optimization
+
+- **Use [Discussion Mode](/Modes#discussion-mode)** - Plan your changes and integrations in Discussion Mode first to avoid unnecessary iterations
+- **Be specific with prompts** - Clear, detailed prompts reduce the need for follow-up messages. Review our [prompting guide](/prompting) for optimal results
+- **[Test](/builder/mobile/testing) in [Preview Mode](/Modes#view-modes)** - Use preview mode to test edits before moving on to other features
+- **Focus on one issue at a time** - Address problems individually rather than trying to fix multiple issues in one message
+- **Learn to [triage effectively](/support/help#how-to-triage)** - Watch our triage guide to efficiently troubleshoot and debug issues
+
+## Publishing and deployment
 
 <Tip>
-  You can view edits in demo mode or preview without publishing. Only publish when ready to share with external parties or go live.
+  [Preview](/Modes#view-modes) and [test](/builder/mobile/testing) your application before publishing. Only publish when ready for production use.
 </Tip>
 
-When ready to launch, click the **Publish** button in the top right. Learn more about [Publishing](/publish-and-share/publish).
+When ready to launch, click **Publish** in the top right. Your application can be deployed as a web app or packaged for mobile app stores.
+
+Learn more about [publishing and deployment](/publish-and-share/publish).
