@@ -72,6 +72,20 @@ How to review error logs and provide context to your AI agent to help fix them.
 
 ## Restarting Preview Server
 
+<Warning>
+  **Preview Server Issues?** We've received reports that certain ISPs may be blocking our preview server URLs. 
+  
+  **How to identify this issue:**
+  - Your preview shows a blank page or fails to load
+  - Mobile app previews get stuck on the "preview loading screen"
+  - You can access the Anything platform normally, but previews won't load
+  
+  **Test method:** Check if your preview works when viewing our site on your mobile phone connected to LTE/4G/5G instead of WiFi. If the preview appears on your mobile phone while on LTE but not on your desktop or laptop, we know it's a block by your ISP/DNS.
+  
+  **Current workaround:** Update your desktop/laptop DNS to use Cloudflare's servers. [View DNS setup instructions →](https://1.1.1.1/dns/)
+  
+  We're working to resolve this issue soon.
+</Warning>
 
 If you're experiencing issues with your preview not appearing, you can restart the preview server by clicking on the power button in the bottom right of your project. 
 
@@ -108,7 +122,7 @@ If you need to revert to a previous version of your project, you can use the Ver
 
 ## Status Page
 
-If there is an outage or system wide issue we will report it on our status page available at [status.create.xyz](http://status.create.xyz)
+If there is an outage or system wide issue we will report it on our status page available at [status.createanything.com](https://status.createanything.com/)
 
 Anything's AI Agent relies on upstream data from Anthropic's Claude Sonnet AI Model, if there is an outage with their system it will impact our builder's ability to execute commands. You can view their status page [here.](https://status.claude.com/)
 
