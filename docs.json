@@ -39,6 +39,7 @@
               "builder/user-accounts",
               "builder/uploads",
               "payments",
+              "builder/anything-ios",
               "builder/mobile",
               "builder/export"
             ]
