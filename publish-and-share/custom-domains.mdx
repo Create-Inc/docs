@@ -1,28 +1,55 @@
 ---
 title: "Custom Domains"
-description: "Publish your created app to a domain you already own"
+description: "Publish your web app to a custom domain - buy one directly or bring your own"
 ---
 
-<div style={{ position:"relative",paddingBottom:"56.25%",height:0,overflow:"hidden" }}>
-<iframe 
-  style={{ position:"absolute",top:0,left:0,width:"100%",height:"100%" }} 
-  src="https://www.loom.com/embed/8505ba16961e47fcb1f96aedf5d3d5ba" 
-  title="Custom Domains Video"
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-  allowFullScreen
-  webkitallowfullscreen="true" 
-  mozallowfullscreen="true" 
-/>
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
+  <iframe
+    src="https://www.loom.com/embed/27c480e50687451ab18d3c36299f9ada"
+    frameBorder="0"
+    webkitAllowFullScreen
+    mozAllowFullScreen
+    allowFullScreen
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+  />
 </div>
 
 ## What is a custom domain?
 
-A custom domain lets you use your own web address (like `yourapp.com`) instead of the default `created.app` address. You'll need to:
+A custom domain lets you use your own web address (like `yourapp.com`) instead of the default `created.app` address. 
 
-- Own a domain (purchase one from providers like [Hover](https://www.hover.com/) if you don't have one)
-- Have an Anything Pro subscription ([upgrade here](https://create.xyz/pricing))
-- Have an app ready to publish
+<Tip>
+  **Free hosting option:** You can always publish your app for free using a `your-app-name.created.app` subdomain. Custom domains are optional and require an Anything Pro subscription.
+</Tip>
+
+You'll need:
+- An Anything Pro subscription ([upgrade here](https://create.xyz/pricing))
+- An app ready to publish
+
+## Two ways to get a custom domain
+
+You have two options for setting up a custom domain:
+
+### Buy a domain directly through Anything
+
+The easiest way to get started! You can reserve a domain directly through our platform when publishing your app. This option handles all the technical setup automatically - no DNS configuration needed on your end. We'll reserve the domain, configure it, and connect it to your app seamlessly.
+
+**Quick steps to purchase a domain:**
+
+1. Head to the project you want to purchase a domain for
+2. Click Publish
+3. Click on "Get a custom domain"
+4. Find the domain you want by searching for it
+5. Click on the domain you want to buy
+6. Click Confirm
+
+<Tip>
+  Domains are purchased through our partnership with Name.com. Payment is automatically charged to your payment method on file with Anything.
+</Tip>
+
+### Bring your own domain
+
+If you already own a domain or prefer to purchase one from an external provider (like [Hover](https://www.hover.com/), [GoDaddy](https://www.godaddy.com/), or [AWS Route 53](https://aws.amazon.com/route53/)), you can connect it to your Anything app. You'll need to configure DNS records at your domain provider (detailed instructions below).
 
 <Note>
   **Important timing notes:**
@@ -54,17 +81,22 @@ When someone visits your domain:
 
 DNS records are like an address book for the internet. They tell browsers where to find your app when someone types in your domain name.
 
-## Setting up your domain
+## Connect your existing domain
+
+If you already own a domain (or prefer to purchase one from an external provider), follow these steps to connect it:
 
 <Steps>
-  <Step title="Publish your app">
-    [Publish](/publish-and-share/publish) your Anything app
+  <Step title="Open your project">
+    Open the project you want to publish and click on the publish button in the upper right
   </Step>
-  <Step title="Configure domain">
-    Select "Publish to a custom domain" in the Publish modal
+  <Step title="Get a custom domain">
+    Click "Get a custom domain" in the Publish modal
   </Step>
-  <Step title="Add DNS records within your hosting control panel from your provider">
-    Add these DNS records **_at your domain provide_**r:
+  <Step title="Connect your domain">
+    Select "Connect your domain" and enter your existing domain (e.g., `www.yourdomain.com`)
+  </Step>
+  <Step title="Add DNS records at your domain provider">
+    Add these DNS records **_at your domain provider_**:
 
     ```
     Type: A
@@ -90,7 +122,9 @@ DNS records are like an address book for the internet. They tell browsers where 
   ```
 </Note>
 
-## Provider-specific setup
+## Provider-specific setup (for bringing your own domain)
+
+If you're connecting an existing domain, follow the instructions below for your specific domain provider:
 
 <AccordionGroup>
   <Accordion title="AWS Route 53">
