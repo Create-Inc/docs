@@ -14,89 +14,74 @@ description: "Publish your web app to a custom domain - buy one directly or brin
   />
 </div>
 
-## What is a custom domain?
-
-A custom domain lets you use your own web address (like `yourapp.com`) instead of the default `created.app` address. 
-
-You'll need:
-- An Anything Pro subscription ([upgrade here](https://anything.com/pricing))
-- An app ready to publish
-
-## Two ways to get a custom domain
-
-You have two options for setting up a custom domain:
-
-### Buy a domain directly through Anything
-
-The easiest way to get started! You can reserve a domain directly through our platform when publishing your app. This option handles all the technical setup automatically - no DNS configuration needed on your end. We'll reserve the domain, configure it, and connect it to your app seamlessly.
-
-**Quick steps to purchase a domain:**
-
-1. Head to the project you want to purchase a domain for
-2. Click Publish
-3. Click on "Get a custom domain"
-4. Find the domain you want by searching for it
-5. Click on the domain you want to buy
-6. Click Confirm
-
 <Tip>
-  Domains are purchased through our partnership with [Name.com](https://www.name.com/support). Payment is automatically charged to your payment method on file with Anything.
+  **Your app, your address.** Use `yourapp.com` instead of the default `created.app` URL.
 </Tip>
 
+## What you need
+
+- Anything Pro or Max subscription ([upgrade here](https://anything.com/pricing))
+- An app ready to publish
+
+That's it.
+
+## Two ways to do this
+
+### 1. Buy through Anything (easiest)
+
+We'll buy and set up the domain for you. Zero DNS configuration on your end.
+
+**Here's how:**
+
+1. Open your project and hit Publish
+2. Click "Get a custom domain"
+3. Search for the domain you want
+4. Buy it
+
+Done. We handle everything else through our partnership with [Name.com](https://www.name.com/support). Payment pulls from your Anything payment method.
+
+DNS typically resolves in under 24 hours.
+
+### 2. Bring your own domain
+
+Already own a domain? Connect it to your app. You'll need to add some DNS records at your provider (instructions below).
+
 <Note>
-  **DNS resolution time:** For domains purchased through us, DNS typically resolves in under 24 hours.
+  **Heads up:** DNS changes can take up to 48 hours. During this time your domain might not work or show old content. If it's still broken after 48 hours, email us.
 </Note>
 
-### Bring your own domain
+## How domains work
 
-If you already own a domain or prefer to purchase one from an external provider (like [Hover](https://www.hover.com/), [GoDaddy](https://www.godaddy.com/), or [AWS Route 53](https://aws.amazon.com/route53/)), you can connect it to your Anything app. You'll need to configure DNS records at your domain provider (detailed instructions below).
-
-<Note>
-  **Important timing notes:**
-
-  - DNS changes can take up to 48 hours to take effect
-  - During this time, your domain might not work or might show old content
-  - If it's been 48 hours since you'd added records and published your domain, reach out for support
-</Note>
-
-<Frame caption="Custom domain configuration in the Publish modal">
-  ![](/images/domains/modal.png)
-</Frame>
-
-## How it works
-
-When someone visits your domain:
+When someone visits your domain, three things happen:
 
 <Steps>
   <Step title="DNS Lookup">
-    Your domain provider checks its DNS records
+    Your domain provider checks its records
   </Step>
   <Step title="Routing">
-    The records point visitors to Anything's servers
+    Those records point to Anything's servers
   </Step>
   <Step title="Delivery">
-    Anything routes visitors to your published app
+    We route visitors to your app
   </Step>
 </Steps>
 
-DNS records are like an address book for the internet. They tell browsers where to find your app when someone types in your domain name.
+Think of DNS records as an address book for the internet.
 
-## Connect your existing domain
-
-If you already own a domain (or prefer to purchase one from an external provider), follow these steps to connect it:
+## Connect an existing domain
 
 <Steps>
-  <Step title="Open your project">
-    Open the project you want to publish and click on the publish button in the upper right
+  <Step title="Step 1: Open your project, click Publish">
+    Open your project and click Publish
   </Step>
-  <Step title="Get a custom domain">
-    Click "Get a custom domain" in the Publish modal
+  <Step title="Step 2: Click 'Get a custom domain'">
+    Click "Get a custom domain"
   </Step>
-  <Step title="Connect your domain">
-    Select "Connect your domain" and enter your existing domain (e.g., `www.yourdomain.com`)
+  <Step title="Step 3: Select 'Connect your domain' and enter it">
+    Select "Connect your domain" and enter it (like `www.yourdomain.com`)
   </Step>
-  <Step title="Add DNS records at your domain provider">
-    Add these DNS records **_at your domain provider_**:
+  <Step title="Step 4: Add DNS records at your domain provider">
+    Add these DNS records at your domain provider:
 
     ```
     Type: A
@@ -113,18 +98,20 @@ If you already own a domain (or prefer to purchase one from an external provider
 </Steps>
 
 <Note>
-  **Using a subdomain?** For addresses like `app.your-domain.com`, just add one record:
+  **Using a subdomain?** (like `app.yourdomain.com`)
+
+  Just add one record:
 
   ```
   Type: A
-  Name: subdomain-name (e.g., "app")
+  Name: your-subdomain (e.g., "app")
   Value: 76.76.21.21
   ```
 </Note>
 
-## Provider-specific setup (for bringing your own domain)
+## Provider-specific instructions
 
-If you're connecting an existing domain, follow the instructions below for your specific domain provider:
+Connecting a domain? Find your provider:
 
 <AccordionGroup>
   <Accordion title="AWS Route 53">
@@ -198,20 +185,20 @@ If you're connecting an existing domain, follow the instructions below for your 
   </Accordion>
 </AccordionGroup>
 
-## Removing a custom domain
+## Remove a domain
 
 <Steps>
-  <Step title="Open Publish modal">
-    Access the Publish settings for your app
+  <Step title="Open Publish settings">
+    Open Publish settings
   </Step>
-  <Step title="Remove domain">
-    Click "Remove domain" next to your custom domain
+  <Step title="Click 'Remove domain'">
+    Click "Remove domain"
   </Step>
-  <Step title="Clean up DNS">
-    Remove the DNS records from your domain provider
+  <Step title="Clean up DNS records">
+    Clean up DNS records at your provider
   </Step>
 </Steps>
 
 ## Need help?
 
-Email [hello@createanything.com](mailto:hello@createanything.com) for support with domain setup.
+Email [hello@createanything.com](mailto:hello@createanything.com)
