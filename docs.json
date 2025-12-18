@@ -75,7 +75,7 @@
             "pages": [
               "support/rebranding",
               "support/help",
-              "support/ambassadors"
+              "support/product-experts-program"
             ]
           },
           {
@@ -179,10 +179,6 @@
     {
       "source": "/create/account/manage-subscription",
       "destination": "/account/subscriptions"
-    },
-    {
-      "source": "/create/support/ambassador-program",
-      "destination": "/support/ambassadors"
     },
     {
       "source": "/create/add-stripe-to-your-create-template",
