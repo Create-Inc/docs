@@ -1,37 +1,32 @@
 ---
 title: "RevenueCat (Beta)"
+description: "Add subscriptions and in-app purchases to your iOS app"
 ---
 
-RevenueCat is a subscription management platform for mobile apps. It helps you manage subscriptions, in-app purchases, and paywalls—but payments are processed by Apple through their App Store payment system.
-
 <Note>
-  RevenueCat is for mobile apps. If you want to monetize a web app, use [Stripe](/stripe).
+  RevenueCat is for mobile apps. For web apps, use [Stripe](/stripe).
 </Note>
 
-## Why Use RevenueCat
+## Overview
 
-RevenueCat manages subscription logic and entitlements for iOS apps, while Apple processes all payments. RevenueCat handles:
-- Subscription status tracking and entitlements
-- Paywall templates and A/B testing
-- Revenue analytics and customer management
-- Cross-platform subscription sync
+RevenueCat manages subscription logic and entitlements for your iOS app. Apple processes all payments through their in-app purchase system. With RevenueCat, you can:
 
-**How payments work:**
-- Users pay through Apple's in-app purchase system (Apple Pay, credit cards, etc.)
-- Apple processes the payment and takes their commission
-- RevenueCat tracks the purchase and unlocks features in your app
-- You receive payouts from Apple, not RevenueCat
+- Track subscription status and manage entitlements
+- Create and test paywall templates
+- Analyze revenue and manage customers
+- Sync subscriptions across platforms
 
 ## Prerequisites
 
-Before setting up RevenueCat, you'll need:
+Before you begin, make sure you have:
+
 - An iOS mobile app project in Anything
 - An [App Store Connect](https://appstoreconnect.apple.com) account with an active developer program membership
 - A [RevenueCat](https://www.revenuecat.com) account
 
 ## Setup
 
-### Connect Your Accounts
+### Connect your accounts
 
 <Steps>
   <Step title="Navigate to Settings">
@@ -44,47 +39,49 @@ Before setting up RevenueCat, you'll need:
     Connect your App Store Developer account to enable in-app purchases and subscriptions.
   </Step>
   <Step title="Connect RevenueCat">
-    Connect your RevenueCat account to manage payments and subscriptions.
+    Connect your RevenueCat account to manage subscriptions and track revenue.
   </Step>
 </Steps>
 
-### Add RevenueCat to Your Project
+### Add RevenueCat to your project
 
 <Steps>
-  <Step title="Open Your Project">
+  <Step title="Open your project">
     Navigate to your mobile app project in the Anything builder.
   </Step>
-  <Step title="Ask the Agent">
-    In the chat, ask the agent to add RevenueCat + App Store Connect integration:
+  <Step title="Add the integration">
+    In the chat, ask the agent to add RevenueCat integration:
     ```
     "Add RevenueCat + App Store Connect to this project"
     ```
   </Step>
-  <Step title="Configure Products">
-    The agent will help you set up your subscription tiers and products. You can define:
+  <Step title="Configure products">
+    The agent helps you set up subscription tiers and products. You can define:
     - Subscription plans (monthly, yearly, etc.)
     - One-time purchases
     - Entitlements that unlock features in your app
   </Step>
 </Steps>
 
-## How It Works
+## How it works
 
-RevenueCat integrates automatically with your mobile app. Here's the flow:
+RevenueCat integrates automatically with your mobile app. Here's how the payment flow works:
 
-1. **Products are configured** in both App Store Connect and RevenueCat
+1. **Configure products** in both App Store Connect and RevenueCat
 2. **Users make purchases** through Apple's in-app purchase system (they see Apple's payment UI)
 3. **Apple processes the payment** and takes their commission (typically 15-30%)
 4. **RevenueCat receives the purchase event** from Apple and tracks subscription status
 5. **RevenueCat unlocks features** in your app based on entitlements
 6. **You receive payouts** from Apple (not RevenueCat) according to Apple's payout schedule
 
-RevenueCat is the subscription management layer—Apple is the payment processor. No code required—Everything is handled through prompts and configuration.
+RevenueCat manages subscriptions and entitlements. Apple processes payments. No code is required. Everything is handled through prompts and configuration.
 
 ## Testing
 
-### TestFlight (Sandbox Testing)
+### TestFlight (sandbox testing)
+
 Test your RevenueCat integration in [TestFlight](https://developer.apple.com/testflight/) before releasing to the App Store. TestFlight uses Apple's sandbox environment, which allows you to:
+
 - Test purchases without real charges
 - Simulate subscription states and payment flows
 - Validate paywall functionality before going live
@@ -95,7 +92,9 @@ Test your RevenueCat integration in [TestFlight](https://developer.apple.com/tes
 </Note>
 
 ### Production
+
 Once your app is approved and released:
+
 - Real payment processing through Apple's App Store
 - Automatic App Store compliance
 - Live analytics and customer management in your RevenueCat dashboard
