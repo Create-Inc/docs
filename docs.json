@@ -47,7 +47,7 @@
             "group": "Payments and Monetization",
             "pages": [
               "stripe",
-              "staging/revenuecat"
+              "revenuecat"
             ]
           },
           {
