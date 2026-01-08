@@ -1,0 +1,129 @@
+---
+title: "Stripe"
+description: "Add Stripe payments to your web app"
+version: "2.0"
+---
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}><iframe src="https://www.loom.com/embed/a01b02ec159d46a58a90c18d4a445e4f?sid=f5ddcd44-a03c-4524-bee4-493ee3bcc506" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe></div>
+
+## Overview
+
+Anything's built-in Stripe integration lets you easily add payments to your web app without complex setup. You can collect payments for:
+
+- Monthly subscriptions (like $20/month for Pro access)
+- One-time purchases (like $100 for lifetime access)
+- Multiple pricing tiers (Basic, Pro, Enterprise)
+- B2B invoicing (for custom work or consulting)
+
+<Note>
+  **Mobile Apps**: Stripe is for web apps only. iOS mobile apps must use [RevenueCat (Beta)](/staging/revenuecat) for all payments and subscriptions.
+</Note>
+
+## Setup
+
+<Steps>
+  <Step title="Connect Stripe Account">
+    Complete your Stripe onboarding in your Anything dashboard. This links your app to your Stripe account so you can receive payments.
+    <Frame>
+      <img src="/images/stripe Accept Payments.png" />
+    </Frame>
+  </Step>
+  
+  <Step title="Enable Authentication">
+    You'll want users to sign in so you can track who has paid for what.
+    ```
+    "Allow users to login so we can track free vs paid customers"
+    ```
+  </Step>
+    <Step title="Update the builder with your desired pricing model or pricing system">
+    ```
+    "Setup a Pro plan, allow them to create 50 to-do tasks after paying 19.99 a month in Stripe, keep free users at 10."
+    ```
+  </Step>
+</Steps>
+
+## How It Works
+
+**Simple Version:**
+1. User clicks "Upgrade" button in your app
+2. Stripe checkout page opens in a popup window
+3. User enters payment info and completes purchase
+4. Your app automatically detects they've paid and unlocks features
+
+## Key Features
+
+**✨ No Complex Setup Required**
+- No need to create "Price IDs" in Stripe dashboard
+- No webhook configuration needed
+- Prices are defined by your direct instructions to the builder
+
+**✨ Smart Status Checking**
+- Your app automatically polls to check if users have paid
+- Works on web apps
+- Caches results for better performance
+
+**✨ Production Ready**
+- Automatically handles test vs live Stripe keys
+- Creates and manages Stripe customers for you
+- Works seamlessly in Anything's preview environment
+
+## Common Pricing Models
+
+### Monthly Subscriptions
+
+```
+Pro Plan: $20/month
+Business Plan: $50/month  
+Enterprise: $100/month
+```
+
+### One-Time Purchases
+
+```
+Lifetime Access: $200 one-time
+Premium Features: $50 one-time
+Event Ticket: $25 one-time
+```
+
+
+## What You Get
+
+When you implement Stripe, Anything automatically provides:
+
+- Backend routes for creating checkout sessions
+- Frontend hooks for checking payment status
+- Customer management in Stripe
+- Proper error handling
+- Web payment flows
+
+## Testing
+
+Anything defaults to test mode while in the builder/preview system, so you can test checkout immediately.
+
+**Test Credit Cards:**
+
+**Successful payments:**
+- Visa: `4242424242424242`
+- Mastercard: `5555555555554444`
+- American Express: `378282246310005`
+
+**Failed payments:**
+- Card declined: `4000000000000002`
+- Insufficient funds: `4000000000009995`
+- Expired card: `4000000000000069`
+
+**Test details:**
+- Expiry date: Any future date (e.g., `12/25`)
+- CVC: Any 3 digits (e.g., `123`)
+- ZIP code: Any valid ZIP (e.g., `12345`)
+
+## Technical Implementation
+
+Anything automatically handles the payment flow for your web app:
+
+1. User clicks payment button in your web app
+2. Stripe checkout page opens in a popup window
+3. User completes payment with their preferred method
+4. Webhook updates user's account with purchased items
+5. App automatically detects payment and unlocks features
+

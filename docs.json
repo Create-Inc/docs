@@ -38,10 +38,16 @@
               "builder/databases",
               "builder/user-accounts",
               "builder/uploads",
-              "payments",
               "builder/anything-ios",
               "builder/mobile",
               "builder/export"
+            ]
+          },
+          {
+            "group": "Payments and Monetization",
+            "pages": [
+              "stripe",
+              "staging/revenuecat"
             ]
           },
           {
@@ -217,8 +223,8 @@
       "destination": "/welcome"
     },
     {
-      "source": "/stripe",
-      "destination": "/payments"
+      "source": "/payments",
+      "destination": "/stripe"
     },
     {
       "source": "/docs/export",

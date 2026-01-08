@@ -26,7 +26,7 @@ Build mobile apps by describing what you want. Anything generates React Native c
 - **Prompt to app** - Describe your app, get working code
 - **Design included** - AI designs apps like a human would
 - **Test on device** - Preview with Expo Go on your phone
-- **Full stack** - Built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/stripe)
+- **Full stack** - Built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/staging/revenuecat)
 - **Publish anywhere** - Deploy to App Store and Play Store
 
 ## Getting Started
@@ -47,7 +47,7 @@ Use camera, location, sensors, and 39+ other device features. We're adding more 
 - Discover nearby restaurants on interactive maps, get directions with location services, call businesses from contacts, browse photo galleries, work offline with smart caching
 
 **AI Coaching App**
-- Chat with AI coach via text, track progress with charts, charge for Pro features with Stripe integration, get daily reminders via notifications, store goals securely
+- Chat with AI coach via text, track progress with charts, charge for Pro features, get daily reminders via notifications, store goals securely
 
 ### Publishing Your App
 - [iOS App Store](/builder/mobile/publishing-ios) - Deploy via TestFlight
@@ -97,20 +97,8 @@ Preview your app in the builder as you chat with Anything.
   <Accordion title="How do I handle different screen sizes?">
     Anything automatically generates responsive layouts that adapt to different device sizes.
   </Accordion>
-  <Accordion title="Can I use Stripe in an iOS app?">
-    Yes! You can use Stripe for digital goods on iOS by linking to external checkout pages, which Anything does automatically for you once you have integrated our Stripe integration.
-
-    Due to a US District Court order, Apple updated its guidelines to allow developers more freedom to direct iOS app users to external payment options. See the [Reuters coverage](https://www.reuters.com/sustainability/boards-policy-regulation/us-judge-rules-apple-violated-order-reform-app-store-2025-04-30/) and [Apple's official announcement](https://developer.apple.com/news/?id=9txfddzf).
-
-    **What Stripe Enables:**
-    - **Digital goods and subscriptions** - Sell in-app credits, premium features, or subscriptions
-    - **External checkout flow** - Redirect users to Stripe's hosted payment page
-    - **Universal Links** - Seamlessly return users to your app after payment
-    - **Cross-platform purchases** - Users can buy on web and access in your app
-
-    **Note:** This approach requires users to leave your app temporarily. Apple Payment and further ecosystem additions are in progress for our mobile builder.
-
-    For complete implementation details, see our [payments system](/payments) documentation.
+  <Accordion title="How do I add payments to my mobile app?">
+    iOS mobile apps must use [RevenueCat (Beta)](/staging/revenuecat) for all payments and subscriptions. RevenueCat handles in-app purchases, subscriptions, and paywalls for iOS apps. Web apps use [Stripe](/stripe) for payments.
   </Accordion>
 </AccordionGroup>
 

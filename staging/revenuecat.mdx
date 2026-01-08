@@ -1,121 +1,104 @@
 ---
-title: "RevenueCat"
-description: "Add mobile app payments and subscriptions to your apps"
+title: "RevenueCat (Beta)"
 ---
 
-## Overview
-
-RevenueCat handles mobile app monetization. Add subscriptions, in-app purchases, and paywalls to your apps with a few prompts.
+RevenueCat is a subscription management platform for mobile apps. It helps you manage subscriptions, in-app purchases, and paywalls—but payments are processed by Apple through their App Store payment system.
 
 <Note>
-  RevenueCat integration is available for mobile apps built with Anything. Web apps use [Stripe](/payments) for payments.
+  RevenueCat is for mobile apps. If you want to monetize a web app, use [Stripe](/stripe).
 </Note>
 
-## Core Features
+## Why Use RevenueCat
 
-### Subscription Management
-- Recurring billing automation
-- Multiple subscription tiers
-- Promotional offers and trials
+RevenueCat manages subscription logic and entitlements for iOS apps, while Apple processes all payments. RevenueCat handles:
+- Subscription status tracking and entitlements
+- Paywall templates and A/B testing
+- Revenue analytics and customer management
 - Cross-platform subscription sync
 
-### In-App Purchases
-- One-time purchases
-- Consumable products
-- Non-consumable unlocks
-- Premium feature access
+**How payments work:**
+- Users pay through Apple's in-app purchase system (Apple Pay, credit cards, etc.)
+- Apple processes the payment and takes their commission
+- RevenueCat tracks the purchase and unlocks features in your app
+- You receive payouts from Apple, not RevenueCat
 
-### Paywall Templates
-- Pre-built conversion-optimized designs
-- A/B testing capabilities
-- Custom paywall creation
-- Localized pricing display
+## Prerequisites
 
-### Analytics & Insights
-- Revenue tracking
-- Churn analysis
-- Customer lifetime value
-- Conversion funnel metrics
+Before setting up RevenueCat, you'll need:
+- An iOS mobile app project in Anything
+- An [App Store Connect](https://appstoreconnect.apple.com) account with an active developer program membership
+- A [RevenueCat](https://www.revenuecat.com) account
 
-## Getting Started
+## Setup
 
-### Enable RevenueCat
-1. Go to your project dashboard
-2. Click **Accept Payments**
-3. Select **RevenueCat**
-4. Configure your products
+### Connect Your Accounts
 
-### Basic Setup
-1. **Create Products** - Define your subscription tiers and one-time purchases
-2. **Set Up Offerings** - Group products into logical packages
-3. **Configure Entitlements** - Map purchases to app features
-4. **Deploy** - RevenueCat handles the rest
+<Steps>
+  <Step title="Navigate to Settings">
+    Go to **Dashboard > Settings > Accept Payments > Mobile**
+    <Frame>
+      <img src="/images/revcat.png" />
+    </Frame>
+  </Step>
+  <Step title="Connect App Store Connect">
+    Connect your App Store Developer account to enable in-app purchases and subscriptions.
+  </Step>
+  <Step title="Connect RevenueCat">
+    Connect your RevenueCat account to manage payments and subscriptions.
+  </Step>
+</Steps>
 
-## Product Configuration
+### Add RevenueCat to Your Project
 
-### Subscription Tiers
-```
-Monthly Pro - $9.99/month
-Yearly Pro - $99.99/year
-Lifetime - $299.99 one-time
-```
+<Steps>
+  <Step title="Open Your Project">
+    Navigate to your mobile app project in the Anything builder.
+  </Step>
+  <Step title="Ask the Agent">
+    In the chat, ask the agent to add RevenueCat + App Store Connect integration:
+    ```
+    "Add RevenueCat + App Store Connect to this project"
+    ```
+  </Step>
+  <Step title="Configure Products">
+    The agent will help you set up your subscription tiers and products. You can define:
+    - Subscription plans (monthly, yearly, etc.)
+    - One-time purchases
+    - Entitlements that unlock features in your app
+  </Step>
+</Steps>
 
-### Entitlements
-- `pro_features` - Access to premium functionality
-- `unlimited_usage` - Remove usage limits
-- `priority_support` - Faster customer support
+## How It Works
 
-## Implementation
+RevenueCat integrates automatically with your mobile app. Here's the flow:
 
-### Automatic Integration
-RevenueCat integrates automatically with your mobile app. No code required.
+1. **Products are configured** in both App Store Connect and RevenueCat
+2. **Users make purchases** through Apple's in-app purchase system (they see Apple's payment UI)
+3. **Apple processes the payment** and takes their commission (typically 15-30%)
+4. **RevenueCat receives the purchase event** from Apple and tracks subscription status
+5. **RevenueCat unlocks features** in your app based on entitlements
+6. **You receive payouts** from Apple (not RevenueCat) according to Apple's payout schedule
 
-### Custom Configuration
-- Modify paywall designs
-- Adjust pricing strategies
-- Set up promotional campaigns
-- Configure webhook endpoints
+RevenueCat is the subscription management layer—Apple is the payment processor. No code required—Everything is handled through prompts and configuration.
 
 ## Testing
 
-### Sandbox Environment
+### TestFlight (Sandbox Testing)
+Test your RevenueCat integration in [TestFlight](https://developer.apple.com/testflight/) before releasing to the App Store. TestFlight uses Apple's sandbox environment, which allows you to:
 - Test purchases without real charges
-- Simulate subscription states
-- Validate paywall flows
-- Debug entitlement logic
+- Simulate subscription states and payment flows
+- Validate paywall functionality before going live
+- Test on real devices with sandbox Apple ID accounts
 
-### Production Deployment
+<Note>
+  In sandbox environments, subscription renewals occur every 24 hours (regardless of subscription duration) to speed up testing cycles.
+</Note>
+
+### Production
+Once your app is approved and released:
+- Real payment processing through Apple's App Store
 - Automatic App Store compliance
-- Real payment processing
-- Live analytics tracking
-- Customer support tools
-
-## Best Practices
-
-### Pricing Strategy
-- Start with simple tiers
-- Test different price points
-- Offer annual discounts
-- Include free trials
-
-### Paywall Optimization
-- Use proven templates
-- A/B test designs
-- Optimize for conversion
-- Localize for markets
-
-### Customer Experience
-- Clear value proposition
-- Easy upgrade paths
-- Restore purchase functionality
-- Transparent billing
-
-## Requirements
-
-- Mobile app project
-- App Store Connect account
-- RevenueCat account
-- iOS/Android deployment
+- Live analytics and customer management in your RevenueCat dashboard
 
 ---
 
@@ -123,5 +106,4 @@ RevenueCat integrates automatically with your mobile app. No code required.
 
 - [Mobile Development](/builder/mobile) - Build mobile applications
 - [Publishing iOS](/builder/mobile/publishing-ios) - Deploy to App Store
-- [Testing](/builder/mobile/testing) - Test your mobile app
-- [Stripe Payments](/payments) - Web app payments
+- [Stripe Payments](/stripe) - Web app payments
