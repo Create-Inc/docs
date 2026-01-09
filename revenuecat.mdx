@@ -26,7 +26,9 @@ Before you begin, make sure you have:
 
 ## Setup
 
-### Connect your accounts
+### Connect your accounts globally
+
+First, connect your accounts at the account level.
 
 <Steps>
   <Step title="Navigate to Settings">
@@ -40,17 +42,42 @@ Before you begin, make sure you have:
   </Step>
   <Step title="Connect RevenueCat">
     Connect your RevenueCat account to manage subscriptions and track revenue.
+    
+    <Note>
+      During RevenueCat onboarding, you may see code snippets or packages. Ignore these for now. Anything handles the integration automatically.
+    </Note>
+  </Step>
+</Steps>
+
+### Connect your accounts per project
+
+After connecting globally, connect your accounts for each individual project.
+
+In this step, you're matching project to project, from our system to RevenueCat and App Store Connect. If you don't yet have projects in those systems to link to, you can create them in this menu and link them.
+
+<Steps>
+  <Step title="Open your project">
+    Navigate to the mobile app project where you want to add RevenueCat.
+  </Step>
+  <Step title="Navigate to project settings">
+    In your project, go to **Project Settings > In app purchases** to connect to the matching projects in RevenueCat and App Store Connect.
+    <Frame>
+      <img src="/images/RCProject.png" />
+    </Frame>
+  </Step>
+  <Step title="Connect App Store Connect">
+    Connect to the matching project in App Store Connect, or create a new project if needed.
+  </Step>
+  <Step title="Connect RevenueCat">
+    Connect to the matching project in RevenueCat, or create a new project if needed. This ensures you can control and track revenue for this project.
   </Step>
 </Steps>
 
 ### Add RevenueCat to your project
 
 <Steps>
-  <Step title="Open your project">
-    Navigate to your mobile app project in the Anything builder.
-  </Step>
   <Step title="Add the integration">
-    In the chat, ask the agent to add RevenueCat integration:
+    Once your accounts are connected, in the chat, ask the agent to add RevenueCat integration:
     ```
     "Add RevenueCat + App Store Connect to this project"
     ```
