@@ -1,12 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Anything",
-  "seo": {
-    "metatags": {
-      "canonical": "https://www.anything.com/docs"
-    }
-  },
+  "name": "Create",
   "colors": {
     "primary": "#7C89FF",
     "light": "#6171FF",
@@ -102,7 +97,7 @@
       "anchors": [
         {
           "anchor": "Product updates",
-          "href": "https://x.com/anythingai",
+          "href": "https://x.com/anything",
           "icon": "x-twitter"
         }
       ]
@@ -119,18 +114,18 @@
     "links": [
       {
         "label": "Updates",
-        "href": "https://x.com/anythingai"
+        "href": "https://x.com/anything"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Anything",
-      "href": "https://www.anything.com/login"
+      "href": "https://www.createanything.com/login"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/anythingai",
+      "x": "https://x.com/anything",
       "youtube": "https://www.youtube.com/@anythinguniversity",
       "linkedin": "https://www.linkedin.com/company/anythingai/"
     }
