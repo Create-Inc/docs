@@ -1,7 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Create",
+  "name": "Anything",
+  "seo": {
+    "metatags": {
+      "canonical": "https://www.anything.com/docs"
+    }
+  },
   "colors": {
     "primary": "#7C89FF",
     "light": "#6171FF",
@@ -120,7 +125,7 @@
     "primary": {
       "type": "button",
       "label": "Anything",
-      "href": "https://www.createanything.com/login"
+      "href": "https://www.anything.com/login"
     }
   },
   "footer": {
