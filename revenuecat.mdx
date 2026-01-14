@@ -68,7 +68,7 @@ First, connect your accounts at the platform level.
 
 After connecting at the platform level, connect your accounts at the project level.
 
-In this step, you're connecting at the project level, from our system to RevenueCat and App Store Connect. If you don't yet have projects in those systems to link to, you can create them in this menu and link them.
+In this step, you're connecting a specific Anything Mobile Project to its corresponding, matching project in RevenueCat and App Store Connect. If you don't yet have projects in those systems to link to, you can create them in this menu and link them.
 
 <Steps>
   <Step title="Open your project">
@@ -120,18 +120,22 @@ RevenueCat manages subscriptions and entitlements. Apple processes payments. No 
 
 ## Testing
 
-### TestFlight (sandbox testing)
+### Testing in the Anything iOS App
 
-Test your RevenueCat integration in [TestFlight](https://developer.apple.com/testflight/) before releasing to the App Store. TestFlight uses Apple's sandbox environment, which allows you to:
+You can test your RevenueCat integration directly in the [Anything iOS App](/builder/anything-ios) on your device. This allows you to:
 
-- Test purchases without real charges
-- Simulate subscription states and payment flows
+- Test purchases and subscriptions in Apple's sandbox environment
 - Validate paywall functionality before going live
-- Test on real devices with sandbox Apple ID accounts
+- Test subscription states and payment flows
+- Preview your app natively on your device
 
-<Note>
-  In sandbox environments, subscription renewals occur every 24 hours (regardless of subscription duration) to speed up testing cycles.
-</Note>
+To test RevenueCat in the Anything iOS App:
+
+1. **Install the Anything iOS App** - Download from the [App Store](https://apps.apple.com/us/app/anything-ai-app-builder/id6751247034) and sign in with your Anything account
+2. **Open your project** - Your projects sync automatically between devices
+3. **Test natively** - Preview and test your app directly on your device with full native functionality
+
+For detailed instructions on testing mobile apps, see [Testing & Debugging Mobile Apps](/builder/mobile/testing). When you're ready to publish to the App Store, see [Publishing to iOS App Store](/builder/mobile/publishing-ios) for instructions on submitting your app to App Store Connect.
 
 ### Production
 
