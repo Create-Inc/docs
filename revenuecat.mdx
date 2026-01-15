@@ -69,38 +69,20 @@ First, connect your accounts at the platform level to enable in-app purchases an
   </Step>
 </Steps>
 
-### Connect your accounts at the project level
+### Add RevenueCat to your project
 
-After connecting at the platform level, connect your accounts at the project level.
-
-In this step, you're connecting a specific Anything Mobile Project to its corresponding, matching project in RevenueCat and App Store Connect. If you don't yet have projects in those systems to link to, you can create them in this menu and link them.
+After connecting at the platform level, add RevenueCat to your project using the AI agent.
 
 <Steps>
   <Step title="Open your project">
     Navigate to the mobile app project where you want to add RevenueCat.
   </Step>
-  <Step title="Navigate to project settings">
-    In your project, go to **Project Settings > In app purchases** to connect to the matching projects in RevenueCat and App Store Connect.
-    <Frame>
-      <img src="/images/RCproject.png" />
-    </Frame>
-  </Step>
-  <Step title="Connect App Store Connect">
-    Connect to the matching project in App Store Connect, or create a new project if needed.
-  </Step>
-  <Step title="Connect RevenueCat">
-    Connect to the matching project in RevenueCat, or create a new project if needed. This ensures you can control and track revenue for this project.
-  </Step>
-</Steps>
-
-### Add RevenueCat to your project
-
-<Steps>
-  <Step title="Add the integration">
-    Once your accounts are connected, in the chat, ask the agent to add RevenueCat integration:
+  <Step title="Set up RevenueCat">
+    In the chat, ask the agent to set up RevenueCat:
     ```
     "Add RevenueCat + App Store Connect to this project"
     ```
+    The AI builder will automatically connect your project to matching projects in RevenueCat and App Store Connect, or create new ones if needed.
   </Step>
   <Step title="Configure products">
     The agent helps you set up subscription tiers and products. You can define:
@@ -109,6 +91,10 @@ In this step, you're connecting a specific Anything Mobile Project to its corres
     - Entitlements that unlock features in your app
   </Step>
 </Steps>
+
+<Note>
+  **Reviewing connections (optional)**: You can review the connections the AI builder made by going to **Project Settings > In app purchases**. This shows the connected projects in RevenueCat and App Store Connect, but you don't need to manually configure these—the AI handles it automatically.
+</Note>
 
 ## How it works
 
@@ -144,7 +130,7 @@ For detailed instructions on testing mobile apps, see [Testing & Debugging Mobil
 
 ### Testing on TestFlight
 
-Submit your app to Apple via our system to test in TestFlight. Test purchases work in TestFlight's production-like environment. See [Publishing to iOS App Store](/builder/mobile/publishing-ios) for setup instructions.
+Submit your app to Apple via our system to test in TestFlight. Test purchases work in TestFlight's production-like environment. See [Publishing to iOS App Store](/builder/mobile/publishing-ios) for submission instructions.
 
 ### Production
 
