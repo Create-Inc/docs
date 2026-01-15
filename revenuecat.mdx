@@ -114,14 +114,14 @@ In this step, you're connecting a specific Anything Mobile Project to its corres
 
 RevenueCat integrates automatically with your mobile app. Here's how the payment flow works:
 
-1. **Configure products** in both App Store Connect and RevenueCat
+1. **Configure products** using the AI agent in Anything. For example: `"Create a Pro Level Subscription that is 9.99 USD a month"`
 2. **Users make purchases** through Apple's in-app purchase system (they see Apple's payment UI)
 3. **Apple processes the payment** and takes their commission (typically 15-30%)
 4. **RevenueCat receives the purchase event** from Apple and tracks subscription status
 5. **RevenueCat unlocks features** in your app based on entitlements
 6. **You receive payouts** from Apple (not RevenueCat) according to Apple's payout schedule
 
-RevenueCat manages subscriptions and entitlements. Apple processes payments. No code is required. Everything is handled through prompts and configuration.
+RevenueCat manages subscriptions and entitlements. Apple processes payments. No code is required. Everything is handled through prompts and configuration with the AI agent.
 
 ## Testing
 
@@ -141,6 +141,10 @@ To test RevenueCat in the Anything iOS App:
 3. **Test natively** - Preview and test your app directly on your device with full native functionality
 
 For detailed instructions on testing mobile apps, see [Testing & Debugging Mobile Apps](/builder/mobile/testing). When you're ready to publish to the App Store, see [Publishing to iOS App Store](/builder/mobile/publishing-ios) for instructions on submitting your app to App Store Connect.
+
+### Testing on TestFlight
+
+Submit your app to Apple via our system to test in TestFlight. Test purchases work in TestFlight's production-like environment. See [Publishing to iOS App Store](/builder/mobile/publishing-ios) for setup instructions.
 
 ### Production
 
