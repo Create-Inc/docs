@@ -15,8 +15,10 @@ Use this checklist to verify your Apple Developer Account is active and ready to
 - [ ] **Program Type** shows Individual or Organization
 - [ ] You can access **App Store Connect** dashboard
 - [ ] **Agreements** are Active (no pending or expired agreements)
+- [ ] **Paid Apps Agreement** is Active (required for monetization)
+- [ ] **Banking and Tax Information** is complete (required for receiving payments)
 
-If all items are checked ✅, your account is ready to publish apps!
+If all items are checked ✅, your account is ready to publish and monetize apps!
 
 ## Step-by-Step Verification
 
@@ -48,18 +50,21 @@ If all items are checked ✅, your account is ready to publish apps!
 
 ### 3. Check Agreements Status
 
-Agreements must be active before you can publish apps:
+Agreements must be active before you can publish apps. **For monetization, banking and paid apps agreements are critical:**
 
 1. In [App Store Connect](https://appstoreconnect.apple.com), click **Agreements, Tax, and Banking** (under Business menu)
 2. Verify all required agreements show **"Active"**
-3. Check for any items marked:
+3. **Check Paid Apps Agreement** - Must be Active if you plan to monetize your app
+4. **Verify Banking Information** - Complete all required banking details to receive payments from Apple
+5. **Verify Tax Information** - Complete tax forms (W-9 for US, or equivalent for your country)
+6. Check for any items marked:
    - ❌ Pending
    - ❌ Incomplete
    - ❌ Expired
 
-<Note>
-  If you plan to offer paid apps or in-app purchases, the **Paid Apps Agreement** must also be Active.
-</Note>
+<Warning>
+  **For Monetization**: You cannot receive payments from Apple until the **Paid Apps Agreement** is Active and your **Banking and Tax information** is complete. These are required even if your app is free but includes in-app purchases or subscriptions.
+</Warning>
 
 ## Common Issues
 
@@ -83,9 +88,15 @@ If your membership shows "Expired":
 ### Agreements Not Active
 
 If agreements show as Pending or Incomplete:
-- Complete any required tax and banking information
+- **Complete Banking Information** - Required to receive payments. Go to Agreements, Tax, and Banking and add your bank account details
+- **Complete Tax Information** - Required for all developers. Submit W-9 (US) or equivalent tax form for your country
+- **Accept Paid Apps Agreement** - Required for any monetization (paid apps, in-app purchases, subscriptions)
 - Review and accept any pending agreements
 - Contact Apple Support if issues persist
+
+<Note>
+  **Important for Monetization**: Even if your app is free, you must complete banking and tax information and accept the Paid Apps Agreement if you plan to offer in-app purchases or subscriptions through RevenueCat or other payment systems.
+</Note>
 
 ## Need Help?
 
