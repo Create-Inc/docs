@@ -14,6 +14,8 @@ Use this checklist to verify your Apple Developer Account is active and ready to
 - [ ] **Membership Status** shows `"Active"` (not Pending, Expired, or Incomplete)
 - [ ] **Program Type** shows Individual or Organization
 - [ ] You can access **App Store Connect** dashboard
+- [ ] **You have Admin access** to the Individual or Organization account you plan to publish through
+- [ ] **Team and Provider match** - If you belong to multiple Developer Teams/Providers, ensure the Team and Provider match for the build to publish
 - [ ] **Agreements** are Active (no pending or expired agreements)
 - [ ] **Paid Apps Agreement** is Active (required for monetization)
 - [ ] **Banking and Tax Information** is complete (required for receiving payments)
@@ -48,7 +50,47 @@ If all items are checked ✅, your account is ready to publish and monetize apps
   If you see a message saying you're not enrolled or don't have access, your account is not ready. Complete your enrollment on the Apple Developer site or contact Apple Support.
 </Warning>
 
-### 3. Check Agreements Status
+### 3. Verify Admin Access
+
+You must have **Admin** (or **Account Holder**) access to the Individual or Organization account you plan to publish through. This is required to sign builds, manage certificates, and submit apps to the App Store.
+
+1. In [App Store Connect](https://appstoreconnect.apple.com), go to **Users and Access**
+2. Verify your Apple ID is listed with **Admin** or **Account Holder** role
+3. If you're part of an Organization account, ensure you're added to the correct team
+4. In [Apple Developer Portal](https://developer.apple.com/account), verify your role under **People** (for Organization accounts)
+
+<Warning>
+  Only **Account Holder** and **Admin** roles can sign builds and publish apps. If you have a different role (like **App Manager** or **Developer**), you'll need to request Admin access from your organization's Account Holder, or use an account where you have Admin privileges.
+</Warning>
+
+### 4. Verify Team and Provider Match
+
+When publishing through our system, if you belong to multiple Developer Teams or Providers, the **Team** and **Provider** must match for the build to publish successfully. This ensures the signing identity aligns with the provider entity in App Store Connect.
+
+**What are Team and Provider?**
+- **Team** refers to your Apple Developer Program team (Individual or Organization), identified by a **Team Name** and **Team ID**
+- **Provider** is the legal entity/provider name tied to your account in App Store Connect
+
+**How to verify they match:**
+
+1. **Find your Team information:**
+   - Go to [developer.apple.com/account](https://developer.apple.com/account) → **Membership**
+   - Note your **Team Name** and **Team ID** (10-character identifier)
+
+2. **Check your Provider in App Store Connect:**
+   - In [App Store Connect](https://appstoreconnect.apple.com), the Provider name should match your Team Name or Team ID
+   - This is typically visible in your account settings or when uploading builds
+
+3. **If you have multiple teams:**
+   - Ensure you're using the correct Team ID when building and signing your app
+   - The Provider in App Store Connect must correspond to the same Team that signed the build
+   - Verify your Apple ID has access to the correct team in both Developer Portal and App Store Connect
+
+<Warning>
+  **Team and Provider Mismatch Error**: If you see `"Team and Provider must match for the build to publish"`, this means the Team ID used to sign your build doesn't match the Provider configured in App Store Connect. Ensure you're using the correct Team/Provider combination when publishing through our system.
+</Warning>
+
+### 5. Check Agreements Status
 
 Agreements must be active before you can publish apps. **For monetization, banking and paid apps agreements are critical:**
 
@@ -84,6 +126,23 @@ If your account shows `"Pending"` or you can't access App Store Connect:
 If your membership shows `"Expired"`:
 - Renew your membership at [developer.apple.com/account](https://developer.apple.com/account)
 - You cannot publish apps with an expired membership
+
+### Insufficient Access Permissions
+
+If you don't have Admin or Account Holder access:
+- **For Individual accounts**: You should automatically have Account Holder access. If not, contact Apple Support
+- **For Organization accounts**: Request Admin access from your organization's Account Holder
+- Verify your role in **App Store Connect > Users and Access** and **Apple Developer Portal > People**
+- Only Account Holder and Admin roles can sign builds and publish apps to the App Store
+
+### Team and Provider Mismatch
+
+If you see `"Team and Provider must match for the build to publish"`:
+- **Check your Team ID**: Go to [developer.apple.com/account](https://developer.apple.com/account) → Membership and note your Team ID
+- **Verify Provider match**: Ensure the Provider in App Store Connect matches your Team Name or Team ID
+- **Multiple teams**: If you belong to multiple Developer Teams, ensure you're using the correct Team/Provider combination when building and publishing
+- **Check signing settings**: Verify your build is signed with the correct Team ID that matches your App Store Connect Provider
+- **Regenerate certificates**: If needed, regenerate certificates and provisioning profiles under the correct team
 
 ### Agreements Not Active
 
