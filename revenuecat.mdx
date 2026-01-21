@@ -32,6 +32,7 @@ Before you begin, make sure you have:
 - An [iOS mobile app project in Anything](/builder/mobile)
 - **[An active Apple Developer Account](/builder/mobile/verify-apple-developer-account)** - Required to publish apps and use in-app purchases. Provides access to [App Store Connect](https://appstoreconnect.apple.com).
 - A [RevenueCat](https://www.revenuecat.com) account
+- **Business information completed in App Store Connect** - Before accepting payments, complete your banking information and tax forms under **App Store Connect > Business**. This is required for Apple to process payouts.
 
 <Warning>
   How to verify your Apple Developer Account is Active? [Review this article](/builder/mobile/verify-apple-developer-account).
@@ -100,6 +101,29 @@ After connecting at the platform level, add RevenueCat to your project using the
   **Reviewing connections (optional)**: You can review the connections the AI builder made by going to **Project Settings > In app purchases**. This shows the connected projects in RevenueCat and App Store Connect, but you don't need to manually configure these—the AI handles it automatically.
 </Note>
 
+### Configure App Store Connect for Subscriptions
+
+After the AI agent sets up your products, you need to complete the subscription configuration in App Store Connect to ensure your subscriptions are ready for submission.
+
+<Steps>
+  <Step title="Upload subscription screenshot">
+    In App Store Connect, go to your subscription's **Review Information** section and upload a screenshot of your subscriptions page. The screenshot must match one of Apple's iPhone specifications. See [Apple's screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications) for requirements.
+    
+    <Warning>
+      Without a screenshot, your subscription will show "missing metadata" and cannot be submitted.
+    </Warning>
+  </Step>
+  <Step title="Set subscription prices">
+    Configure your subscription pricing in App Store Connect. Set the price for each subscription tier and region where you want to offer your subscriptions.
+  </Step>
+  <Step title="Configure price schedule and availability">
+    Go to **Monetization > Pricing and Availability** in App Store Connect and ensure your app's price schedule and availability are properly configured.
+  </Step>
+  <Step title="Verify readiness">
+    Check that your subscription shows **"Ready to submit"** status in both RevenueCat and App Store Connect. This confirms that all required metadata and configuration are complete.
+  </Step>
+</Steps>
+
 ## How it works
 
 RevenueCat integrates automatically with your mobile app. Here's how the payment flow works:
@@ -136,6 +160,14 @@ For detailed instructions on testing mobile apps, see [Testing & Debugging Mobil
 
 Submit your app to Apple via our system to test in TestFlight. Test purchases work in TestFlight's production-like environment. See [Publishing to iOS App Store](/builder/mobile/publishing-ios) for submission instructions.
 
+### Viewing Sandbox Purchases
+
+When testing subscriptions, you can view sandbox purchases in your RevenueCat dashboard:
+
+- Go to **RevenueCat > Customers > Sandbox** to see all test purchases and subscription activity
+- Sandbox purchases appear only in RevenueCat—App Store Connect does not report sandbox purchase data
+- This allows you to verify that purchases are being processed correctly during testing
+
 ### Production
 
 Once your app is approved and released:
@@ -143,6 +175,67 @@ Once your app is approved and released:
 - Real payment processing through Apple's App Store
 - Automatic App Store compliance
 - Live analytics and customer management in your RevenueCat dashboard
+
+## Preparing for Production
+
+Before submitting your app to the App Store, ensure all requirements are met:
+
+### Business Setup Checklist
+
+- [ ] Banking information completed in **App Store Connect > Business**
+- [ ] Tax forms completed in **App Store Connect > Business**
+- [ ] Subscription screenshot uploaded (matches iPhone specifications)
+- [ ] Subscription prices configured in App Store Connect
+- [ ] Price schedule and availability set under **Monetization > Pricing and Availability**
+- [ ] Subscription shows **"Ready to submit"** in both RevenueCat and App Store Connect
+
+### Verification
+
+The best way to verify everything is configured correctly is to check that your subscription products show **"Ready to submit"** status in both:
+- Your RevenueCat dashboard
+- App Store Connect
+
+If you see this status in both places, your subscriptions are properly configured and ready for App Store submission.
+
+## Troubleshooting
+
+### Product Name Mismatch
+
+**Issue**: Products not syncing between RevenueCat and App Store Connect.
+
+**Solution**: Product names must be exactly the same in both RevenueCat and App Store Connect. For example, if your subscription is named `pro_plan` in RevenueCat, it must also be `pro_plan` in App Store Connect (case-sensitive). Mismatched names prevent the systems from matching products.
+
+### "No Offerings" Error
+
+**Issue**: Your app shows "No offerings" when trying to display subscriptions.
+
+**Solution**: This error is usually caused by one of the following:
+- Product name mismatch between RevenueCat and App Store Connect (see above)
+- Missing subscription metadata in App Store Connect (screenshot not uploaded)
+- Subscription prices not configured
+- Service credentials not properly configured
+
+Check that your subscription shows "Ready to submit" in both systems. If issues persist, see [RevenueCat's troubleshooting guide](https://www.revenuecat.com/docs/offerings/troubleshooting-offerings) for more details.
+
+### Missing Metadata
+
+**Issue**: Subscription shows "missing metadata" in App Store Connect.
+
+**Solution**: 
+- Upload a subscription screenshot in **Review Information > Screenshot** that matches Apple's iPhone specifications
+- Ensure subscription prices are set
+- Verify all required fields in App Store Connect are completed
+
+### Service Credentials (Advanced)
+
+<Note>
+  The AI agent should automatically configure service credentials. Only follow these steps if you're experiencing connection issues.
+</Note>
+
+If products aren't syncing properly, you may need to manually verify that service credentials are configured:
+
+- **In-app purchase key**: Should be configured in RevenueCat from App Store Connect. See [RevenueCat's IAP key configuration guide](https://www.revenuecat.com/docs/service-credentials/itunesconnect-app-specific-shared-secret/in-app-purchase-key-configuration).
+- **App Store Connect API key**: Should be configured in RevenueCat. See [RevenueCat's ASC API key configuration guide](https://www.revenuecat.com/docs/service-credentials/itunesconnect-app-specific-shared-secret/app-store-connect-api-key-configuration).
 
 ---
 
