@@ -1,7 +1,9 @@
 ---
 title: "Mobile Apps"
-description: "Build iOS and Android apps with Anything"
+description: "Build iOS apps with Anything"
 ---
+
+Build iOS apps by describing what you want. Anything generates React Native code—from prompt to App Store in three steps.
 
 <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
   <iframe 
@@ -18,53 +20,39 @@ description: "Build iOS and Android apps with Anything"
 We're continuing to add features to mobile apps with active development. Your real-world examples help us prioritize improvements. Try building different apps and tell us what works and what breaks.
 </Warning>
 
-## Why Anything?
+## Get your app on the App Store
 
-Build mobile apps by describing what you want. Anything generates React Native code that works on iOS and Android.
+Follow these three steps to go from idea to published iOS app:
 
-**What you get:**
+### 1. Design your mobile app
+
+Describe your app idea in the builder. Anything generates React Native code with AI-designed interfaces for iOS. You get:
+
 - **Prompt to app** - Describe your app, get working code
 - **Design included** - AI designs apps like a human would
-- **Test on device** - Preview with Expo Go on your phone
 - **Full stack** - Built-in [databases](/builder/databases), [functions](/builder/functions), [auth](/builder/user-accounts), [storage](/builder/uploads), and [payments](/revenuecat)
-- **Publish anywhere** - Deploy to App Store and Play Store
+- **Monetize with RevenueCat** - Add subscriptions, in-app purchases, and paywalls with [RevenueCat integration](/revenuecat)
 
-## Getting Started
+### 2. Test on your iOS Device
 
-Build your first mobile app. Follow our [Getting Started Guide](/builder/mobile/getting-started) from concept to deployment.
+Test your app on your iPhone or iPad using the Anything iOS App. Device features like camera, location, and sensors work on your device but not in the web preview. Learn how to test your app in our [Testing & Debugging Guide](/builder/mobile/testing).
 
-## What You Can Build
+<Warning>
+  Device features like camera, location, and barcode scanning won't work in web preview. Test on your iOS device for full functionality.
+</Warning>
 
-### Device Capabilities
-Use camera, location, sensors, and 39+ other device features. We're adding more constantly. See the complete [Device Capabilities Guide](/builder/mobile/device-capabilities).
+### 3. Submit to TestFlight/Apple
 
-**Example projects:**
-
-**Fitness Companion**
-- Track runs with GPS, capture progress photos, visualize workout data with charts, schedule sessions in calendar, feel achievements with haptic feedback
-
-**Local Business Finder**
-- Discover nearby restaurants on interactive maps, get directions with location services, call businesses from contacts, browse photo galleries, work offline with smart caching
-
-**AI Coaching App**
-- Chat with AI coach via text, track progress with charts, charge for Pro features, get daily reminders via notifications, store goals securely
-
-### Publishing Your App
-- [iOS App Store](/builder/mobile/publishing-ios) - Deploy via TestFlight
-- [Google Play Store](/builder/mobile/publishing-android) - Deploy to Play Store (coming soon)
-
-### Testing
-Test and debug your app with our [Testing & Debugging Guide](/builder/mobile/testing).
+Once your app is ready, deploy to the App Store via TestFlight. Follow our [iOS publishing guide](/builder/mobile/publishing-ios) for step-by-step instructions.
 
 
+## Learn more
 
+### How it works
 
+Anything generates React Native code. Preview on your iOS device using the Anything iOS App.
 
-## How It Works
-
-Anything generates React Native code. Preview with Expo Go on your device.
-
-The code tab shows React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` that work on iOS and Android.
+The code tab shows React Native components like `<View>`, `<Text>`, and `<TouchableOpacity>` for iOS.
 
 <Frame>
   ![](/images/mobile/viewcode.png)
@@ -72,9 +60,17 @@ The code tab shows React Native components like `<View>`, `<Text>`, and `<Toucha
 
 Preview your app in the builder as you chat with Anything.
 
-<Warning>
-  Device features like camera, location, and barcode scanning won't work in web preview. Use Expo Go on your device for full testing.
-</Warning>
+### Device capabilities
+
+Use camera, location, sensors, and 39+ other device features. We're adding more constantly. See the complete [Device Capabilities Guide](/builder/mobile/device-capabilities).
+
+### Publishing
+- [iOS App Store](/builder/mobile/publishing-ios) - Deploy via TestFlight
+- [Google Play Store](/builder/mobile/publishing-android) - Manual process right now. More updates to come as we work towards APK packaging.
+
+### Testing and debugging
+
+Test and debug your app with our [Testing & Debugging Guide](/builder/mobile/testing).
 
 ## FAQ
 
@@ -86,7 +82,7 @@ Preview your app in the builder as you chat with Anything.
     No\! Anything handles all React Native code for you. Just describe what you want.
   </Accordion>
   <Accordion title="Can I publish to app stores?">
-    Yes, iOS publication to App Store is live today. Google Play Store has manual requirements while we work toward full release of that feature.
+    Yes, iOS publication to App Store is live today.
   </Accordion>
   <Accordion title="What about app signing and certificates?">
     You handle app signing certificates yourself for now. We'll simplify this in future updates.
