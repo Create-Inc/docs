@@ -47,7 +47,7 @@
             "group": "Payments and Monetization",
             "pages": [
               "stripe",
-              "revenuecat"
+              "effortless-payments"
             ]
           },
           {
@@ -229,6 +229,10 @@
     {
       "source": "/docs/export",
       "destination": "/builder/export"
+    },
+    {
+      "source": "/revenuecat",
+      "destination": "/effortless-payments"
     }
   ]
 }
