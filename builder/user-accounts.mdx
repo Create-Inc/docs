@@ -296,6 +296,10 @@ Create supports multiple auth methods. Choose the ones that fit your app's needs
 
 You can turn on or off each auth method in the Project Settings.
 
+<Warning>
+  **Important for Mobile Apps:** Per Apple's App Store guidelines, Google and Facebook SSO cannot be present in iOS mobile builds until the "Sign in with Apple" feature is released. Do not implement Google or Facebook authentication in mobile apps until Sign in with Apple is available.
+</Warning>
+
 <Frame caption="Finding the Project Settings">
   ![](/images/auth/google/15-3dotprojectsettings.png)
 </Frame>
